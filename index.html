@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css_animation/animsition.css">
+        <link href="./css/styles.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Amynta</title>
+    </head>
+    <body style="overflow: hidden;">
+        
+        <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
+            <div class="textura">
+                
+            </div>
+            <div class="screen" >
+                
+                <!--Inicio de contenido-->
+                    <img src="./img/carretera.png" style="width: 70vw; position: absolute;left: 17vw; z-index: 0;">
+                    <div class="cuadricula">
+                        
+                        <div class="divCarro" style="width: 2vw; height: 2vw; position: absolute;transform: skew(-420deg,-330deg); z-index: 3; display: flex; top: 11.6vw; left: 0vw;">
+                            <img class="carro" src="./img/inicio/carro/carro4.png" style="width: 2vw; margin: auto;">
+                        </div>
+                    </div>
+                <!--Fin de contenido-->
+            </div>
+        </div>
+    </body>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/animsition.js"></script>
+    <script>
+        
+       function viaje(){
+        $(".divCarro").animate({
+            left: "9vw"
+        }, 600, function(){
+            $(".carro").attr("src", "./img/inicio/carro/carro1.png")
+            $(".divCarro").animate({
+                top: "3.6vw"
+            }, 600)
+        })
+       }
+       $(".cuadricula").click(function(){
+           viaje()
+       })
+        $(document).ready(function () {
+            
+//  script para que funcione la libreria de animacion
+
+        $(".animsition").animsition({
+        
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) { window.location.href = url; }
+        });
+        //  script para que funcione la libreria de animacion
+
+
+
+        }); // fin jQuery
+    </script>
+</html>
+<!--
+<div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+                        <div class="celda"></div>
+
+-->
