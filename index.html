@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="./css_animation/animsition.css">
         <link href="./css/styles.css" rel="stylesheet">
+        <link href="./css/cristhian.css" rel="stylesheet">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Amynta</title>
     </head>
@@ -15,10 +16,42 @@
                 
                 <!--Inicio de contenido-->
                     <img src="./img/carretera.png" style="width: 70vw; position: absolute;left: 17vw; z-index: 0;">
+                    
+                    <img class="carteles" src = "./img/cristhian/carteles.png">
                     <div class="cuadricula">
-                        
+                        <div class="edificios" style="top: 10vw; left: 39vw;">
+                            <img src="./img/cristhian/edificio1.png" class="imgEdificio" id="0">
+                        </div>
+                        <div class="edificios" style="top: 5vw; left: 31.5vw;">
+                            <img src="./img/cristhian/edificio2.png" class="imgEdificio" id="1">
+                        </div>
+                        <div class="edificios" style="top: 11vw; left: 26.5vw; width: 5vw; height: 5vw;">
+                            <img src="./img/cristhian/edificio3.png" class="imgEdificio" id="2">
+                        </div>
+                        <div class="edificios" style="top: 14.4vw; left: 8.5vw; width: 5vw; height: 5vw;">
+                            <img src="./img/cristhian/edificio4.png" class="imgEdificio" id="3">
+                        </div>
+                        <div class="edificios" style="top: 1vw; left: 23.4vw; width: 3.5vw; height: 3.5vw;">
+                            <img src="./img/cristhian/edificio5.png" class="imgEdificio" id="4">
+                        </div>
+                        <div class="edificios" style="top: 6vw; left: 3.4vw; width: 6vw; height: 6vw;">
+                            <img src="./img/cristhian/edificio6.png" class="imgEdificio" id="5">
+                        </div>
+                        <div class="edificios" style="top: 5vw; left: 15.5vw; width: 6vw; height: 6vw;">
+                            <img src="./img/cristhian/edificio7.png" class="imgEdificio" id="6">
+                        </div>
+                        <div class="edificios" style="top: 0vw; left: 13.5vw; width: 6vw; height: 6vw;">
+                            <img src="./img/cristhian/edificio8.png" class="imgEdificio" id="7">
+                        </div>
                         <div class="divCarro" style="width: 2vw; height: 2vw; position: absolute;transform: skew(-420deg,-330deg); z-index: 3; display: flex; top: 11.6vw; left: 0vw;">
                             <img class="carro" src="./img/inicio/carro/carro4.png" style="width: 2vw; margin: auto;">
+                        </div>
+                    </div>
+                    <div class="telefonoIn">
+                        <div class="countViajes">
+                            <span>
+                                0-8
+                            </span>
                         </div>
                     </div>
                 <!--Fin de contenido-->
@@ -28,19 +61,35 @@
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/animsition.js"></script>
     <script>
-        
-       function viaje(){
-        $(".divCarro").animate({
-            left: "9vw"
-        }, 600, function(){
-            $(".carro").attr("src", "./img/inicio/carro/carro1.png")
-            $(".divCarro").animate({
-                top: "3.6vw"
-            }, 600)
-        })
-       }
-       $(".cuadricula").click(function(){
-           viaje()
+       
+       $(".imgEdificio").click(function(){
+           console.log(this.id)
+           switch(this.id){
+               case "0":
+                   viaje0();
+                break;
+                case "1":
+                   viaje1();
+                break;
+                case "2":
+                   viaje2();
+                break;
+                case "3":
+                   viaje3();
+                break;
+                case "4":
+                   viaje4();
+                break;
+                case "5":
+                   viaje5();
+                break;
+                case "6":
+                   viaje6();
+                break;
+                case "7":
+                   viaje7();
+                break;
+           }
        })
         $(document).ready(function () {
             
@@ -71,9 +120,81 @@
         });
         //  script para que funcione la libreria de animacion
 
+        
 
 
         }); // fin jQuery
+        //VIAJES:
+        function viaje0(){
+            $(".divCarro").animate({
+                left: "36vw"
+            }, 1200)
+        }
+        function viaje1(){
+            $(".divCarro").animate({
+                left: "31vw"
+            }, 600, function(){
+                $(".carro").attr("src", "./img/inicio/carro/carro1.png")
+                $(".divCarro").animate({
+                    top: "8.6vw"
+                }, 600)
+            })
+        }
+        function viaje2(){
+            $(".divCarro").animate({
+                left: "23.2vw"
+            }, 600, function(){
+                $(".carro").attr("src", "./img/inicio/carro/carro2.png")
+                $(".divCarro").animate({
+                    top: "14.4vw"
+                }, 600)
+            })
+        }
+        function viaje3(){
+            $(".divCarro").animate({
+                left: "9vw"
+            }, 600, function(){
+                $(".carro").attr("src", "./img/inicio/carro/carro2.png")
+                $(".divCarro").animate({
+                    top: "13.4vw"
+                }, 600)
+            })
+        }
+        function viaje4(){
+            $(".divCarro").animate({
+                left: "20vw"
+            }, 600, function(){
+                $(".carro").attr("src", "./img/inicio/carro/carro1.png")
+                $(".divCarro").animate({
+                    top: "2.6vw"
+                }, 600)
+            })
+        }
+        function viaje5(){
+            $(".divCarro").animate({
+                left: "4vw"
+            }, 300)
+        }
+        function viaje6(){
+            $(".divCarro").animate({
+                left: "8.9vw"
+            }, 600, function(){
+                $(".carro").attr("src", "./img/inicio/carro/carro1.png")
+                $(".divCarro").animate({
+                    top: "9.2vw"
+                }, 600)
+            })
+        }
+        function viaje7(){
+            $(".divCarro").animate({
+                left: "8.9vw"
+            }, 600, function(){
+                $(".carro").attr("src", "./img/inicio/carro/carro1.png")
+                $(".divCarro").animate({
+                    top: "3.2vw"
+                }, 600)
+            })
+        }
     </script>
 </html>
 <!--

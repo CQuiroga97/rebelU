@@ -1,0 +1,52 @@
+.carteles{
+    width: 71vw;
+    position: absolute;
+    left: 15vw;
+    top: 3vw;
+    z-index: 0;
+}
+.edificios{
+    position: absolute;
+    width: 9vw;
+    height: 9vw;
+    transform: skew(-420deg,-330deg);
+    display: flex;
+    z-index: 4;
+}
+.edificios img{
+    width: 80%;
+    margin: auto;
+    cursor: pointer;
+    transition: width .5s;
+}
+.edificios img:hover{
+    width: 87%;
+}
+.telefonoIn{
+    width: 14vw;
+    height: 22vw;
+    position: absolute;
+    right: 3vw;
+    bottom: 3vw;
+    background-image: url("../img/cristhian/telefono.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+}
+.telefonoIn .countViajes{
+    margin: auto;
+    width: 7vw;
+    height: 7vw;
+    background-color: black;
+    margin-bottom: 2vw;
+    border-radius: 1vw;
+    display: flex;
+}
+.telefonoIn .countViajes span{
+    color: white;
+    font-size: 4vw;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+}
