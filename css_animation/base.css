@@ -1,7 +1,7 @@
 .animsition,
 .animsition-overlay {
   position: relative;
-  opacity: 0;
+
   animation-fill-mode: both;
 }
 

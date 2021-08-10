@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Sancoale;
+}
+
+@font-face {
+    font-family: Sancoale;
+    src: url("../font/Sancoale/Sancoale\ Softened.ttf");
+}
+
+@font-face {
+    font-family: _regular;
+    src: url("../font/Sancoale/Sancoale\ Regular.ttf");
+}
+@font-face {
+    font-family: UberMoveBold;
+    src: url("../font/Uber/UberMoveBold.otf");
+}
+@font-face {
+    font-family: UberMoveMedium;
+    src: url("../font/Uber/UberMoveMedium.otf");
+}
+
+:root{
+--letra-titulos: 4.5vw;
+--letra-titulos-internos: 2vw;
+
+--letra-subs: 2.5vw;
+
+--letra-textos: 1.7vw;
+--letra-textos-modals: 2vw;
+}

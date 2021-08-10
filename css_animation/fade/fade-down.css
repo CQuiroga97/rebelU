@@ -1,11 +1,11 @@
 @keyframes fade-in-down {
   0% {
     transform: translateY(-500px);
-    opacity: 0;
+    
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
+    
   }
 }
 
@@ -18,11 +18,11 @@
 @keyframes fade-out-down {
   0% {
     transform: translateY(0);
-    opacity: 1;
+    
   }
   100% {
-    transform: translateY(500px);
-    opacity: 0;
+    transform: translateY(100vh);
+   
   }
 }
 
