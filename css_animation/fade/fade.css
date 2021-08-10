@@ -1,4 +1,4 @@
-@keyframes fade-in {
+/* @keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -25,4 +25,4 @@
 
 .fade-out {
   animation-name: fade-out;
-}
+} */
