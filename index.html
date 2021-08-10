@@ -12,10 +12,10 @@
             <div class="textura">
                 
             </div>
-            <div class="screen" >
+            <div class="screen" style="transform: scale(1.3);">
                 
                 <!--Inicio de contenido-->
-                    <img src="./img/carretera.png" style="width: 70vw; position: absolute;left: 17vw; z-index: 0;">
+                    <img src="./img/carretera.png" class="carretera" style="width: 70vw; position: absolute;left: 17vw; z-index: 0;top: 2vw;">
                     
                     <img class="carteles" src = "./img/cristhian/carteles.png">
                     <div class="cuadricula">
@@ -61,7 +61,17 @@
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/animsition.js"></script>
     <script>
-       
+       function cambiarPantalla(){
+            $(".carretera").animate({
+                top: "50vw"
+            }, 500)
+            $(".cuadricula").animate({
+                top: "-50vw"
+            }, 500)
+            $(".carteles").animate({
+                top: "-50vw"
+            }, 500)
+       }
        $(".imgEdificio").click(function(){
            console.log(this.id)
            switch(this.id){
@@ -128,7 +138,9 @@
         function viaje0(){
             $(".divCarro").animate({
                 left: "36vw"
-            }, 1200)
+            }, 1200, function(){
+                cambiarPantalla()
+            })
         }
         function viaje1(){
             $(".divCarro").animate({
@@ -137,7 +149,9 @@
                 $(".carro").attr("src", "./img/inicio/carro/carro1.png")
                 $(".divCarro").animate({
                     top: "8.6vw"
-                }, 600)
+                }, 600, function(){
+                cambiarPantalla()
+            })
             })
         }
         function viaje2(){
@@ -147,7 +161,9 @@
                 $(".carro").attr("src", "./img/inicio/carro/carro2.png")
                 $(".divCarro").animate({
                     top: "14.4vw"
-                }, 600)
+                }, 600, function(){
+                cambiarPantalla()
+            })
             })
         }
         function viaje3(){
@@ -157,7 +173,9 @@
                 $(".carro").attr("src", "./img/inicio/carro/carro2.png")
                 $(".divCarro").animate({
                     top: "13.4vw"
-                }, 600)
+                }, 600, function(){
+                cambiarPantalla()
+            })
             })
         }
         function viaje4(){
@@ -167,13 +185,17 @@
                 $(".carro").attr("src", "./img/inicio/carro/carro1.png")
                 $(".divCarro").animate({
                     top: "2.6vw"
-                }, 600)
+                }, 600, function(){
+                cambiarPantalla()
+            })
             })
         }
         function viaje5(){
             $(".divCarro").animate({
                 left: "4vw"
-            }, 300)
+            }, 300, function(){
+                cambiarPantalla()
+            })
         }
         function viaje6(){
             $(".divCarro").animate({
@@ -182,7 +204,9 @@
                 $(".carro").attr("src", "./img/inicio/carro/carro1.png")
                 $(".divCarro").animate({
                     top: "9.2vw"
-                }, 600)
+                }, 600, function(){
+                cambiarPantalla()
+            })
             })
         }
         function viaje7(){
@@ -192,7 +216,9 @@
                 $(".carro").attr("src", "./img/inicio/carro/carro1.png")
                 $(".divCarro").animate({
                     top: "3.2vw"
-                }, 600)
+                }, 600, function(){
+                cambiarPantalla()
+            })
             })
         }
     </script>
