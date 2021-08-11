@@ -50,3 +50,112 @@
     text-align: center;
     font-weight: bold;
 }
+.letrero, .letrero2{
+    width: 55vw; 
+    margin: auto; 
+    height: 15vw; 
+    background-color: black; 
+    position: relative; 
+    margin-bottom: -10vw; 
+    top: -35vw;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.letrero2 .titulo{
+    font-size: 4.5vw;
+    color: white;
+    margin: auto;
+    margin-bottom: 0vw;
+}
+.letrero2 .subtitulo{
+    font-size: 2vw;
+    color: white;
+    margin: auto;
+    margin-top: 0vw;
+}
+.persona{
+    width: 19vw; 
+    margin: auto;
+    position: absolute; 
+    left: -5vw; 
+    margin-bottom: auto; 
+    top: 27vw; 
+    z-index: 2;
+}
+.nubes{
+    width: 200vw; 
+    margin: auto; 
+    position: absolute; 
+    left: -50vw; 
+    margin-bottom: auto; 
+    top: -5vw;
+}
+.ciudad{
+    width: 500vw; 
+    margin: auto; 
+    position: absolute; 
+    left: -250vw; 
+    margin-bottom: auto; 
+}
+.carretera{
+    width: 100vw; 
+    margin: auto; 
+    height: 30vw; 
+    background-color: #8692A3; 
+    position: relative; 
+    top: 30vw; 
+    margin-top: 2vw; 
+    display: flex; 
+    background-image: url('../img/cristhian/carretera.png');    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 58% 101%;
+}
+.carro{
+    width: 3vw;
+    margin: auto; 
+    position: relative; 
+    margin-top: -1vw;
+}
+.divBtnInicio{
+    width: 100%; height: 5vw; background-color: white; position: absolute;z-index: 0; bottom: 0vw; display: flex;
+}
+.divBtnInicio .botonesInicio{
+    width: 15vw; height: 3vw; margin: auto;
+    display: flex;
+    -webkit-box-shadow: 0px 0px 15px 5px #000000; 
+    box-shadow: 0px 0px 15px 5px #000000;
+    cursor: pointer;
+}
+.divBtnInicio .botonesInicio span{
+    font-size: 2vw;
+    font-weight: bold;
+    margin: auto;
+}
+.cuadriculaTexto{
+    width: 50vw; height: 25vw; box-shadow: 0px 0px 15px 1px #000000; margin: auto; display: flex;
+    flex-direction: column;
+}
+.cuadriculaTexto .txt{
+    margin: auto;
+    width: 90%;
+    font-size: 2vw;
+}
+.lineaTiempo{
+    width: 80vw; height: 25vw;  display: flex; flex-direction: column; margin: auto;
+}
+.lineaTiempo .espLT{
+    width: 80vw; height: 11.5vw; display: flex; margin: auto;
+}
+.infoLT{
+    top: 0vw;margin: auto; z-index: 1;width: 100%; height: auto;margin-bottom: 1vw;
+    font-size: 1vw;
+    background-color: #357EA1;
+    text-align: center;
+    opacity: 0;
+}
+.barra{
+    width: 0%; height: 1vw; display: flex; margin: auto; margin-left: 0vw; background-color: #357EA1;height: 2.5vw;
+    opacity: 0;
+}

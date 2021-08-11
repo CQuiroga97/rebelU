@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../css_animation/animsition.css">
+        <link href="../../css/styles.css" rel="stylesheet">
+        <link href="../../css/cristhian.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Amynta</title>
+    </head>
+    <body style="overflow: hidden;">
+        
+        <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
+        
+            <div class="screen" >
+                
+                <!--Inicio de contenido-->
+                <div class="letrero2" style="top: 0vw;margin: auto; z-index: 1;width: 41vw;; height: 7vw;">
+                    <span class="titulo" style="margin: auto;">Timeline</span>
+                </div>
+                <div class="lineaTiempo" style=" flex-direction: row; width: 60vw; height: 20vw;">
+                    <div class="espLT" style="font-size: 1.7vw; left: -2vw; position: relative;  height: 100%; width: 30vw; display: flex; flex-direction: column;">
+                        <span style="margin: auto;">Mexico</span>
+                        <span style="margin: auto;">China</span>
+                        <span style="margin: auto;">India</span>
+                        <span style="margin: auto;">Philippines</span>
+                        <span style="margin: auto;">El Salvador</span>
+                    </div>
+                    <div style="width: 80vw; height: 1vw; display: flex; margin: auto; height: 100%; flex-direction: column;">
+                        <div class="barra" id="b1">
+                        
+                        </div>
+                        <div class="barra" id="b2">
+                        
+                        </div>
+                        <div class="barra" id="b3">
+                        
+                        </div>
+                        <div class="barra" id="b4">
+                        
+                        </div>
+                        <div class="barra" id="b5">
+                        
+                        </div>
+                    </div>
+                    <div class="espLT" style="height: 100%; width: 30vw; flex-direction: column; font-size: 1.7vw;">
+                        <span style="margin: auto;">25%</span>
+                        <span style="margin: auto;">6%</span>
+                        <span style="margin: auto;">6%</span>
+                        <span style="margin: auto;">4%</span>
+                        <span style="margin: auto;">6%</span>
+                        
+                    </div>
+                </div>
+                <!--Fin de contenido-->
+            </div>
+        </div>
+    </body>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/animsition.js"></script>
+    <script>
+        $("#b1").animate({
+            width: "100%",
+            opacity: 1
+        }, 1000)
+        $("#b2").animate({
+            width: "24%",
+            opacity: 1
+        }, 1000)
+        $("#b3").animate({
+            width: "24%",
+            opacity: 1
+        }, 1000)
+        $("#b4").animate({
+            width: "16%",
+            opacity: 1
+        }, 1000)
+        $("#b5").animate({
+            width: "12%",
+            opacity: 1
+        }, 1000)
+       $(".letrero2").click(function(){
+           console.log(this.id)
+           $("#i"+this.id).animate({
+               opacity: 1
+           }, 500)
+       })
+        $(document).ready(function () {
+            
+//  script para que funcione la libreria de animacion
+
+        $(".animsition").animsition({
+        
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) { window.location.href = url; }
+        });
+        //  script para que funcione la libreria de animacion
+
+        
+
+
+        }); // fin jQuery
+    </script>
+</html>

@@ -1,58 +1,48 @@
 <html>
     <head>
         <link rel="stylesheet" href="./css_animation/animsition.css">
+        <link href="./css/globales.css" rel="stylesheet">
         <link href="./css/styles.css" rel="stylesheet">
         <link href="./css/cristhian.css" rel="stylesheet">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Amynta</title>
     </head>
-    <body style="overflow: hidden;">
+    <body style="overflow: hidden; background-color: rgba(255, 255, 255, 0.885);">
         
         <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
             <div class="textura">
                 
             </div>
-            <div class="screen" style="transform: scale(1.3);">
+            <div class="screen" style="opacity: 0;">
                 
                 <!--Inicio de contenido-->
-                    <img src="./img/carretera.png" class="carretera" style="width: 70vw; position: absolute;left: 17vw; z-index: 0;top: 2vw;">
-                    
-                    <img class="carteles" src = "./img/cristhian/carteles.png">
-                    <div class="cuadricula">
-                        <div class="edificios" style="top: 10vw; left: 39vw;">
-                            <img src="./img/cristhian/edificio1.png" class="imgEdificio" id="0">
-                        </div>
-                        <div class="edificios" style="top: 5vw; left: 31.5vw;">
-                            <img src="./img/cristhian/edificio2.png" class="imgEdificio" id="1">
-                        </div>
-                        <div class="edificios" style="top: 11vw; left: 26.5vw; width: 5vw; height: 5vw;">
-                            <img src="./img/cristhian/edificio3.png" class="imgEdificio" id="2">
-                        </div>
-                        <div class="edificios" style="top: 14.4vw; left: 8.5vw; width: 5vw; height: 5vw;">
-                            <img src="./img/cristhian/edificio4.png" class="imgEdificio" id="3">
-                        </div>
-                        <div class="edificios" style="top: 1vw; left: 23.4vw; width: 3.5vw; height: 3.5vw;">
-                            <img src="./img/cristhian/edificio5.png" class="imgEdificio" id="4">
-                        </div>
-                        <div class="edificios" style="top: 6vw; left: 3.4vw; width: 6vw; height: 6vw;">
-                            <img src="./img/cristhian/edificio6.png" class="imgEdificio" id="5">
-                        </div>
-                        <div class="edificios" style="top: 5vw; left: 15.5vw; width: 6vw; height: 6vw;">
-                            <img src="./img/cristhian/edificio7.png" class="imgEdificio" id="6">
-                        </div>
-                        <div class="edificios" style="top: 0vw; left: 13.5vw; width: 6vw; height: 6vw;">
-                            <img src="./img/cristhian/edificio8.png" class="imgEdificio" id="7">
-                        </div>
-                        <div class="divCarro" style="width: 2vw; height: 2vw; position: absolute;transform: skew(-420deg,-330deg); z-index: 3; display: flex; top: 11.6vw; left: 0vw;">
-                            <img class="carro" src="./img/inicio/carro/carro4.png" style="width: 2vw; margin: auto;">
-                        </div>
+                <div class="letrero">
+                    <div class="letrero2" style="top: 0vw;margin-bottom: 0vw; z-index: 1;">
+                        <span class="titulo">UBER - CIP</span>
+                        <br>
+                        <span class="subtitulo">Cultural immersion program</span>
                     </div>
-                    <div class="telefonoIn">
-                        <div class="countViajes">
+                    <div class="divBtnInicio">
+                        <div class="botonesInicio">
                             <span>
-                                0-8
+                                LATAM
                             </span>
                         </div>
+                        <div class="botonesInicio">
+                            <span>
+                                North America
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                    <img src="./img/cristhian/nubes.png" class="nubes">
+                    
+                    <img src="./img/cristhian/persona.png" class="persona" >
+                    <div style="width: 100vw; height: 20vw; margin: auto;position: relative; display: flex; margin-bottom: -25vw;">
+                        <img src="./img/cristhian/ciudad.png" class="ciudad">
+                    </div>
+                    <div class="carretera">
+                        <img src="./img/cristhian/carro.png" class="carro">
                     </div>
                 <!--Fin de contenido-->
             </div>
@@ -61,46 +51,58 @@
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/animsition.js"></script>
     <script>
-       function cambiarPantalla(){
+        $(".carro").animate({
+            width: "15vw",
+            marginTop: "-5vw"
+        }, 1000)
+        $(".persona").animate({
+            width: "15vw",
+            left: "10vw"
+        }, 1000)
+        $(".letrero").animate({
+            top: "-5vw"
+        }, 1000)
+        $(".nubes").animate({
+            left: "0vw",
+            width: "100vw",
+            top: "2.5vw"
+        }, 1000)
+        $(".ciudad").animate({
+            left: "-130vw",
+            width: "300vw",
+            top: "5vw"
+        }, 1000)
+        $(".screen").animate({
+            opacity: 1
+        }, 1000)
+        $(".carretera").animate({
+            top: "25vw",
+        }, 1000,function(){
+            $(".divBtnInicio").animate({
+                bottom: "-4vw",
+            }, 1000)
+            $(".ciudad").animate({
+                left: "-28vw",
+                width: "130vw",
+                top: "13vw"
+            }, 1000)
             $(".carretera").animate({
-                top: "50vw"
-            }, 500)
-            $(".cuadricula").animate({
-                top: "-50vw"
-            }, 500)
-            $(".carteles").animate({
-                top: "-50vw"
-            }, 500)
-       }
-       $(".imgEdificio").click(function(){
-           console.log(this.id)
-           switch(this.id){
-               case "0":
-                   viaje0();
-                break;
-                case "1":
-                   viaje1();
-                break;
-                case "2":
-                   viaje2();
-                break;
-                case "3":
-                   viaje3();
-                break;
-                case "4":
-                   viaje4();
-                break;
-                case "5":
-                   viaje5();
-                break;
-                case "6":
-                   viaje6();
-                break;
-                case "7":
-                   viaje7();
-                break;
-           }
-       })
+            top: "24vw"
+            }, 1000)
+            $(".nubes").animate({
+                left: "10vw",
+                width: "80vw",
+                top: "4vw"
+            }, 1000)
+            $(".persona").animate({
+                width: "13vw",
+                left: "20vw"
+            }, 1000)
+            $(".carro").animate({
+                width: "25vw",
+                marginTop: "-10vw"
+            }, 1000)
+        })
         $(document).ready(function () {
             
 //  script para que funcione la libreria de animacion
@@ -135,166 +137,6 @@
 
         }); // fin jQuery
         //VIAJES:
-        function viaje0(){
-            $(".divCarro").animate({
-                left: "36vw"
-            }, 1200, function(){
-                cambiarPantalla()
-            })
-        }
-        function viaje1(){
-            $(".divCarro").animate({
-                left: "31vw"
-            }, 600, function(){
-                $(".carro").attr("src", "./img/inicio/carro/carro1.png")
-                $(".divCarro").animate({
-                    top: "8.6vw"
-                }, 600, function(){
-                cambiarPantalla()
-            })
-            })
-        }
-        function viaje2(){
-            $(".divCarro").animate({
-                left: "23.2vw"
-            }, 600, function(){
-                $(".carro").attr("src", "./img/inicio/carro/carro2.png")
-                $(".divCarro").animate({
-                    top: "14.4vw"
-                }, 600, function(){
-                cambiarPantalla()
-            })
-            })
-        }
-        function viaje3(){
-            $(".divCarro").animate({
-                left: "9vw"
-            }, 600, function(){
-                $(".carro").attr("src", "./img/inicio/carro/carro2.png")
-                $(".divCarro").animate({
-                    top: "13.4vw"
-                }, 600, function(){
-                cambiarPantalla()
-            })
-            })
-        }
-        function viaje4(){
-            $(".divCarro").animate({
-                left: "20vw"
-            }, 600, function(){
-                $(".carro").attr("src", "./img/inicio/carro/carro1.png")
-                $(".divCarro").animate({
-                    top: "2.6vw"
-                }, 600, function(){
-                cambiarPantalla()
-            })
-            })
-        }
-        function viaje5(){
-            $(".divCarro").animate({
-                left: "4vw"
-            }, 300, function(){
-                cambiarPantalla()
-            })
-        }
-        function viaje6(){
-            $(".divCarro").animate({
-                left: "8.9vw"
-            }, 600, function(){
-                $(".carro").attr("src", "./img/inicio/carro/carro1.png")
-                $(".divCarro").animate({
-                    top: "9.2vw"
-                }, 600, function(){
-                cambiarPantalla()
-            })
-            })
-        }
-        function viaje7(){
-            $(".divCarro").animate({
-                left: "8.9vw"
-            }, 600, function(){
-                $(".carro").attr("src", "./img/inicio/carro/carro1.png")
-                $(".divCarro").animate({
-                    top: "3.2vw"
-                }, 600, function(){
-                cambiarPantalla()
-            })
-            })
-        }
+        
     </script>
 </html>
-<!--
-<div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-                        <div class="celda"></div>
-
--->
