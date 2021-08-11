@@ -26,8 +26,8 @@
 
 #carro_internas{
     position: absolute;
-    right: 35%;
-    top: 21%;
+    right: 30%;
+    top: 11%;
     width: 4.5%;
 }
 
@@ -37,20 +37,30 @@
     display: flex;
     flex-direction: column;
     bottom: 3%;
-    left: -5%;
+    left: -5.3vw;
 
 }
 
 #contenedor_btns_menu img{
-    width: 91%;
     margin-bottom: 6%;
     cursor: pointer;
+    height: 70px;
+    width: 169px;
 }
 
 #contenedor_contenido{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#cuadro_blanco_estrellas{
+    background-color: white;
+    width: 51%;
+    height: 40px;
+    position: absolute;
+    bottom: 4vw;
+    right: 20%;
 }
 
 #contenedor_titulos_generales{
@@ -183,6 +193,7 @@
     padding: 8%;
     height: 100vh;
     cursor: pointer;
+    width: 100%;
     display: none;
 }
 
@@ -192,6 +203,15 @@
     padding: 5%;
     padding-top: 9%;
 }
+
+.contenedor_modal_info_encuesta{
+    display: flex;
+    font-family: _regular;
+    padding: 5%;
+    padding-top: 9%;
+    box-shadow: inset 0px 0px 0px 14px rgb(255 255 255);
+}
+
 
 .contenido_modals{
     background-color: black;
@@ -236,9 +256,240 @@
 .equis{
     position: absolute;
     width: 4%;
-    top: 2vw;
-    left: 2%;
+    top: 11vw;
+    right: 14%;
+    z-index: 6;
     cursor: pointer;
 }
 
+#contenedor_subs_generales_borde{
+    color: black;
+    font-size: var(--letra-subs);
+    font-family: UberMoveMedium;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 2px 3px rgb(112 112 112 / 57%);
+    padding: 5%;
+    position: relative;
+    bottom: 5vw;
+    z-index: -1;
+    text-align: center;
+}
+
+#contenedor_botones_disc{
+    display: flex;
+    justify-content: center;
+    font-family: UberMoveMedium;
+    font-weight: bold;
+    font-size: var(--letra-titulos-internos);
+    color: white;
+    width: 71%;
+}
+
+#contenedor_botones_disc article{
+    box-shadow: 0px 0px 2px 3px rgb(112 112 112 / 30%);
+    padding: 1.5%;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 32%;
+    margin-right: 4%;
+}
+
+#contenedor_botones_disc article:hover{
+    background-color:#357EA1 ;
+}
+
+#parqueadero_disc_2{
+    position: absolute;
+    right: -4%;
+    width: 103%;
+    top: 10vw;
+}
+
+.carros_disc_2{
+    position: absolute;
+    width: 17%;
+    cursor: pointer;
+}
+
+#carro_azul_disc_2{
+    right: 55%;
+    top: 14vw;
+}
+
+#carro_verde_disc_2{
+    right: 45%;
+    top: 18vw;
+}
+
+#carro_blanco_disc_2{
+    right: 36%;
+    top: 22vw;
+}
+
+#carro_negro_disc_2{
+    right: 27%;
+    top: 27vw;
+}
+
+#disc_2{
+    position: absolute;
+    z-index: 5;
+    width: 30%;
+    right: 23%;
+    top: 9vw;
+    display: none;
+}
+
+#parqueadero_disc_4{
+    position: absolute;
+    right: -1%;
+    width: 102%;
+    top: 12vw;
+}
+
+.carros_disc_4{
+    position: absolute;
+    width: 17%;
+    cursor: pointer;
+}
+
+#carro_azul_disc_4{
+    right: 25%;
+    top: 16vw;
+}
+
+#carro_verde_disc_4{
+    right: 35%;
+    top: 20vw;
+}
+
+#carro_blanco_disc_4{
+    right: 46%;
+    top: 24vw;
+}
+
+#carro_negro_disc_4{
+    right: 56%;
+    top: 28vw;
+}
+
+#disc_4{
+    position: absolute;
+    z-index: 5;
+    width: 35%;
+    right: 40%;
+    top: 9vw;
+    display: none;
+}
+
+.chulos_disc{
+    position: absolute;
+    width: 5%;
+}
+
+
+#chulo_language{
+    left: 22%;
+    bottom: 1vw;
+}
+
+#chulo_handle{
+    left: 48%;
+    bottom: 1vw;
+}
+
+.contenedor_modal_encuesta{
+    font-family: _regular;
+    padding: 5%;
+    padding-top: 6%;
+}
+
+#titulo_encuesta{
+    font-family: UberMoveMedium;
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* encuesta */
+
+.contenedor_respuestas_encuesta{
+    padding: 5%;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 2.3vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: -11px;
+    height: 33px;
+    width: 32px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  /* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: white;
+  }
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .container .checkmark:after {
+    top: 10px;
+    left: 9.5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #357EA1;
+  }
+
+  .flecha_izquierda_encuesta {
+    position: absolute;
+    width: 4%;
+    top: 11vw;
+    right: 14%;
+    z-index: 6;
+    cursor: pointer;
+}
+
+.equis_encuesta_correcto{
+    position: absolute;
+    width: 4%;
+    top: 11vw;
+    right: 14%;
+    z-index: 6;
+    cursor: pointer;
+}
 
