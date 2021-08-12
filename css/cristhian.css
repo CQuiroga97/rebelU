@@ -159,3 +159,46 @@
     width: 0%; height: 1vw; display: flex; margin: auto; margin-left: 0vw; background-color: #357EA1;height: 2.5vw;
     opacity: 0;
 }
+/*Social*/
+.social_menu{
+    width: 60vw;height: 35vw; margin: auto; display: flex; flex-direction: column;
+}
+.social_menu .linea{
+    width: 100%; height: 40%; display: flex;margin: auto;
+}
+.social_menu .linea .cuadro{
+    width: 49%; height: 100%; display: flex; flex-direction: column;margin: auto;cursor: pointer;
+}
+.social_menu .linea .cuadro .socialBtn{
+    width: 100%; height: 98%;  display: flex;
+}
+.social_menu .linea .cuadro .barraS{
+    background-color: rgb(20, 105, 233); width: 0%; height: 2%; flex-direction: column;
+}
+.social_menu .linea .cuadro .socialBtn .imgS{
+    width: 50%; height: 100%;overflow: hidden;
+}
+.social_menu .linea .cuadro .socialBtn .imgS img{
+    margin: auto;
+    width: 110%;
+    position: relative;
+}
+.social_menu .linea .cuadro .socialBtn .txtS{
+    width: 50%; height: 100%; display: flex; flex-direction: column;
+}
+.social_menu .linea .cuadro .socialBtn .txtS .tituloS{
+     width: 100%; height: 50%; display: flex;
+}
+.social_menu .linea .cuadro .socialBtn .txtS .tituloS span{
+    font-size: var(--letra-textos);
+    margin: auto;margin-left: 1vw;margin-top: 1vw;
+}
+.social_menu .linea .cuadro .socialBtn .txtS .flechaS{
+    width: 100%; height: 50%;display: flex;
+}
+.social_menu .linea .cuadro .socialBtn .txtS .flechaS img{
+    width: 15%;
+    height: 30%;
+    margin-top: 30%;
+    margin-left: 55%;
+}
