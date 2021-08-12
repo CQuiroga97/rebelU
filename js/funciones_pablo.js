@@ -117,11 +117,11 @@ function encuesta_correcto(id_flecha,id_bien,disc,btn_continue){
   });
 }
 
-function comprobar_encuesta(btn_validar,check_1,check_2,check_3,modal_mal,modal_bien,modal_encuesta){
+function comprobar_encuesta(btn_validar,check_1,check_2,check_3,check_4,modal_mal,modal_bien,modal_encuesta){
 
   $(btn_validar).click(function(){
 
-    if( $(check_1).is(':checked') && $(check_2).is(':checked') && $(check_3).is(':checked') ) {
+    if( $(check_4).is(':checked') && !$(check_1).is(':checked') && !$(check_2).is(':checked') && !$(check_3).is(':checked')   ) {
       $(modal_bien).fadeIn();
       $(modal_encuesta).fadeOut();
     }
@@ -131,5 +131,29 @@ function comprobar_encuesta(btn_validar,check_1,check_2,check_3,modal_mal,modal_
     }
   });
  
+}
+
+function cambiar_over_4(equis,btn_1,btn_2){
+  $(equis).click(function(){
+    $(btn_1).fadeOut();
+    $(btn_2).fadeIn();
+   
+  });
+}
+
+
+function abrir_continue_over_7(id_btn,id_continue,btn_1,btn_2,btn_3){
+   
+    
+  $(id_btn).click(function(){
+   
+    $(id_btn).addClass('click');
+
+    if($(btn_1).hasClass('click') && $(btn_2).hasClass('click') && $(btn_3).hasClass('click') ){
+      $(id_continue).fadeIn();
+
+    }
+  });
+   
 }
 

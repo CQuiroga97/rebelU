@@ -238,10 +238,10 @@
    <!-- modal encuesta -->
    <section  class="modals" id="modal_encuesta">
 
-    <div style="background-color: white; color: black;" class="titulo_modal">
+    <div style="background-color: white; color: black; top: -14%;" class="titulo_modal">
         Knowledge check
     </div>
-<section style="background-color:#3360D3 ;" class="contenido_modals">
+<section style="background-color:#3360D3 ; margin-top: -8%;" class="contenido_modals">
    
 
     <div class="contenedor_modal_encuesta">
@@ -272,7 +272,7 @@
                 <span class="checkmark"></span>
             </label>
 
-            <button id="btn_validar">Validar</button>
+            <div id="btn_validar">Validar</div>
         </section>
   
 
@@ -403,7 +403,7 @@ console.log("jquery");
         encuesta_mal('.flecha_izquierda_encuesta','#modal_mal','#modal_encuesta');
         encuesta_correcto('.equis_encuesta_correcto','#modal_bien','#disc_4','.continue_normal')
 
-        comprobar_encuesta('#btn_validar','#check_1','#check_2','#check_3','#modal_mal','#modal_bien','#modal_encuesta')
+        comprobar_encuesta('#btn_validar','#check_1','#check_2','#check_3', '#check_4','#modal_mal','#modal_bien','#modal_encuesta')
 
         cambiar_src('.flecha_izquierda_encuesta' ,'../../slider/flecha_izquierda_hover.png' , '../../slider/flecha_izquierda.png');
         cambiar_src('.equis_encuesta_correcto' ,'../../slider/equis_hover.png' , '../../slider/equis.png');
