@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- llamando estilos principales -->
+      <link rel="stylesheet" href="../../css/pablo.css">
+      <link rel="stylesheet" href="../../css/globales.css">
+      <!-- llamando estilos principales -->
+  
+      <!-- llamando estilos libreria animacion -->
+      <link rel="stylesheet" href="../../css_animation/animsition.css">
+      <!-- llamando estilos libreria animacion -->
+    <title>RedBubble</title>
+</head>
+
+
+<body class="body_arriba">
+    <div class="animsition">
+        <img loading="lazy" id="uber_tp" src="../../img/inicio/simbolos_generales/uber_tp.png" alt="">
+
+        <article id="contenedor_carro_internas">
+            <img loading="lazy" id="celular_internas" src="../../img/inicio/simbolos_generales/celular.png" alt="">
+
+            <div id="cuadro_blanco_estrellas"></div>
+            <img loading="lazy" id="carro_internas" src="../../img/inicio/simbolos_generales/carro_internas.png" alt="">
+        </article>
+
+
+
+    <section id="contenedor_general">
+      
+
+        <article id="contenedor_contenido">
+       
+
+            <div style="width: 80%;font-size: var(--letra-titulos);font-weight: bold;" id="contenedor_subs_generales_borde">
+            
+                <p>What is Customer Service?</p>
+            </div>
+
+            <p id="texto_over_2">
+                Customer service is the support you offer your customers (both before and after they buy and use your products or services) <span> that helps them have an easy and enjoyable experience with you. </span>
+            </p>
+
+            <section id="contenedor_botones_disc">
+               <article style="padding: 3.5%;" class="more_info">
+                   <p>More Info </p>
+               </article>
+
+            
+            </section>
+
+        </article>
+
+    </section>
+
+    <div href="./does_2.html" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue">
+        <p>Continue</p>
+    </div>
+
+    <section id="contenedor_btns_menu">
+    
+        <img id="btn_atras" href="javascript: history.go(-1)"  class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" src="../../img/inicio/simbolos_generales/btn_atras.png" alt="">
+
+        <img id="btn_home" href="" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" src="../../img/inicio/simbolos_generales/btn_home.png" alt="">
+    </section>
+
+     <!-- modal negro -->
+  <section class="modals" id="modal_1">
+    <img src="../../slider/equis.png" alt="" class="equis">
+    <div class="titulo_modal">
+        Customer support
+    </div>
+<section class="contenido_modals">
+   
+
+    <div class="contenedor_modal_info">
+        <p class="texto_modals">
+            Customer support is more than just <br> providing answers; it’s an important part of <br> the promise your brand makes to its <br> customers. 
+        </p>
+
+        <img src="../../img/pablo/overview/customer_1.jpg" alt="" class="imgs_modal">
+    </div>
+
+   
+        <article href="./overview_3.html" class="animsition-link" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" id="know_more">
+            <p>I want to 
+                know more! </p>
+        </article>
+
+     
+ 
+</section>
+
+
+</section>
+
+<!-- modal negro -->
+
+    </div>
+</body>
+
+
+
+<!-- llamados a scripts -->
+
+<!-- llamado a jquery -->
+<script src="../../js/jquery-3.4.1.min.js"></script>
+<!-- llamado a jquery -->
+
+<!-- llamado a libreria de animacion -->
+<script src="../../js/animsition.js"></script>
+<!-- llamado a libreria de animacion -->
+
+<!-- llamado a funciones -->
+<script src="../../js/funciones_pablo.js"></script>
+<script src="../../js/globales.js"></script>
+<!-- llamado a funciones -->
+
+<!-- llamados a scripts -->
+
+
+<script>
+    $(document).ready(function () {
+console.log("jquery");
+        //  animacion
+        $(".animsition").animsition({
+          
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: '', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) { window.location.href = url; }
+        });
+
+      
+        abrir_modals('.more_info' , '#modal_1' , '.equis');
+        carro_internas('#carro_internas','23%', '23%','36%','36%','0deg', '90deg' ,'#cuadro_blanco_estrellas','43%');
+       
+// fin jQuery
+    });
+
+
+</script>
+</html>

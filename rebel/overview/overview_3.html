@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- llamando estilos principales -->
+      <link rel="stylesheet" href="../../css/pablo.css">
+      <link rel="stylesheet" href="../../css/globales.css">
+      <!-- llamando estilos principales -->
+  
+      <!-- llamando estilos libreria animacion -->
+      <link rel="stylesheet" href="../../css_animation/animsition.css">
+      <!-- llamando estilos libreria animacion -->
+    <title>RedBubble</title>
+</head>
+
+
+<body class="body_arriba">
+    <div class="animsition">
+        <img loading="lazy" id="uber_tp" src="../../img/inicio/simbolos_generales/uber_tp.png" alt="">
+
+        <article id="contenedor_carro_internas">
+            <img loading="lazy" id="celular_internas" src="../../img/inicio/simbolos_generales/celular.png" alt="">
+
+            <div id="cuadro_blanco_estrellas"></div>
+            <img loading="lazy" id="carro_internas" src="../../img/inicio/simbolos_generales/carro_internas.png" alt="">
+        </article>
+
+
+
+    <section id="contenedor_general">
+      
+
+        <article id="contenedor_contenido">
+       
+
+            <div style="width: 80%;font-size: var(--letra-titulos);font-weight: bold; background-color: black; color: white; " id="contenedor_subs_generales_borde">
+            
+                <p>Today’s customer service…</p>
+            </div>
+
+            <p style="margin-bottom: 1%; margin-top: -9%; position: relative; top: -7vw;opacity: 0;" id="texto_over_2">
+              <span> Today’s customer service goes far beyond the traditional telephone support agent. </span>
+            </p>
+
+            <section id="contenedor_simbolos_over_3">
+                <img id="sobre" src="../../img/pablo/overview/sobre.png" alt="" class="simbolos_over_3">
+                <img id="mundo" src="../../img/pablo/overview/mundo.png" alt="" class="simbolos_over_3">
+                <img id="mensaje" src="../../img/pablo/overview/mensaje.png" alt="" class="simbolos_over_3">
+                <img id="persona" src="../../img/pablo/overview/persona.png" alt="" class="simbolos_over_3">
+            </section>
+
+            <div class="many" style="padding: 2.8%; width: 84%; bottom: 6vw; z-index: 1; background-color: white; top: -2vw; opacity: 0;" id="contenedor_subs_generales_borde">
+            
+                <p> <span style="font-weight: bold;"> Many companies also provide self-service support, </span> so customers can find their own answers at any time day or night. </p>
+            </div>
+
+            <section id="contenedor_botones_disc">
+               <article href="./overview_4.html" class="animsition-link but" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" style="padding: 3%;width: 52%;margin-top: -12%;margin-bottom: 3%; position: relative; top: 6vw; opacity: 0;">
+                   <p>But, why is Customer Service so important?</p>
+               </article>
+
+            
+            </section>
+
+        </article>
+
+    </section>
+
+    <div href="./does_2.html" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue">
+        <p>Continue</p>
+    </div>
+
+    <section id="contenedor_btns_menu">
+    
+        <img id="btn_atras" href="javascript: history.go(-1)"  class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" src="../../img/inicio/simbolos_generales/btn_atras.png" alt="">
+
+        <img id="btn_home" href="" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" src="../../img/inicio/simbolos_generales/btn_home.png" alt="">
+    </section>
+
+
+
+<!-- modal negro -->
+
+    </div>
+</body>
+
+
+
+<!-- llamados a scripts -->
+
+<!-- llamado a jquery -->
+<script src="../../js/jquery-3.4.1.min.js"></script>
+<!-- llamado a jquery -->
+
+<!-- llamado a libreria de animacion -->
+<script src="../../js/animsition.js"></script>
+<!-- llamado a libreria de animacion -->
+
+<!-- llamado a funciones -->
+<script src="../../js/funciones_pablo.js"></script>
+<script src="../../js/globales.js"></script>
+<!-- llamado a funciones -->
+
+<!-- llamados a scripts -->
+
+
+<script>
+    $(document).ready(function () {
+console.log("jquery");
+        //  animacion
+        $(".animsition").animsition({
+          
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: '', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) { window.location.href = url; }
+        });
+
+      
+
+        carro_internas('#carro_internas','23%', '23%','36%','36%','0deg', '90deg' ,'#cuadro_blanco_estrellas','43%');
+       
+        $('#texto_over_2').animate({
+            "opacity" : "1",
+            "top" : "0vw"
+        },function(){
+            $('#sobre').animate({
+                "top" : "4vw",
+                "opacity" : "1"
+            },function(){
+                $('#mundo').animate({
+                    "top" : "4vw",
+                "opacity" : "1"
+                },function(){
+                    $('#mensaje').animate({
+                    "top" : "4vw",
+                    "opacity" : "1"
+                    },function(){
+                        $('#persona').animate({
+                            "top" : "4vw",
+                            "opacity" : "1"
+                        },function(){
+                            $('.many').animate({
+                                "top" : "-7vw",
+                                "opacity" : "1"
+                            },function(){
+                                $('.but').animate({
+                                    "top" : "-2vw",
+                                    "opacity" : "1"
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+
+// fin jQuery
+    });
+
+
+</script>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- llamando estilos principales -->
+      <link rel="stylesheet" href="../../css/pablo.css">
+      <link rel="stylesheet" href="../../css/globales.css">
+      <!-- llamando estilos principales -->
+  
+      <!-- llamando estilos libreria animacion -->
+      <link rel="stylesheet" href="../../css_animation/animsition.css">
+      <!-- llamando estilos libreria animacion -->
+    <title>RedBubble</title>
+</head>
+
+
+<body class="body_arriba">
+    <div class="animsition">
+        <img loading="lazy" id="uber_tp" src="../../img/inicio/simbolos_generales/uber_tp.png" alt="">
+
+        <article id="contenedor_carro_internas">
+            <img loading="lazy" id="celular_internas" src="../../img/inicio/simbolos_generales/celular.png" alt="">
+
+            <div id="cuadro_blanco_estrellas"></div>
+            <img loading="lazy" id="carro_internas" src="../../img/inicio/simbolos_generales/carro_internas.png" alt="">
+        </article>
+
+
+
+    <section id="contenedor_general">
+      
+
+        <article id="contenedor_contenido">
+       
+
+            <div style="width: 80%;font-size: var(--letra-titulos);font-weight: bold; background-color: black; color: white; padding: 2%;" id="contenedor_subs_generales_borde">
+            
+                <p>But, why is Customer Service so important?</p>
+            </div>
+
+        <section id="contenedor_over_4">
+            <img src="../../img/pablo/overview/over_4.png" alt="">
+
+            <div>
+            <p style="width: 72%; margin-top: 0;" id="texto_over_2">
+                Customer service has an impact on both existing customers and potential customers. 
+            </p>
+
+            <section style="width: 102%;" id="contenedor_botones_disc">
+               <article style="padding: 3.5%;" class="right_now">
+                   <p>Right now</p>
+               </article>
+
+               <article href="./overview_7.html" class="animsition-link bad" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" style="padding: 3.5%; width: 49%;">
+                <p>What about bad 
+                    experiences?</p>
+              </article>
+
+            </section>
+        </div>
+
+        </section>
+
+        </article>
+
+    </section>
+
+    <div href="./does_2.html" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue">
+        <p>Continue</p>
+    </div>
+
+    <section id="contenedor_btns_menu">
+    
+        <img id="btn_atras" href="javascript: history.go(-1)"  class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" src="../../img/inicio/simbolos_generales/btn_atras.png" alt="">
+
+        <img id="btn_home" href="" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" src="../../img/inicio/simbolos_generales/btn_home.png" alt="">
+    </section>
+
+     <!-- modal negro -->
+  <section class="modals" id="modal_1">
+    <img style="top: 16vw; right: 12%;" src="../../slider/equis.png" alt="" class="equis">
+    <div style="width: 73%; left: 15%;" class="titulo_modal">
+        “Technologies Customer Experience Report” found...
+    </div>
+<section style="margin-left: 9%;" class="contenido_modals">
+   
+
+  <section id="contenedor_modal_over_4">
+      <article>
+          <img src="../../img/pablo/overview/86.png" alt="">
+          <p>86% of U.S. adults are willing to pay more for a better customer experience </p>
+      </article>
+
+      <article>
+        <img style="width: 31%;" src="../../img/pablo/overview/73.png" alt="">
+        <p>73% of U.S. adults said a friendly customer service made them fall in love with a brand.  </p>
+      </article>
+  </section>
+     
+ 
+</section>
+
+
+</section>
+
+<!-- modal negro -->
+
+    </div>
+</body>
+
+
+
+<!-- llamados a scripts -->
+
+<!-- llamado a jquery -->
+<script src="../../js/jquery-3.4.1.min.js"></script>
+<!-- llamado a jquery -->
+
+<!-- llamado a libreria de animacion -->
+<script src="../../js/animsition.js"></script>
+<!-- llamado a libreria de animacion -->
+
+<!-- llamado a funciones -->
+<script src="../../js/funciones_pablo.js"></script>
+<script src="../../js/globales.js"></script>
+<!-- llamado a funciones -->
+
+<!-- llamados a scripts -->
+
+
+<script>
+    $(document).ready(function () {
+console.log("jquery");
+        //  animacion
+        $(".animsition").animsition({
+          
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: '', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) { window.location.href = url; }
+        });
+
+        cambiar_over_4('.equis','.right_now' , '.bad');
+        abrir_modals('.right_now' , '#modal_1' , '.equis');
+        carro_internas('#carro_internas','23%', '23%','36%','36%','0deg', '90deg' ,'#cuadro_blanco_estrellas','43%');
+       
+// fin jQuery
+    });
+
+
+</script>
+</html>
