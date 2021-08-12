@@ -35,7 +35,7 @@ body{
     background-size: 100% 100%;
 }
 .cuadricula{
-    width: 46vw; height: 25vw; margin: auto;  z-index: 0; position: relative;display: grid;transform: skew(420deg,330deg); left: 1vw; top: -2vw;
+    width: 46vw; height: 25vw; margin: auto;  z-index: 0; position: relative;display: grid;transform: skew(420deg,330deg); left: 1vw; top: -70vw;
     grid-template-columns: repeat(9, 1fr);
   grid-gap: 0px;
 }

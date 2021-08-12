@@ -2,7 +2,7 @@
     width: 71vw;
     position: absolute;
     left: 15vw;
-    top: 5vw;
+    top: 60vw;
     z-index: 0;
 }
 .edificios{
@@ -26,7 +26,7 @@
     width: 13vw;
     height: 20vw;
     position: absolute;
-    right: 14vw;
+    right: -14vw;
     bottom: 8vw;
     background-image: url("../img/cristhian/telefono.png");
     background-position: center;
@@ -119,19 +119,29 @@
     margin-top: -1vw;
 }
 .divBtnInicio{
-    width: 100%; height: 5vw; background-color: white; position: absolute;z-index: 0; bottom: 0vw; display: flex;
+    width: 100%; height: 11vw; background-color: white; position: absolute;z-index: 0; bottom: 0vw; display: flex;
 }
 .divBtnInicio .botonesInicio{
-    width: 15vw; height: 3vw; margin: auto;
+    width: 15vw; height: 10vw; margin: auto;
     display: flex;
     -webkit-box-shadow: 0px 0px 15px 5px #000000; 
     box-shadow: 0px 0px 15px 5px #000000;
     cursor: pointer;
+    flex-direction: column;
+    position: relative;
+    transition: top .5s;
+    top: 0vw;
+}
+.divBtnInicio .botonesInicio img{
+    margin: auto; width: 10vw;
 }
 .divBtnInicio .botonesInicio span{
     font-size: 2vw;
     font-weight: bold;
     margin: auto;
+}
+.divBtnInicio .botonesInicio:hover{
+    top: 6.5vw;
 }
 .cuadriculaTexto{
     width: 50vw; height: 25vw; box-shadow: 0px 0px 15px 1px #000000; margin: auto; display: flex;
