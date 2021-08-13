@@ -605,4 +605,110 @@
     display: none;
 }
 
+.contenedor_over_8{
+    display: flex;
+    justify-content: center;
+    margin-top: -4%;
+}
 
+.contenedor_over_8 article{
+    margin: 3%;
+}
+
+.numeros_over_8{
+    font-size: 3.5vw;
+    color: black;
+    font-family: UberMoveMedium;
+    font-weight: bold;
+    position: relative;
+    top: 4vw;
+    left: 10%;
+    z-index: -1;
+}
+
+
+.simbolos_numeros_over_8{
+    cursor: pointer;
+    width: 78%;
+}
+
+#contenedor_over_9{
+    display: flex;
+    align-items: center;
+    margin-top: 8%;
+    margin-left: 3%;
+}
+
+.arbol{
+    width: 19%;
+}
+
+
+#contenedor_play{
+    display: flex;
+    justify-content: center;
+}
+
+.simbolo_play{
+    cursor: pointer;
+    width: 29%;
+    margin-right: 6%;
+}
+
+/* encuesta 2 */
+
+.container_2 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 2.3vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .container_2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark_2 {
+    position: absolute;
+    top: 0;
+    left: -11px;
+    height: 33px;
+    width: 32px;
+    background-color: black;
+    border-radius: 50%;
+    border: 4px solid #3B6FF3;
+  }
+
+  /* When the radio button is checked, add a blue background */
+.container_2 input:checked ~ .checkmark_2 {
+    background-color: black;
+  }
+
+  .container_2 input:checked ~ .checkmark_2:after {
+    display: block;
+  }
+
+  .checkmark_2:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .container_2 .checkmark_2:after {
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3B6FF3;
+  }

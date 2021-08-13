@@ -14,7 +14,7 @@
       <!-- llamando estilos libreria animacion -->
 
            <!-- llamando estilos slide -->
-    
+          
            <!-- llamando estilos slide -->
     <title>RedBubble</title>
 </head>
@@ -27,8 +27,8 @@
         <article id="contenedor_carro_internas">
             <img loading="lazy" id="celular_internas" src="../../img/inicio/simbolos_generales/celular.png" alt="">
 
-            <div style="width: 19%;" id="cuadro_blanco_estrellas"></div>
-            <img style="top: 37%; right: 65%; transform: rotate(321deg);" loading="lazy" id="carro_internas" src="../../img/inicio/simbolos_generales/carro_internas.png" alt="">
+            <div style="width: 13%;" id="cuadro_blanco_estrellas"></div>
+            <img style="top: 43%; right: 58%; transform: rotate(270deg);" loading="lazy" id="carro_internas" src="../../img/inicio/simbolos_generales/carro_internas.png" alt="">
         </article>
 
 
@@ -37,38 +37,32 @@
       
 
         <article id="contenedor_contenido">
-            <div style="width: 76%; padding: 1%;" id="contenedor_titulos_generales">
-                <p>Cost of a bad Customer Service Experience.</p>
+            <div style="width: 66%; padding: 1.5%;" id="contenedor_titulos_generales">
+                <p>Knowing that, let’s listen to some calls…</p>
             </div>
 
-        <section id="contenedor_parqueadero_disc_2">
-            <!-- parqueadero -->
-            <img style="right: -2%; top: 11vw; width: 98%;" src="../../img/pablo/overview/parqueadero_over.png" alt="" id="parqueadero_disc_4">
-            <!-- parqueadero -->
+        <section id="contenedor_over_9">
+            <img src="../../img/pablo/overview/arbol.png" alt="" class="arbol">
 
-            <!-- carros -->
-            <img src="../../img/pablo/disc/azul_2.png" alt="" id="carro_azul_disc_4" class="carros_disc_4">
-            <img src="../../img/pablo/disc/blanco_2.png" alt="" id="carro_verde_disc_4" class="carros_disc_4">
-            <img src="../../img/pablo/disc/negro_2.png" alt="" id="carro_blanco_disc_4" class="carros_disc_4">
-            <img style="visibility: hidden;" src="../../img/pablo/disc/negro_2.png" alt="" id="carro_negro_disc_4" class="carros_disc_4">
-              <!-- carros -->
-
-              <!-- disc -->
-              <img src="../../img/pablo/disc/disc_4.png" alt="" id="disc_4" >
-              <!-- disc -->
-
-               <!-- continue -->
-            
-
-            <div href="" class="animsition-link continue_normal" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" style="top: 29vw;width: 23%;right: 2%;"  loading="lazy" id="btn_continue">
-                <p>Check service statics </p>
+            <div id="contenedor_play">
+                <img id="btn_audio_1" src="../../img/pablo/overview/play.png" alt="" class="simbolo_play">
+                <img id="btn_audio_2" src="../../img/pablo/overview/play.png" alt="" class="simbolo_play">
             </div>
-             <!-- continue -->
+
+            <!-- audios -->
+            <audio  id="audio_1"  src="../../img/pablo/overview/audios/Professional.mp3"></audio>
+            <audio  id="audio_2"  src="../../img/pablo/overview/audios/Rude.mp3"></audio>
+
+            <img src="../../img/pablo/overview/arbol.png" alt="" class="arbol">
         </section>
 
         
 
         </article>
+
+        <div class="continue_play"  style="top: 33vw;width: 20%;right: 42%;"  loading="lazy" id="btn_continue">
+            <p>Continue</p>
+        </div>
 
     </section>
 
@@ -83,54 +77,97 @@
 
 
 
-<!-- modal 1 -->
-<section  class="modals" id="modal_1">
-    <img style="top:13vw;right: 15%;" src="../../slider/equis.png" alt="" class="equis">
- 
-<section style="margin-left: 15%;margin-top: 8% !important;margin-top: 6%;width: 75%;background-color:white;margin-top: 4%;padding: 8%;box-shadow: inset 0px 0px 2px 9px rgb(0 0 0);box-shadow: black;box-shadow: 2px black;" class="contenido_modals">
+
+   <!-- modal encuesta -->
+   <section  class="modals" id="modal_encuesta">
+
+    <div style="background-color: #3B6FF3;color: white;top: -14%;" class="titulo_modal">
+        Knowledge check
+    </div>
+<section style="background-color:#3360D3 ; margin-top: -8%;" class="contenido_modals">
    
-        <p style="font-size: 2vw; font-weight: bold; text-align: center; margin-right: 0%; margin-top: 4%; color: black;" class="texto_modals">
-            Americans will tell an average of 15 people about a poor service experience and on the other hand, they will tell 11 people about a good experience.
+
+    <div style="color: black; background-color: white; box-shadow: inset 0px 0px 0px 12px black;" class="contenedor_modal_encuesta">
+        <p id="titulo_encuesta">¿What is customer service??</p>
+
+        <section class="contenedor_respuestas_encuesta">
+            <label class="container_2">
+                <input type="checkbox" id="check_1">Telephone, chat, email and social media support. 
+                <span class="checkmark_2"></span>
+            </label>
+            <br>
+
+            <label class="container_2">
+                <input type="checkbox" id="check_2">Customer service is the support you offer your customers, both before and after they buy and use your products or services.
+                <span class="checkmark_2"></span>
+            </label>
+            <br>
+
+            <label class="container_2">
+                <input type="checkbox" id="check_3">Customer service is more than just providing answers.
+                <span class="checkmark_2"></span>
+            </label>
+
+            <br>
+
+
+            <div id="btn_validar">Validate</div>
+        </section>
+  
+
+    </div>
+</section>
+
+
+</section>
+
+<!-- modal encuesta -->
+
+<!-- modal mal -->
+  <section  class="modals" id="modal_mal">
+    <img  src="../../slider/flecha_izquierda.png" alt="" class="flecha_izquierda_encuesta">
+ 
+<section style="background-color:#357EA1 ; margin-top: 4%;" class="contenido_modals">
+   
+
+    <div class="contenedor_modal_info_encuesta">
+        <p style="font-size: 6vw; font-weight: bold; text-align: center; margin-right: 12%;" class="texto_modals">
+            Sorry, <br>
+            that’s not right. <br>
+            Try again.
         </p>
 
+        <img src="../../img/pablo/disc/encuesta_mal.png" alt="" class="imgs_modal">
+    </div>
 </section>
 
 
 </section>
-<!-- modal 1 -->
+
+<!-- modal mal -->
 
 
-<!-- modal 2 -->
-<section  class="modals" id="modal_2">
-    <img style="top:13vw;right: 15%;" src="../../slider/equis.png" alt="" class="equis">
+<!-- modal bien -->
+<section  class="modals" id="modal_bien">
+    <img src="../../slider/equis.png" alt="" class="equis_encuesta_correcto">
  
-<section style="margin-left: 15%;margin-top: 8% !important;margin-top: 6%;width: 75%;background-color:white;margin-top: 4%;padding: 8%;box-shadow: inset 0px 0px 2px 9px rgb(0 0 0);box-shadow: black;box-shadow: 2px black;" class="contenido_modals">
+<section style="background-color:#3B6FF3 ; margin-top: 4%;" class="contenido_modals">
    
-        <p style="font-size: 2vw; font-weight: bold; text-align: center; margin-right: 0%; margin-top: 4%; color: black;" class="texto_modals">
-            33% of Americans say they’ll consider switching companies after just a single instance of poor service.
+
+    <div style="justify-content: space-around;" class="contenedor_modal_info_encuesta">
+        <p style="font-size: 6vw; font-weight: bold; text-align: center; margin-right: 9%; margin-top: 4%;" class="texto_modals">
+            Correct <br>
+            Answer!
         </p>
 
+        <img src="../../img/pablo/disc/encuesta_correcto.png" alt="" class="imgs_modal">
+    </div>
 </section>
 
 
 </section>
-<!-- modal 2 -->
 
-<!-- modal 3 -->
-<section  class="modals" id="modal_3">
-    <img style="top:13vw;right: 15%;" src="../../slider/equis.png" alt="" class="equis">
- 
-<section style="margin-left: 15%;margin-top: 8% !important;margin-top: 6%;width: 75%;background-color:white;margin-top: 4%;padding: 8%;box-shadow: inset 0px 0px 2px 9px rgb(0 0 0);box-shadow: black;box-shadow: 2px black;" class="contenido_modals">
-   
-        <p style="font-size: 2vw; font-weight: bold; text-align: center; margin-right: 0%; margin-top: 4%; color: black;" class="texto_modals">
-            More than half of Americans have scrapped a planned purchase or transaction because of bad service.
-        </p>
-
-</section>
-
-
-</section>
-<!-- modal 3 -->
+<!-- modal bien -->
 
     </div>
 </body>
@@ -151,6 +188,7 @@
 <script src="../../js/funciones_pablo.js"></script>
 
 <script src="../../js/globales.js"></script>
+<script src="../../js/audios_over_9.js"></script>
 <!-- llamado a funciones -->
 
 <!-- llamados a scripts -->
@@ -184,28 +222,23 @@ console.log("jquery");
             transition: function (url) { window.location.href = url; }
         });
 
-        mover_carros_disc_2('#carro_azul_disc_4' , '17vw' , '23%' , '16vw' , '25%');
-        mover_carros_disc_2('#carro_verde_disc_4' , '21vw' , '32%' , '20vw' , '35%');
-        mover_carros_disc_2('#carro_blanco_disc_4' , '25vw' , '43%' , '24vw' , '46%');
-        mover_carros_disc_2('#carro_negro_disc_4' , '30vw' , '53%' , '28vw' , '56%');
-
-
-        abrir_modals('#carro_azul_disc_4' , '#modal_3' , '.equis');
-        abrir_modals('#carro_verde_disc_4' , '#modal_2' , '.equis');
-        abrir_modals('#carro_blanco_disc_4' , '#modal_1' , '.equis');
-
-
-
-        abrir_continue_over_7('#carro_azul_disc_4','#btn_continue', '#carro_azul_disc_4','#carro_verde_disc_4','#carro_blanco_disc_4');
-        abrir_continue_over_7('#carro_verde_disc_4','#btn_continue', '#carro_azul_disc_4','#carro_verde_disc_4','#carro_blanco_disc_4');
-        abrir_continue_over_7('#carro_blanco_disc_4','#btn_continue', '#carro_azul_disc_4','#carro_verde_disc_4','#carro_blanco_disc_4');
-  
-       
+    
        
 
-     
+        abrir_continue_disc_2('#carro_azul_disc_4','#btn_continue','#disc_4','#carro_azul_disc_4','#carro_verde_disc_4','#carro_blanco_disc_4','#carro_negro_disc_4');
+        abrir_continue_disc_2('#carro_verde_disc_4','#btn_continue','#disc_4','#carro_azul_disc_4','#carro_verde_disc_4','#carro_blanco_disc_4','#carro_negro_disc_4');
+        abrir_continue_disc_2('#carro_blanco_disc_4','#btn_continue','#disc_4','#carro_azul_disc_4','#carro_verde_disc_4','#carro_blanco_disc_4','#carro_negro_disc_4');
+        abrir_continue_disc_2('#carro_negro_disc_4','#btn_continue','#disc_4','#carro_azul_disc_4','#carro_verde_disc_4','#carro_blanco_disc_4','#carro_negro_disc_4');
 
-        carro_internas('#carro_internas','41%', '43%','63%','58%','310deg', '275deg' ,'#cuadro_blanco_estrellas','8%');
+        abrir_encuesta('.continue_play' , '#modal_encuesta');
+        encuesta_mal('.flecha_izquierda_encuesta','#modal_mal','#modal_encuesta');
+        encuesta_correcto('.equis_encuesta_correcto','#modal_bien','#disc_4','.continue_normal')
+
+        comprobar_encuesta_over_9('#btn_validar','#check_1','#check_2','#check_3','#modal_mal','#modal_bien','#modal_encuesta')
+        cambiar_src('.flecha_izquierda_encuesta' ,'../../slider/flecha_izquierda_hover.png' , '../../slider/flecha_izquierda.png');
+        cambiar_src('.equis_encuesta_correcto' ,'../../slider/equis_hover.png' , '../../slider/equis.png');
+
+        carro_internas('#carro_internas','46%', '46%','46%','46%','270deg', '270deg' ,'#cuadro_blanco_estrellas','0%');
        
 // fin jQuery
     });

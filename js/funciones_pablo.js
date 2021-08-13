@@ -157,3 +157,47 @@ function abrir_continue_over_7(id_btn,id_continue,btn_1,btn_2,btn_3){
    
 }
 
+function numeros_over_8(id_btn_numero,id_numero){
+  $(id_btn_numero).mouseenter(function(){
+    $(id_numero).animate({
+      "top" : "2.5vw"
+    },{queue:false});       
+    
+}).mouseleave(function(){
+  $(id_numero).animate({
+    "top" : "4vw"
+  },{queue:false}); 
+});
+}
+
+function abrir_continue_over_8(id_btn,id_continue,btn_1,btn_2,btn_3,btn_4,btn_5,btn_6,btn_7){
+   
+    
+  $(id_btn).click(function(){
+   
+    $(id_btn).addClass('click');
+
+    if($(btn_1).hasClass('click') && $(btn_2).hasClass('click') && $(btn_3).hasClass('click') && $(btn_4).hasClass('click')&& $(btn_5).hasClass('click') && $(btn_6).hasClass('click') && $(btn_7).hasClass('click') ){
+      $(id_continue).fadeIn();
+
+    }
+  });
+   
+}
+
+
+function comprobar_encuesta_over_9(btn_validar,check_1,check_2,check_3,modal_mal,modal_bien,modal_encuesta){
+
+  $(btn_validar).click(function(){
+
+    if( $(check_3).is(':checked') && !$(check_1).is(':checked') && !$(check_2).is(':checked')) {
+      $(modal_bien).fadeIn();
+      $(modal_encuesta).fadeOut();
+    }
+    else{
+      $(modal_mal).fadeIn();
+      $(modal_encuesta).fadeOut();
+    }
+  });
+ 
+}
