@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../css_animation/animsition.css">
+        <link href="../../css/globales.css" rel="stylesheet">
+        <link href="../../css/styles.css" rel="stylesheet">
+        <link href="../../css/cristhian.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Amynta</title>
+    </head>
+    <body style="overflow: hidden;">
+        
+        <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
+            <div class="blurSocial blurG2">
+                <div class="textoBlur" style="border: 0vw ; height: 30vw;background-color: black;">
+                    <div style="width: 49.6%; background-color: black; height: 100%; margin-left: 0vw;" class="doDont">
+                    
+                        <div class="tituloAzulAl" style="flex-direction: row;">
+                        </div>
+                        <span class="txt1">
+
+                        </span>
+                        
+                    </div>
+                    <div style="width: 49.6%; height: 100%;display: flex;flex-direction: column;">
+                        <div style="height: 49.2%;margin-top: 0vw; background-color: black; width: 100%;" class="doDont">
+                            <div class="tituloAzul">
+                                <span>Do</span>
+                            </div>
+                            <span class="txt2">
+
+                            </span>
+                        </div>
+                        <div style="height: 49.2%;margin-bottom: 0vw; background-color: black; width: 100%;" class="doDont">
+                            <div class="tituloAzul">
+                                <span>Don´t</span>
+                            </div>
+                            <span class="txt3">
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen" >
+                
+                <!--Inicio de contenido-->
+                <div class="letrero2" style="top: 0vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;">
+                    <span class="titulo" style="margin: auto;">Knowledge Check</span>
+                </div>
+                <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;text-align: center;">Select the 5 countries of birth for <br>
+                    immigrants in the US. </span>
+                <div class="lineaTiempo" style=" flex-direction: row; height: 20vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;">
+                    
+                </div>
+                <!--Fin de contenido-->
+            </div>
+        </div>
+    </body>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/animsition.js"></script>
+    <script>
+        
+        places = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"]
+        textoAzul = ["We assist every customer in the same way, regardless race, sexual orientation or beliefs, these are possible verbiages that you can and cannot use. ", "In the case of a xenophobic customer with the representative this are the best ways to handle these calls. ", "In the case when a customer that belongs to the United States Armed Forces", "When the customer calls and express their political opinion.", "When the customer calls and gives a personal opinion regarding certain religion or sports preferences.", "When an elderly customer is calling.​", "It is very common to receive calls from Latin America customers, how do we deal with those interactions?​", "Rebel is a very big campaign. We have all kinds of customers. There can be the chance when a disabled customer can call you asking for help​"]
+        textos = [
+                    ["The customer states: <br>“Hi, my name is Muhammad Alí, I'm calling to report that in the last ride i completed, the client was very rude with me because i am not American, i'm feeling so bad about that.”", "Show empathy, apologize about the inconvenience, reassure the customer that assists every customer in the same way, regardless race, sexual orientation or beliefs and tell a formal complaint we are going to block the rider so he won’t match with you again.", "Judge the customer, make any opinion regarding the situation, make any comment that can be disrespectful with the customer."],
+                    ["The customer states: <br>“I’m not able to understand you, are you from India? Let me speak with an American”.", "Show willingness to help the customer, show confidence in your tone of voice, use power words and keep it professional", "Don’t be rude, don’t transfer the call without trying to de-escalate the customer, don’t take it personal, do not argue with the customer."],
+                    ["The customer states: <br>“Hi, I'm calling to report that I placed an order for 2 burgers with the addition of bacon, without pickles and 2 sodas, however I received water instead of the sodas and one of the hamburgers arrived without the addition of bacon.”", "Apologize for the inconvenience, thank them for the service and provide the customer with the best resolution and appropriate expectations.", "Not acknowledging the service that they provided to their country, not taking the ownership of the issue and not showing interest. "],
+                    ["The customer states: <br>“Hello, I am Felipe and i’m calling because I need my cancellation fee, since I have been waiting the rider for 20 minutes and he does not arrive, I need help quickly since I need to go home to see the elections that Donald Trump will win, because that's how it will be, what do you think?”", "Be neutral, keep it professional, guide the customer to the resolution and be focused only on the original issue about the order. ask probing questions to focus on the issue that prompted the customer to call", "Provide personal opinions, don’t argue with the customer, do not be sarcastic, do not answer back, if a customer insists avoid the topic."],
+                    ["The customer states: <br>“I’m Muslim and my religion does not allow me talking with a woman, can you transfer me”.", "Acknowledge the customers believes, explain to them, we do not handle extension, offer assistance, if the customer denies it, check with your supervisor. ", "Be rude, do not judge customer’s religion, do not discuss with the customer, do not provide personal opinion. "],
+                    ["The customer states: <br>“Hello, I am calling because it is the first time that I am going online and when I try to access the app, my screen freezes and does not allow me to move forward. How can I fix it?”.", "Be patient! That is the first step. Place yourself in the customer’s position and do your best to explain every step. If you do not know how to explain, use your KB. There you will find the step by step with screenshots.We can repeatedly explain the steps multiple times and we can also offer to send them via the caller's email. ", "Do not suggest the customer to ask for help in a different place. Customers are very important for us regardless the age, sex and religion. Avoid being rude or sarcastic, if that person is asking for help is because they really need it. ​"],
+                    ["The customer states: <br>“Hello, my name is Felipe Gonzalez, and I want to know why I have not received the payment for the last trip I made. I completed it correctly in the app, but I do not have the record of that payment in my statement.”.", "Even when we are used to receive calls daily from American citizens, Latin America customers are as important as the rest of our customers. Be polite, greet the customer, thank customer for calling and solve the customer’s issue.​", "You can tell that the customer is from a specific country from Latin America just by identifying the accent. Do not offer proactively the service in Spanish, if they live at the states is because they know English. Do not try to make fun of them if they are struggling with the language. Do not offer to transfer the call to an only Spanish agent proactively, just if the customer asks you to do it.​"],
+                    ["The customer states: <br>Hello, I'm Jazmin, and I'm a translator, I'm calling on behalf of Lucy who is deaf and she wants to check the status of her documents.", "First, Ask the caller the info required to verify the owner’s account: (full name, and DOB) after that proceed with the request. Thank the customer for sharing, listen actively to what they are telling you and pay special attention to the instructions, think on the time that the process is going to take for that customer, respect him!​", "Do not make fun of the customer, do not suggest the customer to call later or to look for help elsewhere. Avoid phrases like “ I am very sorry to hear that”​"]
+                ];
+        
+        $(".blurG2").click(function(){
+            $(".blurG2").animate({
+                right: "-100%"
+            }, 500)
+        });
+        $(document).ready(function () {
+            
+//  script para que funcione la libreria de animacion
+            for(i = 1; i<9; i++){
+                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divCarros'><div class='place'><span>"+places[i-1]+"</span></div><img class='bandera' src='../../img/cristhian/carro"+i+".png'  id='"+i+"'></div>")
+            }
+            $(".bandera").click(function(){
+                $(".blurSocial").animate({
+                    right: "0%"
+                }, 500)
+                $(".txt1").html(textos[this.id-1][0])
+                $(".txt2").html(textos[this.id-1][1])
+                $(".txt3").html(textos[this.id-1][2])
+                $(".tituloAzulAl").html("<div style='display: flex;height: 29vw;margin-top: 2vw;margin-left: 3vw;transform: rotate(-90deg);flex-direction: column;'><span style='transform: rotate(0deg);text-align: left;margin-top: 3vw; margin-bottom: 1vw;'>"+places[this.id-1]+" Scenario</span><span style='margin-top: 1vw;transform: rotate(0deg);width: 28vw; font-size: 2.5vw; text-align: left;margin-left: 0vw;'>"+textoAzul[this.id-1]+"</span></div>")
+                
+            })
+            $(".bandera").hover(function(){
+                $(this).animate({
+                    width: "50%",
+                    height: "60%"
+                }, 500);
+            },
+            function(){
+                $(this).animate({
+                    width: "60%",
+                    height: "70%"
+                }, 500);
+            })
+        $(".animsition").animsition({
+        
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) { window.location.href = url; }
+        });
+        //  script para que funcione la libreria de animacion
+
+        
+
+
+        }); // fin jQuery
+    </script>
+</html>

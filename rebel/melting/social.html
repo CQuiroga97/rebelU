@@ -10,10 +10,20 @@
     <body style="overflow: hidden;">
         
         <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
-        
+            <div class="blurSocial">
+                <div class="textoBlur">
+                    <div class="txtB">
+                        <span>
+                            The civil rights movement was a struggle for social justice that took place mainly during the 1950s and 1960s for Black Americans to gain equal rights under the law in the United States.
+                        </span>
+                    </div>
+                    <div class="imgB" style="background-image: url('../../img/cristhian/imgBlur1.png');"></div>
+                </div>
+            </div>
             <div class="screen" >
                 
                 <!--Inicio de contenido-->
+                
                 <div class="letrero2" style="top: 0vw;margin: auto; z-index: 1;width: 60vw;; height: 9vw;">
                     <span class="titulo" style="margin: auto; text-align: center;">Social events that had impacted the USA</span>
                 </div>
@@ -44,7 +54,7 @@
                                 </div>
                                 <div class="txtS">
                                     <div class="tituloS">
-                                        <span>Civil Rights</span>
+                                        <span>Gay Marriage</span>
                                     </div>
                                     <div class="flechaS">
                                         <img src="../../img/cristhian/flechaSocial.png"  class="f2">
@@ -64,7 +74,7 @@
                                 </div>
                                 <div class="txtS">
                                     <div class="tituloS">
-                                        <span>Civil Rights</span>
+                                        <span>Obama Election</span>
                                     </div>
                                     <div class="flechaS">
                                         <img src="../../img/cristhian/flechaSocial.png" class="f3">
@@ -82,7 +92,8 @@
                                 </div>
                                 <div class="txtS">
                                     <div class="tituloS">
-                                        <span>Civil Rights</span>
+                                        <span>Black Lives 
+                                            Matter</span>
                                     </div>
                                     <div class="flechaS">
                                         <img src="../../img/cristhian/flechaSocial.png"  class="f4">
@@ -103,6 +114,19 @@
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/animsition.js"></script>
     <script>
+        textos = ["The civil rights movement was a struggle for social justice that took place mainly during the 1950s and 1960s for Black Americans to gain equal rights under the law in the United States.", "The June 2013 decision of the U.S. Supreme Court in United States v. Windsor striking down the law barring federal recognition of same-sex marriage gave significant impetus to the progress of lawsuits that challenged state bans on same-sex marriage in federal court.", "On November 4, 2008, Barack Obama is elected the 44th president and becomes the first African-American chief executive of the United States. In his victory speech, President Obama remarks that “change has come to America.", "Black Lives Matter (BLM) is a decentralized political and social movement protesting against incidents of police brutality and all racially motivated violence against people of color."]
+        $(".cuadro").click(function(){
+            $(".blurSocial").animate({
+                right: "0%"
+            }, 500)
+            $(".imgB").css("background-image", "url('../../img/cristhian/imgBlur"+this.id+".png')")
+            $(".txtB").html("<span>"+textos[this.id - 1]+"</span>")
+        })
+        $(".blurSocial").click(function(){
+            $(this).animate({
+                right: "-100%"
+            }, 500)
+        });
         $(".cuadro").hover(function(){
             $(".im"+this.id).animate({
                 width: "120%",

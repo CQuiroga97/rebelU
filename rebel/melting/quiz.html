@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../css_animation/animsition.css">
+        <link href="../../css/globales.css" rel="stylesheet">
+        <link href="../../css/styles.css" rel="stylesheet">
+        <link href="../../css/cristhian.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Amynta</title>
+    </head>
+    <body style="overflow: hidden;">
+        
+        <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
+            <div class="blurSocial blurG2">
+                <div class="textoBlur" style="border: 1vw solid white; height: 25vw;">
+                    <img src="../../img/cristhian/wrongQuiz.PNG" style="width: 100%; height: 100%;">
+                </div>
+            </div>
+            <div class="screen" >
+                
+                <!--Inicio de contenido-->
+                <div class="letrero2" style="top: 0vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;">
+                    <span class="titulo" style="margin: auto;">Knowledge Check</span>
+                </div>
+                <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;text-align: center;">Select the 5 countries of birth for <br>
+                    immigrants in the US. </span>
+                <div class="lineaTiempo" style=" flex-direction: row; height: 20vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;">
+                    
+                </div>
+                <!--Fin de contenido-->
+            </div>
+        </div>
+    </body>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/animsition.js"></script>
+    <script>
+        $(".imgBtn2").hover(function(){
+            $(".letrero2.cursor.imgBtn2").css("background-color", "#357EA1")
+            $(".ib2").animate({
+                top: "-1vw"
+            }, 200)
+        }, 
+        function(){
+            $(".letrero2.cursor.imgBtn2").css("background-color", "black")
+            $(".ib2").animate({
+                top: "0vw"
+            }, 200)
+        })
+        textos = ["Ask probing questions with key words so you can have an idea of the issue. Tell the customer you are having connection issues, then ask politely to repeat the information if needed.", "Listen carefully and bring your undivided attention to the customer​. Stay calm, so you can better understand the issue.", "I’m sorry, I’m having connection issues, would you please repeat that information? So as I understand you have not received the package, am I correct?"];
+        $(".imgBtn").click(function(){
+            $(".blurG").animate({
+                right: "0%"
+            }, 500)
+            $(".imgB").css("background-image", "url('../../img/cristhian/imgBlurG"+this.id+".png')")
+            $(".txtB").html("<span style='text-align: center'>"+textos[this.id - 1]+"</span>")
+        })
+        $(".blurG").click(function(){
+            $(this).animate({
+                right: "-100%"
+            }, 500)
+        });
+        $(".imgBtn2").click(function(){
+            $(".blurG2").animate({
+                right: "0%"
+            }, 500)
+        })
+        $(".blurG2").click(function(){
+            $(".blurG2").animate({
+                right: "-100%"
+            }, 500)
+        });
+       $(".letrero2").click(function(){
+           console.log(this.id)
+           $("#i"+this.id).animate({
+               opacity: 1
+           }, 500)
+       })
+        $(document).ready(function () {
+            
+//  script para que funcione la libreria de animacion
+            for(i = 1; i<11; i++){
+                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divBanderas'><div class='check' id='"+i+"'></div><img class='bandera' src='../../img/cristhian/bandera"+i+".png'  id='b"+i+"'></div>")
+            }
+            $(".bandera").click(function(){
+                if(this.id == "b3" || this.id == "b7" || this.id == "b8" || this.id == "b9" || this.id == "b10"){
+                    $(this).attr("title", "1");
+                    $(this).css("top", "-1vw");
+                    $("#"+this.id.split("b")[1]).css("opacity", "1");
+                    setTimeout(function(){
+                        if($("#3").css("opacity") == "1" && $("#7").css("opacity") == "1" && $("#8").css("opacity") == "1" && $("#9").css("opacity") == "1" && $("#10").css("opacity") == "1"){
+                           
+                            $(".textoBlur").html(' <img src="../../img/cristhian/corrQuiz.PNG" style="width: 100%; height: 100%;">')
+                            $(".blurSocial").animate({
+                                right: "0%"
+                            }, 500)
+                        }
+                    }, 500)
+                    
+                }else{
+                    $(".blurSocial").animate({
+                        right: "0%"
+                    }, 500)
+                    $(".check").css("opacity", "0");
+                    $(".bandera").css("top", "0vw");
+                }
+                
+            })
+            $(".bandera").hover(function(){
+                $(this).css("top", "-1vw");
+            },
+            function(){
+                if($(this).attr("title") != "1")
+                $(this).css("top", "0vw");
+            })
+        $(".animsition").animsition({
+        
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) { window.location.href = url; }
+        });
+        //  script para que funcione la libreria de animacion
+
+        
+
+
+        }); // fin jQuery
+    </script>
+</html>
