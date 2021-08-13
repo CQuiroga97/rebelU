@@ -158,7 +158,7 @@
 }
 .cuadriculaTexto{
     width: 50vw; height: 25vw; box-shadow: 0px 0px 15px 1px #000000; margin: auto; display: flex;
-    flex-direction: column;
+    flex-direction: column;position: relative;
 }
 .cuadriculaTexto .txt{
     margin: auto;
@@ -169,7 +169,7 @@
     width: 80vw; height: 25vw;  display: flex; flex-direction: column; margin: auto;position: relative;
 }
 .lineaTiempo .espLT{
-    width: 80vw; height: 11.5vw; display: flex; margin: auto;
+    width: 80vw; height: 11.5vw; display: flex; margin: auto;position: relative;
 }
 .infoLT{
     top: 0vw;margin: auto; z-index: 1;width: 100%; height: auto;margin-bottom: 1vw;
@@ -190,7 +190,7 @@
     width: 100%; height: 40%; display: flex;margin: auto;
 }
 .social_menu .linea .cuadro{
-    width: 49%; height: 100%; display: flex; flex-direction: column;margin: auto;cursor: pointer;
+    width: 49%; height: 100%; display: flex; flex-direction: column;margin: auto;cursor: pointer;position: relative;
 }
 .social_menu .linea .cuadro .socialBtn{
     width: 100%; height: 98%;  display: flex;
@@ -311,4 +311,17 @@
 }
 .blurSocial .doDont .tituloAzulAl span{
     transform: rotate(-90deg);
+}
+.edificios .check{
+    width: 1.5vw;height: 1.5vw;background-color: white;position: absolute;top: 2vw; right: 1vw;-webkit-box-shadow:0px 0px .5vw .1vw #000000;border-radius: .8vw .8vw;
+    box-shadow: 0px 0px .5vw .005vw #000000;background-image: url("../img/cristhian/checkQuiz.png");background-repeat: no-repeat;background-position: center;background-size: 50% 40%;opacity:0;transition: opacity .5s;
+}
+.btnContinuar{
+    height: auto;position: absolute;display: flex;background-color: white;color: black;box-shadow: 0px 0px .5vw .005vw #000000; cursor: pointer;display: none; opacity: 0;
+}
+.btnContinuar:hover{
+    background-color: black;color: white;
+}
+.btnContinuar span{
+    margin: auto;font-size: var(--letra-textos);text-align: center;padding: .7vw;
 }

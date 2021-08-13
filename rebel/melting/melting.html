@@ -24,7 +24,7 @@
                             As immigrants came from all over the world to the United States, they brought pieces of their own culture with them.
                         </span>
                     </div>
-                    <div class="letrero2" style="top: 0vw;margin: auto; z-index: 1;width: 20vw;; height: 5vw; margin-top: -5vw;">
+                    <div class="letrero2 cursor" style="top: 0vw;margin: auto; z-index: 1;width: 20vw;; height: 5vw; margin-top: -5vw;">
                         <span class="titulo" style="margin: auto; font-size: 2vw;">Check Timeline</span>
                     </div>
                 <!--Fin de contenido-->
@@ -34,7 +34,16 @@
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/animsition.js"></script>
     <script>
-       
+       $(".cursor").click(function(){
+           $(".cuadriculaTexto").animate({
+               top: "-50vw"
+           }, 500)
+           $(".cursor").animate({
+               top: "50vw"
+           }, 500, function(){
+               window.location.href = "./timeline.html";
+           })
+       })
         $(document).ready(function () {
             
 //  script para que funcione la libreria de animacion

@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="../../css_animation/animsition.css">
         <link href="../../css/styles.css" rel="stylesheet">
+        <link href="../../css/globales.css" rel="stylesheet">
         <link href="../../css/cristhian.css" rel="stylesheet">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Amynta</title>
@@ -13,11 +14,11 @@
             <div class="screen" >
                 
                 <!--Inicio de contenido-->
-                <div class="letrero2" style="top: 0vw;margin: auto; z-index: 1;width: 41vw;; height: 7vw;">
+                <div class="letrero2 l2" style="top: -50vw;margin: auto; z-index: 1;width: 41vw;; height: 7vw;">
                     <span class="titulo" style="margin: auto;">Timeline</span>
                 </div>
-                <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;">Click each date to know more.</span>
-                <div class="lineaTiempo">
+                <span class="sp" style="font-size: 1.7vw; margin-left: auto;margin-right: auto;position: relative; top: -50vw;">Click each date to know more.</span>
+                <div class="lineaTiempo" style="top: 50vw;">
                     <div class="espLT" style="left: -2vw; position: relative;">
 
                         <div style="width: 20vw; height: 11.5vw; display: flex; flex-direction: column;">
@@ -89,6 +90,12 @@
                         </div>
                         
                     </div>
+
+                </div>
+                <div class="btnContinuar" style="width: 11vw; bottom: 0vw; right: 4vw;">
+                    <span>
+                        I want to know more
+                    </span>
                 </div>
                 <!--Fin de contenido-->
             </div>
@@ -97,14 +104,48 @@
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/animsition.js"></script>
     <script>
+        var count = 0;
+        $(".btnContinuar").click(function(){
+            $(".l2").animate({
+                top: "-50vw"
+            }, 500)
+            $(".sp").animate({
+                top: "-50vw"
+            }, 500)
+            $(".lineaTiempo").animate({
+                top: "50vw"
+            }, 500)
+            $(".screen").fadeOut(1000, function(){
+                window.location.href = "./grammar.html";
+            })
+        })
        $(".letrero2").click(function(){
-           console.log(this.id)
-           $("#i"+this.id).animate({
-               opacity: 1
-           }, 500)
+           if($("#i"+this.id).css("opacity") == 0){
+               count++;
+               console.log(count);
+                $("#i"+this.id).animate({
+                    opacity: 1
+                }, 500)
+                if(count == 5){
+                    $(".btnContinuar").css("display", "flex");
+                    $(".btnContinuar").animate({
+                        opacity: 1,
+                        bottom: "5vw"
+                    }, 500)
+                }
+           }
+           
        })
         $(document).ready(function () {
-            
+            $(".letrero2").animate({
+                top: "0vw"
+            }, 500)
+            $(".sp").animate({
+                top: "0vw"
+            }, 500)
+            $(".lineaTiempo").animate({
+                top: "0vw"
+            }, 500)
 //  script para que funcione la libreria de animacion
 
         $(".animsition").animsition({

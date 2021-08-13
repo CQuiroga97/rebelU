@@ -43,12 +43,12 @@ With the keywords that you were able to identify, you must ask probing questions
             <div class="screen" >
                 
                 <!--Inicio de contenido-->
-                <div class="letrero2" style="top: 0vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;">
+                <div class="letrero2 l1" style="top: -50vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;">
                     <span class="titulo" style="margin: auto;">Accent guidelines</span>
                 </div>
-                <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;text-align: center;">When we cannot understand a customer due <br>
+                <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;text-align: center;position: relative; top: -50vw;" class="sp">When we cannot understand a customer due <br>
                     to their accent. </span>
-                <div class="lineaTiempo" style=" flex-direction: row; height: 15vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;left: 5vw;">
+                <div class="lineaTiempo" style=" flex-direction: row; height: 15vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;left: 5vw; top: 50vw;">
                     <div class="opt">
                         
                         <img src="../../img/cristhian/imgGuide2.png" class="imgBtn" id="1" alt="" style="width: 14vw;">
@@ -67,13 +67,18 @@ With the keywords that you were able to identify, you must ask probing questions
                         <img src="../../img/cristhian/imgGuide1.png" class="imgBtn2 ib2" alt="" style="width: 5vw;">
                     </div>
                 </div>
-                <div class="lineaTiempo" style=" flex-direction: row; height: 5vw;width: 65vw;margin-top: 0vw; margin-bottom: auto;left: 5vw;">
+                <div class="lineaTiempo" style=" flex-direction: row; height: 5vw;width: 65vw;margin-top: 0vw; margin-bottom: auto;left: 5vw; top: 50vw;">
                     <div class="letrero2 cursor imgBtn" id="3"  style="width: 20vw; height: 3vw;margin: auto;margin-left: 6vw;">
                         <span class="subtitulo" style="margin: auto;font-weight: bold;">Suggested Verbiage</span>
                     </div>
                     <div class="letrero2 cursor imgBtn2" style="width: 10vw; height: 3vw;margin: auto;margin-left: -1vw;">
                         <span class="subtitulo" style="margin: auto;font-weight: bold;">Do & Don't</span>
                     </div>
+                </div>
+                <div class="btnContinuar" style="width: 11vw; bottom: -50vw; right: 10vw; display: flex; opacity: 1;">
+                    <span>
+                        Continue
+                    </span>
                 </div>
                 <!--Fin de contenido-->
             </div>
@@ -82,6 +87,37 @@ With the keywords that you were able to identify, you must ask probing questions
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/animsition.js"></script>
     <script>
+        $(".sp").animate({
+            top: "0vw"
+        }, 500)
+        $(".l1").animate({
+            top: "0vw"
+        }, 500)
+        $(".lineaTiempo").animate({
+            top: "0vw"
+        }, 500)
+        $(".btnContinuar").animate({
+            bottom: "13.5vw"
+        }, 500)
+        $(".btnContinuar").click(function(){
+            $(".sp").animate({
+                top: "-50vw"
+            }, 500)
+            $(".l1").animate({
+                top: "-50vw"
+            }, 500)
+            $(".lineaTiempo").animate({
+                top: "50vw"
+            }, 500)
+            $(".btnContinuar").animate({
+                bottom: "-50vw"
+            }, 500)
+            $(".screen").animate({
+                opacity: 0
+            }, 500, function(){
+                window.location.href = "./quiz.html";
+            })
+        })
         $(".imgBtn2").hover(function(){
             $(".letrero2.cursor.imgBtn2").css("background-color", "#357EA1")
             $(".ib2").animate({

@@ -26,30 +26,35 @@
                             <div class="tituloMenuRebel">
                                 <span>Overview of custumer service</span>
                             </div>
+                            <div class="check" id="c1"></div>
                         </div>
                         <div class="edificios" style="top: 4vw; left: 21.5vw;">
                             <img src="../img/cristhian/menuRebelBt2.png" class="imgEdificio" id="1">
                             <div class="tituloMenuRebel">
                                 <span>DISC Theory</span>
                             </div>
+                            <div class="check" id="c2"></div>
                         </div>
                         <div class="edificios" style="top: 15vw; left: 6.5vw;">
                             <img src="../img/cristhian/menuRebelBt3.png" class="imgEdificio" id="2">
                             <div class="tituloMenuRebel">
                                 <span>Diversity and Inclusion</span>
                             </div>
+                            <div class="check" id="c3"></div>
                         </div>
                         <div class="edificios" style="top: 14.4vw; left: 23.5vw;z-index: 5;">
                             <img src="../img/cristhian/menuRebelBt4.png" class="imgEdificio" id="3">
                             <div class="tituloMenuRebel">
                                 <span>Melting Pot</span>
                             </div>
+                            <div class="check" id="c4"></div>
                         </div>
                         <div class="edificios" style="top: 7vw; left: 34.4vw;">
                             <img src="../img/cristhian/menuRebelBt5.png" class="imgEdificio" id="4">
                             <div class="tituloMenuRebel">
                                 <span>What TP does?</span>
                             </div>
+                            <div class="check" id="c5"></div>
                         </div>
                     </div>
                 <!--Fin de contenido-->
@@ -64,25 +69,36 @@
            $(".screen").fadeOut(500, function(){
                switch(id){
                    case "0":
-                        window.location.href = "./"
+                        window.location.href = "./overview/overview_1.html";
                    break;
                    case "1":
-
+                        window.location.href = "./disc/disc_1.html";
                    break;
                    case "2":
-
+                        window.location.href = "./inclusion/diversity.html";
                    break;
                    case "3":
-
+                        window.location.href = "./melting/melting.html";
                    break;
                    case "4":
-
+                        window.location.href = "./tp_does/does_1.html";
                    break;
                }
            })
        })
         $(document).ready(function () {
-            
+            if(localStorage.getItem('overview') != null)
+                $("#c1").css("opacity", 1)
+            if(localStorage.getItem('disc') != null)
+                $("#c2").css("opacity", 1)
+            if(localStorage.getItem('inclusion') != null)
+                $("#c3").css("opacity", 1)
+            if(localStorage.getItem('melting') != null)
+                $("#c4").css("opacity", 1)
+            if(localStorage.getItem('tpDoes') != null)
+                $("#c5").css("opacity", 1)
+            if(localStorage.getItem('disc') != null && localStorage.getItem('inclusion') != null && localStorage.getItem('melting') != null && localStorage.getItem('overview') != null && localStorage.getItem('tpDoes') != null)
+                    localStorage.setItem('rebel', '1')
 //  script para que funcione la libreria de animacion
 
         $(".animsition").animsition({

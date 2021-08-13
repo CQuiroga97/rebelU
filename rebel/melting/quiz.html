@@ -18,13 +18,18 @@
             <div class="screen" >
                 
                 <!--Inicio de contenido-->
-                <div class="letrero2" style="top: 0vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;">
+                <div class="letrero2" style="top: -50vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;">
                     <span class="titulo" style="margin: auto;">Knowledge Check</span>
                 </div>
-                <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;text-align: center;">Select the 5 countries of birth for <br>
+                <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;text-align: center;position: relative;top: -50vw;" class="sp">Select the 5 countries of birth for <br>
                     immigrants in the US. </span>
-                <div class="lineaTiempo" style=" flex-direction: row; height: 20vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;">
+                <div class="lineaTiempo" style=" flex-direction: row; height: 20vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;top: 50vw;">
                     
+                </div>
+                <div class="btnContinuar" style="width: 11vw; bottom: 0vw; right: 44vw;">
+                    <span>
+                        Continue
+                    </span>
                 </div>
                 <!--Fin de contenido-->
             </div>
@@ -33,6 +38,33 @@
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/animsition.js"></script>
     <script>
+        $(".btnContinuar").click(function(){
+            $(".sp").animate({
+                top: "-50vw"
+            }, 500)
+            $(".letrero2").animate({
+                top: "-50vw"
+            }, 500)
+            $(".lineaTiempo").animate({
+                top: "50vw"
+            }, 500)
+            $(".btnContinuar").animate({
+                bottom: "-50vw"
+            }, 500)
+            $(".screen").fadeOut(500, function(){
+                localStorage.setItem('melting', '1')
+                window.location.href = "../menu.html"
+            })
+        })
+        $(".sp").animate({
+            top: "0vw"
+        }, 500)
+        $(".letrero2").animate({
+            top: "0vw"
+        }, 500)
+        $(".lineaTiempo").animate({
+            top: "0vw"
+        }, 500)
         $(".imgBtn2").hover(function(){
             $(".letrero2.cursor.imgBtn2").css("background-color", "#357EA1")
             $(".ib2").animate({
@@ -81,19 +113,24 @@
                 $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divBanderas'><div class='check' id='"+i+"'></div><img class='bandera' src='../../img/cristhian/bandera"+i+".png'  id='b"+i+"'></div>")
             }
             $(".bandera").click(function(){
-                if(this.id == "b3" || this.id == "b7" || this.id == "b8" || this.id == "b9" || this.id == "b10"){
+                if(this.id == "b3" || this.id == "b7" || this.id == "b8" || this.id == "b9" || this.id == "b4"){
                     $(this).attr("title", "1");
                     $(this).css("top", "-1vw");
                     $("#"+this.id.split("b")[1]).css("opacity", "1");
                     setTimeout(function(){
-                        if($("#3").css("opacity") == "1" && $("#7").css("opacity") == "1" && $("#8").css("opacity") == "1" && $("#9").css("opacity") == "1" && $("#10").css("opacity") == "1"){
-                           
+                        if($("#3").css("opacity") == "1" && $("#7").css("opacity") == "1" && $("#8").css("opacity") == "1" && $("#9").css("opacity") == "1" && $("#4").css("opacity") == "1"){
+                           console.log(1)
                             $(".textoBlur").html(' <img src="../../img/cristhian/corrQuiz.PNG" style="width: 100%; height: 100%;">')
                             $(".blurSocial").animate({
                                 right: "0%"
                             }, 500)
+                            $(".btnContinuar").css("display", "flex");
+                            $(".btnContinuar").animate({
+                                opacity: 1,
+                                bottom: "5vw"
+                            }, 500)
                         }
-                    }, 500)
+                    }, 600)
                     
                 }else{
                     $(".blurSocial").animate({
