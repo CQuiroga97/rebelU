@@ -24,11 +24,13 @@
                     </div>
                     <div class="divBtnInicio">
                         <div class="botonesInicio">
+                            <img src="./img/cristhian/rutaInicio1.PNG">
                             <span>
                                 LATAM
                             </span>
                         </div>
                         <div class="botonesInicio">
+                            <img src="./img/cristhian/rutaInicio2.PNG">
                             <span>
                                 North America
                             </span>
@@ -51,6 +53,26 @@
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/animsition.js"></script>
     <script>
+        $(".botonesInicio").click(function(){
+            $(".letrero").animate({
+                top: "-70vw"
+            }, 500);
+            $(".carretera").animate({
+                top: "70vw"
+            }, 500);
+            $(".persona").animate({
+                top: "70vw"
+            }, 500);
+            $(".nubes").animate({
+                top: "70vw"
+            }, 500);
+            $(".ciudad").animate({
+                top: "70vw"
+            }, 500, function(){
+                window.location.href="./menu.html";
+            });
+
+        })
         $(".carro").animate({
             width: "15vw",
             marginTop: "-5vw"
@@ -78,27 +100,27 @@
         $(".carretera").animate({
             top: "25vw",
         }, 1000,function(){
-            $(".divBtnInicio").animate({
+            $(".divBtnInicio").delay(500).animate({
                 bottom: "-4vw",
             }, 1000)
-            $(".ciudad").animate({
+            $(".ciudad").delay(500).animate({
                 left: "-28vw",
                 width: "130vw",
                 top: "13vw"
             }, 1000)
-            $(".carretera").animate({
+            $(".carretera").delay(500).animate({
             top: "24vw"
             }, 1000)
-            $(".nubes").animate({
+            $(".nubes").delay(500).animate({
                 left: "10vw",
                 width: "80vw",
                 top: "4vw"
             }, 1000)
-            $(".persona").animate({
+            $(".persona").delay(500).animate({
                 width: "13vw",
                 left: "20vw"
             }, 1000)
-            $(".carro").animate({
+            $(".carro").delay(500).animate({
                 width: "25vw",
                 marginTop: "-10vw"
             }, 1000)

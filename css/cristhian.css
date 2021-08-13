@@ -2,7 +2,7 @@
     width: 71vw;
     position: absolute;
     left: 15vw;
-    top: 5vw;
+    top: 60vw;
     z-index: 0;
 }
 .edificios{
@@ -26,7 +26,7 @@
     width: 13vw;
     height: 20vw;
     position: absolute;
-    right: 14vw;
+    right: -14vw;
     bottom: 8vw;
     background-image: url("../img/cristhian/telefono.png");
     background-position: center;
@@ -119,19 +119,29 @@
     margin-top: -1vw;
 }
 .divBtnInicio{
-    width: 100%; height: 5vw; background-color: white; position: absolute;z-index: 0; bottom: 0vw; display: flex;
+    width: 100%; height: 11vw; background-color: white; position: absolute;z-index: 0; bottom: 0vw; display: flex;
 }
 .divBtnInicio .botonesInicio{
-    width: 15vw; height: 3vw; margin: auto;
+    width: 15vw; height: 10vw; margin: auto;
     display: flex;
     -webkit-box-shadow: 0px 0px 15px 5px #000000; 
     box-shadow: 0px 0px 15px 5px #000000;
     cursor: pointer;
+    flex-direction: column;
+    position: relative;
+    transition: top .5s;
+    top: 0vw;
+}
+.divBtnInicio .botonesInicio img{
+    margin: auto; width: 10vw;
 }
 .divBtnInicio .botonesInicio span{
     font-size: 2vw;
     font-weight: bold;
     margin: auto;
+}
+.divBtnInicio .botonesInicio:hover{
+    top: 6.5vw;
 }
 .cuadriculaTexto{
     width: 50vw; height: 25vw; box-shadow: 0px 0px 15px 1px #000000; margin: auto; display: flex;
@@ -158,4 +168,47 @@
 .barra{
     width: 0%; height: 1vw; display: flex; margin: auto; margin-left: 0vw; background-color: #357EA1;height: 2.5vw;
     opacity: 0;
+}
+/*Social*/
+.social_menu{
+    width: 60vw;height: 35vw; margin: auto; display: flex; flex-direction: column;
+}
+.social_menu .linea{
+    width: 100%; height: 40%; display: flex;margin: auto;
+}
+.social_menu .linea .cuadro{
+    width: 49%; height: 100%; display: flex; flex-direction: column;margin: auto;cursor: pointer;
+}
+.social_menu .linea .cuadro .socialBtn{
+    width: 100%; height: 98%;  display: flex;
+}
+.social_menu .linea .cuadro .barraS{
+    background-color: rgb(20, 105, 233); width: 0%; height: 2%; flex-direction: column;
+}
+.social_menu .linea .cuadro .socialBtn .imgS{
+    width: 50%; height: 100%;overflow: hidden;
+}
+.social_menu .linea .cuadro .socialBtn .imgS img{
+    margin: auto;
+    width: 110%;
+    position: relative;
+}
+.social_menu .linea .cuadro .socialBtn .txtS{
+    width: 50%; height: 100%; display: flex; flex-direction: column;
+}
+.social_menu .linea .cuadro .socialBtn .txtS .tituloS{
+     width: 100%; height: 50%; display: flex;
+}
+.social_menu .linea .cuadro .socialBtn .txtS .tituloS span{
+    font-size: var(--letra-textos);
+    margin: auto;margin-left: 1vw;margin-top: 1vw;
+}
+.social_menu .linea .cuadro .socialBtn .txtS .flechaS{
+    width: 100%; height: 50%;display: flex;
+}
+.social_menu .linea .cuadro .socialBtn .txtS .flechaS img{
+    width: 15%;
+    height: 30%;
+    margin-top: 30%;
+    margin-left: 55%;
 }

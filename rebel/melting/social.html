@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../css_animation/animsition.css">
+        <link href="../../css/globales.css" rel="stylesheet">
+        <link href="../../css/styles.css" rel="stylesheet">
+        <link href="../../css/cristhian.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Amynta</title>
+    </head>
+    <body style="overflow: hidden;">
+        
+        <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
+        
+            <div class="screen" >
+                
+                <!--Inicio de contenido-->
+                <div class="letrero2" style="top: 0vw;margin: auto; z-index: 1;width: 60vw;; height: 9vw;">
+                    <span class="titulo" style="margin: auto; text-align: center;">Social events that had impacted the USA</span>
+                </div>
+                <div class="social_menu">
+                    <div class="linea">
+                        <div class="cuadro" id="1">
+                            <div class="socialBtn">
+                                <div class="imgS">
+                                    <img src="../../img/cristhian/imgSocial1.png" class="im1">
+                                </div>
+                                <div class="txtS">
+                                    <div class="tituloS">
+                                        <span>Civil Rights</span>
+                                    </div>
+                                    <div class="flechaS">
+                                        <img src="../../img/cristhian/flechaSocial.png"  class="f1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="barraS b1">
+                            
+                            </div>
+                        </div>
+                        <div class="cuadro" id="2">
+                            <div class="socialBtn">
+                                <div class="imgS">
+                                    <img src="../../img/cristhian/imgSocial2.png" class="im2">
+                                </div>
+                                <div class="txtS">
+                                    <div class="tituloS">
+                                        <span>Civil Rights</span>
+                                    </div>
+                                    <div class="flechaS">
+                                        <img src="../../img/cristhian/flechaSocial.png"  class="f2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="barraS b2">
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="linea">
+                        <div class="cuadro" id="3">
+                            <div class="socialBtn">
+                                <div class="imgS">
+                                    <img src="../../img/cristhian/imgSocial3.png" class="im3">
+                                </div>
+                                <div class="txtS">
+                                    <div class="tituloS">
+                                        <span>Civil Rights</span>
+                                    </div>
+                                    <div class="flechaS">
+                                        <img src="../../img/cristhian/flechaSocial.png" class="f3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="barraS b3">
+                                
+                            </div>
+                        </div>
+                        <div class="cuadro" id="4">
+                            <div class="socialBtn">
+                                <div class="imgS">
+                                    <img src="../../img/cristhian/imgSocial4.png" class="im4">
+                                </div>
+                                <div class="txtS">
+                                    <div class="tituloS">
+                                        <span>Civil Rights</span>
+                                    </div>
+                                    <div class="flechaS">
+                                        <img src="../../img/cristhian/flechaSocial.png"  class="f4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="barraS b4">
+                            
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--Fin de contenido-->
+            </div>
+        </div>
+    </body>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/animsition.js"></script>
+    <script>
+        $(".cuadro").hover(function(){
+            $(".im"+this.id).animate({
+                width: "120%",
+                left: "-4%",
+                top: "-4%"
+            }, 500)
+            $(".b"+this.id).animate({
+                width: "100%",
+            }, 500)
+            $(".f"+this.id).animate({
+                marginLeft: "65%",
+            }, 500)
+        }, function(){
+            $(".im"+this.id).animate({
+                width: "110%",
+                left: "0%",
+                top: "0%"
+            }, 500)
+            $(".b"+this.id).animate({
+                width: "0%",
+            }, 500)
+            $(".f"+this.id).animate({
+                marginLeft: "55%",
+            }, 500)
+        })
+       $(".letrero2").click(function(){
+           console.log(this.id)
+           $("#i"+this.id).animate({
+               opacity: 1
+           }, 500)
+       })
+        $(document).ready(function () {
+            
+//  script para que funcione la libreria de animacion
+
+        $(".animsition").animsition({
+        
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) { window.location.href = url; }
+        });
+        //  script para que funcione la libreria de animacion
+
+        
+
+
+        }); // fin jQuery
+    </script>
+</html>
