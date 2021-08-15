@@ -230,7 +230,7 @@
     position: absolute; width: 100%; height: 100%; background-color: rgba(104, 104, 104, 0.487); z-index: 3;display: flex;right: -100%;flex-direction: column;cursor: pointer;
 }
 .blurSocial .textoBlur{
-    margin: auto;width: 65vw;height: 30vw;background-color: white;border: 1vw solid black;display: flex;
+    margin: auto;width: 65vw;height: 30vw;background-color: white;border: 1vw solid black;display: flex;position: relative;
 }
 .blurSocial .textoBlur .txtB, .blurSocial .textoBlur .imgB{
     width: 50%; height: 100%;background-position: center;background-size: 100% 104%;display: flex;
@@ -316,12 +316,96 @@
     width: 1.5vw;height: 1.5vw;background-color: white;position: absolute;top: 2vw; right: 1vw;-webkit-box-shadow:0px 0px .5vw .1vw #000000;border-radius: .8vw .8vw;
     box-shadow: 0px 0px .5vw .005vw #000000;background-image: url("../img/cristhian/checkQuiz.png");background-repeat: no-repeat;background-position: center;background-size: 50% 40%;opacity:0;transition: opacity .5s;
 }
-.btnContinuar{
+.btnContinuar, .btnContinuar2{
     height: auto;position: absolute;display: flex;background-color: white;color: black;box-shadow: 0px 0px .5vw .005vw #000000; cursor: pointer;display: none; opacity: 0;
+}
+.btnContinuar2{
+    background-color: black;color: white;
 }
 .btnContinuar:hover{
     background-color: black;color: white;
 }
-.btnContinuar span{
+.btnContinuar2:hover{
+    background-color: white;color: black;
+}
+.btnContinuar span, .btnContinuar2 span{
     margin: auto;font-size: var(--letra-textos);text-align: center;padding: .7vw;
+}
+.lineaTiempo .divCup{
+    cursor:pointer;display:flex;width: 33.33%;height: 100%;background-image: url("../img/cristhian/tuboCup.png");background-position: center;background-repeat: no-repeat;background-size: 35% 83%;
+}
+.lineaTiempo .divCup img{
+    width: 6vw;margin: auto;bottom: 4vw;position: relative;transition: bottom .5s;
+}
+.lineaTiempo .divCup:hover .signCup{
+    bottom: 8vw;
+}
+.lineaTiempo .protip{
+    width: 50%;
+    height: 100%;display: flex;flex-direction: column;
+}
+.lineaTiempo .protip img{
+    width: 80%; margin: auto;
+}
+.txtB .divPreguntas{
+    width: 70%; height: 20vw;margin: auto;display: flex;flex-wrap: wrap;
+}
+.txtB .divPreguntas .preguntas{
+    width: 50%;height: 33.33%;margin: auto;display: flex;
+}
+.txtB .divPreguntas .preguntas label input{
+    opacity: 0;width: 0;height: 0;
+}
+.txtB .divPreguntas .preguntas label{
+    margin: auto;margin-right: 0vw;
+}
+.txtB .divPreguntas .preguntas span{
+   margin: auto;color: white;width: 20vw;
+}
+.checkmark{
+  top: 0;
+  left: 0;
+  height: 2vw;
+  width: 2vw;
+  background-color: #eee;border-radius: 2vw;
+}
+.txtB .divPreguntas .preguntas label input:checked ~ .checkmark {
+    background-image: url("../img/cristhian/puntoAzul.png"); background-size: 60% 60%; background-position: center; background-repeat: no-repeat;
+  }
+  .rep{
+    width: 7vw;height: 7vw;position: absolute;background-color: white;border: .5vw solid black;top: -.5vw;left: 34.5vw;background-image: url("../img/cristhian/playBtn.png"); background-position: center;background-repeat: no-repeat;background-size: 50% 50%;
+  }
+  .close {
+    position: absolute;
+    cursor: pointer;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 2vw;
+    background-color: white;
+    z-index: 5;
+    display: flex;
+    right: -2vw;
+    top: -2vw;
+}
+.close span{
+    margin: auto;
+    font-size: 3vw;font-family: Arial, Helvetica, sans-serif;font-weight: bold;
+}
+.close:hover{
+    background-color: #357EA1;color: white;
+}
+.logos{
+    width: 12vw;position: absolute;right: 1vw;top: 1vw;
+}
+.botonesMenus{
+    width: 6vw;height: 8vw;;position: absolute;bottom: 2vw;left: -2vw;display: flex; flex-direction: column;z-index: 5;
+}
+.botonesMenus .sombra, .botonesMenus .sombra .botones{
+    width: 6vw;height: 3vw;background-color: black;margin: auto;border-radius: 0vw 6vw 6vw 0vw;position: relative;
+}
+.botonesMenus .sombra .botones{
+    background-color: white;border: .1vw solid black;top: -.2vw;cursor: pointer;transition: left .5s;left: 0vw;
+}
+.botonesMenus .sombra .botones:hover{
+    left: -1vw;
 }

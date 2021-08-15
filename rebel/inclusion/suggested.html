@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../css_animation/animsition.css">
+        <link href="../../css/globales.css" rel="stylesheet">
+        <link href="../../css/styles.css" rel="stylesheet">
+        <link href="../../css/cristhian.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RedBubble</title>
+    </head>
+    <body style="overflow: hidden;">
+        
+        <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
+            <div class="blurSocial">
+                <div class="textoBlur">
+                    <div class="close">
+                        <span>X</span>
+                    </div>
+                    <div class="txtB">
+                        <span>
+                            The civil rights movement was a struggle for social justice that took place mainly during the 1950s and 1960s for Black Americans to gain equal rights under the law in the United States.
+                        </span>
+                    </div>
+                    <div class="imgB" style="background-image: url('../../img/cristhian/imgBlur1.png');"></div>
+                </div>
+            </div>
+           
+            <div class="screen" >
+                    <img src="../../img/inicio/simbolos_generales/uber_tp.png" class="logos">
+                
+                <!--Inicio de contenido-->
+                <div class="letrero2" style="top: 0vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;top:-50vw;">
+                    <span class="titulo" style="margin: auto;">Suggested verbiages</span>
+                </div>
+                <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;text-align: center;top:-50vw;position: relative;" class="sp">Click each cup to reveal the hidden <br>
+                    verbiage. </span>
+                <div class="lineaTiempo" style="top:50vw; flex-direction: row; height: 30vw;width: 42vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;">
+                    <div class="divCup" id="1">
+                        <img src="../../img/cristhian/signCup.png" class="signCup">
+                    </div>
+                    <div class="divCup" id="2">
+                        <img src="../../img/cristhian/signCup.png" class="signCup">
+                    </div>
+                    <div class="divCup" id="3">
+                        <img src="../../img/cristhian/signCup.png" class="signCup">
+                    </div>
+                </div>
+                <div class="btnContinuar" style="width: 11vw; bottom: 0vw; right: 10vw;">
+                    <span>
+                        Continue
+                    </span>
+                </div>
+                <!--Fin de contenido-->
+            </div>
+        </div>
+    </body>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/animsition.js"></script>
+    <script>
+        textos = ["Dear Customer, I do understand that this has been an inconvenience for you and I am working to resolve [customer’s issue]. I will ask again that you please stop using this type of language.", "Dear Customer, I understand that you are upset and I want to make this right for you, however, when you use this type of language, it’s difficult for me to clearly understand your issue and move forward in getting it resolved.", "Mr. Smith, I would like to continue assisting you at this time but I am going to transfer you to my Lead/Manager, who will assist you in getting this resolved."]
+        clicks = ["", "", ""]
+        $(".divCup").click(function(){
+            clicks[this.id - 1] = "1"; 
+            $(".blurSocial").animate({
+                right: "0%"
+            }, 500)
+            $(".imgB").css("background-image", "url('../../img/cristhian/imgSug"+this.id+".png')")
+            $(".txtB").html("<span>"+textos[this.id - 1]+"</span>")
+            if(clicks[0] != "" && clicks[1] != "" && clicks[2] != "" && clicks[3] != ""){
+                $(".btnContinuar").css("display", "flex");
+                    $(".btnContinuar").animate({
+                        opacity: 1,
+                        bottom: "5vw"
+                    }, 500)
+            }
+        })
+        $(".close").click(function(){
+            $(".blurSocial").animate({
+                right: "-100%"
+            }, 500)
+        });
+        $(".divCup").click(function(){
+            console.log($(this).find(".signCup").css("bottom"));
+            $(this).find(".signCup").css("bottom", "8vw")
+        })
+        $(".blurG2").click(function(){
+            $(".blurG2").animate({
+                right: "-100%"
+            }, 500)
+        });
+        $(".btnContinuar").click(function(){
+            $(".letrero2").animate({
+                top: "-50vw"
+            }, 500)
+            $(".sp").animate({
+                top: "-50vw"
+            }, 500)
+            $(".lineaTiempo").animate({
+                top: "50vw"
+            }, 500, function(){
+                window.location.href = "./code.html"
+            })
+        })
+        $(document).ready(function () {
+            $(".letrero2").animate({
+                top: "0vw"
+            }, 500)
+            $(".sp").animate({
+                top: "0vw"
+            }, 500)
+            $(".lineaTiempo").animate({
+                top: "0vw"
+            }, 500)
+//  script para que funcione la libreria de animacion
+            
+            $(".bandera").click(function(){
+                $(".blurSocial").animate({
+                    right: "0%"
+                }, 500)
+                clicks[this.id-1] = "1";
+                flag = 0;
+                for(i = 0; i<clicks.length; i++){
+                    if(clicks[i] == "1")flag++;
+                }
+                if(flag == 8){
+                    $(".btnContinuar").css("display", "flex");
+                    $(".btnContinuar").animate({
+                        opacity: 1,
+                        bottom: "5vw"
+                    }, 500)
+                }
+                $(".txt1").html(textos[this.id-1][0])
+                $(".txt2").html(textos[this.id-1][1])
+                $(".txt3").html(textos[this.id-1][2])
+                $(".tituloAzulAl").html("<div style='display: flex;height: 29vw;margin-top: 2vw;margin-left: 3vw;transform: rotate(-90deg);flex-direction: column;'><span style='transform: rotate(0deg);text-align: left;margin-top: 3vw; margin-bottom: 1vw;'>"+places[this.id-1]+" Scenario</span><span style='margin-top: 1vw;transform: rotate(0deg);width: 28vw; font-size: 2.5vw; text-align: left;margin-left: 0vw;'>"+textoAzul[this.id-1]+"</span></div>")
+                
+            })
+            $(".bandera").hover(function(){
+                $(this).animate({
+                    width: "50%",
+                    height: "60%"
+                }, 500);
+            },
+            function(){
+                $(this).animate({
+                    width: "60%",
+                    height: "70%"
+                }, 500);
+            })
+        $(".animsition").animsition({
+        
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) { window.location.href = url; }
+        });
+        //  script para que funcione la libreria de animacion
+
+        
+
+
+        }); // fin jQuery
+    </script>
+</html>

@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../css_animation/animsition.css">
+        <link href="../../css/globales.css" rel="stylesheet">
+        <link href="../../css/styles.css" rel="stylesheet">
+        <link href="../../css/cristhian.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RedBubble</title>
+    </head>
+    <body style="overflow: hidden;">
+        
+        <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
+            <div class="blurSocial blurG2">
+                <div class="textoBlur" style="border: 0vw ; height: 30vw;background-color: black;">
+                    <div class="close"><span>X</span></div>
+                    <div style="width: 49.6%; background-color: black; height: 100%; margin-left: 0vw;" class="doDont">
+                    
+                        
+                        <span class="txt1" style="font-size: 1.5vw;text-align: left;">
+
+                        </span>
+                        
+                    </div>
+                    <div style="width: 49.6%; height: 100%;display: flex;flex-direction: column;">
+                        <div style="height: 49.2%;margin-top: 0vw; background-color: black; width: 100%;" class="doDont">
+                            <div class="tituloAzul">
+                                <span>Do</span>
+                            </div>
+                            <span class="txt2" style="font-size: 1.5vw;text-align: left;">
+
+                            </span>
+                        </div>
+                        <div style="height: 49.2%;margin-bottom: 0vw; background-color: black; width: 100%;" class="doDont">
+                            <div class="tituloAzul">
+                                <span>Don´t</span>
+                            </div>
+                            <span class="txt3" style="font-size: 1.5vw;text-align: left;">
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen" >
+                    <img src="../../img/inicio/simbolos_generales/uber_tp.png" class="logos">
+                
+                <!--Inicio de contenido-->
+                <div class="letrero2" style="top: 0vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 8vw;top: -50vw;">
+                    <span class="titulo" style="margin: auto;">Code Etiquette</span>
+                </div>
+                <div class="lineaTiempo" style="top:50vw; flex-direction: row; height: 10vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;background-image: url('../../img/cristhian/parqueo.png');background-size: 104% 100%;background-position: 2vw;">
+                    
+                </div>
+                <div class="btnContinuar" style="width: 11vw; bottom: 0vw; right: 44vw;">
+                    <span>
+                        Continue
+                    </span>
+                </div>
+                <!--Fin de contenido-->
+            </div>
+        </div>
+    </body>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/animsition.js"></script>
+    <script>
+        clicks = ["", "", "", "", "", "", "", ""]
+        places = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"]
+        textos = [
+                    ["The customer states that they received the email stating that the item was delivered, but they do not have anything in their front door. ", "Acknowledge the customer issue, put yourself in the customer’s shoes, ask questions regarding if they checked around the house, if they say yes just follow the KB procedure and apologize about the inconvenience. ", "Avoid telling the customer that is our fault, also do not ask what kind of neighborhood the customer lives or if they think that this was stolen."],
+                    ["The client (Rider) calls to report that he forgot his wallet in the driver's car and is very angry that he cannot contact him directly.", "Understand the customer's frustration, show empathy, show interest in his case, ask him all the necessary questions to help him (date and time of the trip, name of the driver and description of the lost object) and explain that his case will be escalated.", "Do not say that the object is already lost or that it was his lack of care, do not use a rude tone of voice or say that the lost object will take a day to receive it at home."],    
+                    ["The client calls to report that he ordered his food more than 2 hours ago and has not received it yet, and he does not agree that the delivery takes so long, because the app showed him that he would receive it in 30 minutes", "Be empathetic and let the customer know in a polite way that you are the one who will solve the problem, follow KB procedure  if this is requested by the customer. ", "Do not state something regarding the customer’s location, saying that this may be the problem. <br>Do not accuse the carrier’s driver or something directly with a person. "],
+                    ["The driver is calling to report that another car crashed him while on a trip with the client, and the driver is injured.", "The driver is calling to report that another car crashed him while on a trip with the client, and the driver is injured.", "Do not tell him to go to the hospital and do not ask questions that may worry him more about the situation, and do not tell him that he must solve that incident by himself."],
+                ];
+        
+        $(".close").click(function(){
+            $(".blurG2").animate({
+                right: "-100%"
+            }, 500)
+        });
+        $(".btnContinuar").click(function(){
+            $(this).animate({
+                top: "50vw"
+            }, 500)
+            $(".letrero2").animate({
+                top: "-50vw"
+            }, 500)
+            $(".sp").animate({
+                top: "-50vw"
+            }, 500)
+            $(".lineaTiempo").animate({
+                top: "50vw"
+            }, 500, function(){
+                window.location.href = "./proTips.html"
+            })
+        })
+        $(document).ready(function () {
+            $(".letrero2").animate({
+                top: "0vw"
+            }, 500)
+            $(".lineaTiempo").animate({
+                top: "0vw"
+            }, 500)
+            
+//  script para que funcione la libreria de animacion
+            for(i = 1; i<5; i++){
+                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divCarros' style='height: 100%''><img class='bandera' src='../../img/cristhian/carroNegro.png' style='margin:auto;width:100%; height: 110%'  id='"+i+"'></div>")
+            }
+            $(".bandera").click(function(){
+                $(".blurSocial").animate({
+                    right: "0%"
+                }, 500)
+                clicks[this.id-1] = "1";
+                flag = 0;
+                for(i = 0; i<clicks.length; i++){
+                    if(clicks[i] == "1")flag++;
+                }
+                if(flag == 4){
+                    $(".btnContinuar").css("display", "flex");
+                    $(".btnContinuar").animate({
+                        opacity: 1,
+                        bottom: "5vw"
+                    }, 500)
+                }
+                $(".txt1").html("<span style='font-size: 3vw'>"+places[this.id-1]+" Scenario</span><br>"+textos[this.id-1][0])
+                $(".txt2").html(textos[this.id-1][1])
+                $(".txt3").html(textos[this.id-1][2])
+                
+            })
+            $(".bandera").hover(function(){
+                $(this).animate({
+                    width: "90%",
+                    height: "100%"
+                }, 500);
+            },
+            function(){
+                $(this).animate({
+                    width: "100%",
+                    height: "110%"
+                }, 500);
+            })
+        $(".animsition").animsition({
+        
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) { window.location.href = url; }
+        });
+        //  script para que funcione la libreria de animacion
+
+        
+
+
+        }); // fin jQuery
+    </script>
+</html>
