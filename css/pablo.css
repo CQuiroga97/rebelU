@@ -712,3 +712,170 @@
     border-radius: 50%;
     background: #3B6FF3;
   }
+
+  /* food */
+
+  #contenedor_food{
+    background-color: #357EA1;
+    padding: 3%;
+    width: 68%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #contenedor_food img{
+    cursor: pointer;
+    width: 38%;
+  }
+
+  #contenedor_food img:hover{
+      transform: scale(.9);
+      transition: 0.4s ease;
+  }
+
+  #titulo_modals_paises{
+    font-size: 4vw;
+    font-weight: bold;
+    font-family: UberMoveBold;
+    color: black;
+    text-align: left;
+  }
+
+
+  /* .animacion_food{
+    position: relative;
+    top: -31vw;
+  }
+
+  .animacion_food_2{
+    position: relative;
+    top: 32vw;
+} */
+
+.animacion_clima{
+    position: relative;
+
+}
+
+.animacion_clima_2{
+    position: relative;
+
+}
+
+#contenedor_sports{
+    display: flex;
+    width: 46%;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.contenedor_item_food{
+    background-color: white;
+    text-align: center;
+    padding: 4%;
+    border-radius: 58px;
+    box-shadow: 0px 0px 4px 4px #00000036;
+    transition: 0.1s ease;
+    width: 37%;
+}
+
+.contenedor_item_food:hover{
+    box-shadow: 0px 0px 0px 11px #357ea1;
+}
+
+
+.contenedor_item_food img{
+    width: 58%;
+
+}
+
+#contenedor_titulo_modals_sports{
+    display: flex;
+    align-items: center;
+}
+
+#contenedor_titulo_modals_sports p{
+    font-size: 3vw;
+    color: black;
+    font-family: UberMoveBold;
+    margin-right: 7%;
+}
+
+#contenedor_titulo_modals_sports img{
+    height: 54px;
+}
+
+.contenedor_clima{
+    display: flex;
+    box-shadow: 0px 0px 2px 3px rgb(112 112 112 / 57%);
+    padding: 4%;
+    position: fixed;
+    top: 70vw;
+    justify-content: space-around;
+    width: 70%;
+    z-index: -1;
+}
+
+#contenedor_texto_clima{
+    color: black;
+    width: 40%;
+}
+
+#titulo_clima{
+    font-size: var(--letra-titulos);
+    font-family: UberMoveMedium;
+    text-align: center;
+    margin-bottom: 9%;
+}
+
+#texto_clima{
+    font-size: var(--letra-textos);
+    font-family: _regular;
+}
+
+
+
+.img_clima_numero{
+    width: 445px;
+}
+
+#contenedor_btns_clima{
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor_btns_clima article{
+    background-color: #357EA1;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5vw;
+    width: 47%;
+    border-radius: 15px;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn_mapa_clima{
+    width: 16% !important;
+    margin-right: 8%;
+}
+
+.btn_mapa_clima img{
+    height: 41px;
+}
+
+
+
+.btn_things:hover{
+    color: black !important;
+    background-color: white !important;
+    box-shadow: inset 0px 0px 0px 7px #357ea1;
+}
+
+.btn_mapa_clima:hover{
+    background-color: white !important;
+    box-shadow: inset 0px 0px 0px 7px #357ea1;
+}
