@@ -194,7 +194,7 @@
         $(".checkmark").click(function(){
             setTimeout(function(){
                 console.log($(".cb1").is(":checked"))
-                if($(".cb1").is(":checked") && $(".cb4").is(":checked") && $(".cb5").is(":checked") && $(".cb6").is(":checked")){
+                if($(".cb1").is(":checked") && $(".cb4").is(":checked") && $(".cb5").is(":checked") && $(".cb6").is(":checked") && !$(".cb2").is(":checked") && !$(".cb3").is(":checked") ){
                     $(".btnC2").css("display", "flex");
                     $(".btnC2").animate({
                         opacity: 1,
