@@ -54,7 +54,7 @@
 
     </section>
 
-    <div href="" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue">
+    <div href="../menu.html" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue">
         <p>Continue</p>
     </div>
 
@@ -216,7 +216,10 @@
 
 
 <script>
-    localStorage.setItem("cu", "1")
+     $("#btn_continue").click(function(){
+        localStorage.setItem("cu", "1")
+    })
+    
     $(document).ready(function () {
 console.log("jquery");
         //  animacion

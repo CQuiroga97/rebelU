@@ -47,9 +47,18 @@
                     <div class="lineaBanderas"></div>
                 </div>
                 <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;text-align: center;position: relative;top: -50vw;" class="sp">Click on each active month to check more details. </span>
-                <div class="lineaTiempo" style=" flex-direction: row; height: 25vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;top: 50vw;">
+                <div style="width: 59vw; height: 22vw;margin: auto;margin-top: 0vw; position: relative;display: flex; flex-wrap: wrap;  " class="meses2">
+                    <div style="width: 2vw; height: 100%; display: flex;">
+                        <img src="../img/cristhian/flecha.png" style="width: 1.5vw; margin: auto;cursor: pointer;" class="anterior">
+                    </div>
+                    <div class="lineaTiempo" style=" flex-direction: row; height: 22vw;width: 55vw; flex-wrap: wrap;">
                     
+                    </div>
+                    <div style="width: 2vw; height: 100%; display: flex;">
+                        <img src="../img/cristhian/flecha.png" style="width: 1.5vw; margin: auto;transform: rotate(180deg);cursor: pointer;" class="siguiente">
+                    </div>
                 </div>
+                
                 <div class="btnContinuar" style="width: 11vw; bottom: 0vw; right: 44vw;">
                     <span>
                         Continue
@@ -65,6 +74,43 @@
     <script>
         moverCarro("12.2vw", "12.2vw", "5.5vw", "9vw", "259deg", "259deg");
         cambiarEstrellas("25%", "0%")
+        $(".anterior").click(function(){
+            if(parseInt(localStorage.getItem("numPais")) > 12)
+            localStorage.setItem("numPais", localStorage.getItem("numPais") - 1);
+            $(".sp").animate({
+                top: "-50vw"
+            }, 500)
+            $(".letrero2").animate({
+                top: "-50vw"
+            }, 500)
+            $(".meses2").animate({
+                top: "50vw"
+            }, 500, function(){
+                window.location.href = "./meses.html"
+            })
+            $(".btnContinuar").animate({
+                bottom: "-50vw"
+            }, 500)
+            
+        })
+        $(".siguiente").click(function(){
+            if(parseInt(localStorage.getItem("numPais")) < 13)
+            localStorage.setItem("numPais", parseInt(localStorage.getItem("numPais")) + 1);
+            $(".sp").animate({
+                top: "-50vw"
+            }, 500)
+            $(".letrero2").animate({
+                top: "-50vw"
+            }, 500)
+            $(".meses2").animate({
+                top: "50vw"
+            }, 500, function(){
+                window.location.href = "./meses.html"
+            })
+            $(".btnContinuar").animate({
+                bottom: "-50vw"
+            }, 500)
+        })
         $(".btnContinuar").click(function(){
             $(".sp").animate({
                 top: "-50vw"
@@ -72,14 +118,13 @@
             $(".letrero2").animate({
                 top: "-50vw"
             }, 500)
-            $(".lineaTiempo").animate({
+            $(".meses2").animate({
                 top: "50vw"
             }, 500)
             $(".btnContinuar").animate({
                 bottom: "-50vw"
             }, 500)
             $(".screen").fadeOut(500, function(){
-                localStorage.setItem('melting', '1')
                 window.location.href = "../menu.html"
             })
         })
@@ -89,7 +134,7 @@
         $(".letrero2").animate({
             top: "0vw"
         }, 500)
-        $(".lineaTiempo").animate({
+        $(".meses2").animate({
             top: "0vw"
         }, 500)
         $(".imgBtn2").hover(function(){

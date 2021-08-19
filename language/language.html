@@ -133,7 +133,7 @@
 
     </section>
 
-    <div href="" class="animsition-link continue_play" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue" style="top: 6vw; right: 6%;">
+    <div href="../menu.html" class="animsition-link continue_play" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue" style="top: 6vw; right: 6%;">
         <p>Continue</p>
     </div>
 
@@ -268,7 +268,9 @@
 
 
 <script>
-    localStorage.setItem("la", "1")
+    $("#btn_continue").click(function(){
+        localStorage.setItem("la", "1")
+    })
     $(document).ready(function () {
 console.log("jquery");
         //  animacion
