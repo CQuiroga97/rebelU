@@ -12,6 +12,9 @@ function cambiar_src(id,src_1,src_2){
 //   flechas slider
   cambiar_src('#flecha_izquierda_slide' ,'../../slider/flecha_izquierda_hover.png' , '../../slider/flecha_izquierda.png');
   cambiar_src('#flecha_derecha_slide' ,'../../slider/flecha_derecha_hover.png' , '../../slider/flecha_derecha.png');
+
+  cambiar_src('#flecha_izquierda_slide_2' ,'../../slider/flecha_izquierda_hover.png' , '../../slider/flecha_izquierda.png');
+  cambiar_src('#flecha_derecha_slide_2' ,'../../slider/flecha_derecha_hover.png' , '../../slider/flecha_derecha.png');
   cambiar_src('.equis' ,'../../slider/equis_hover.png' , '../../slider/equis.png');
 
   //Botones menu abajo
@@ -52,5 +55,15 @@ function cambiar_src(id,src_1,src_2){
       "width" : width_estrellas
     });
   }
+
+  // Cambiar ruta mapas clima
+function cambiar_src_clima(id_btn,id_img,src_1,src_2){
+  $(id_btn).mouseenter(function(){
+       $(id_img).attr('src' , src_1)                                                                                     
+
+  }).mouseleave(function(){
+    $(id_img).attr('src' , src_2)  
+  });
+}
 
   
