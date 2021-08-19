@@ -13,7 +13,7 @@
                 
             </div>
             <div class="screen" style="transform: scale(1.2);">
-                <img src="./img/inicio/simbolos_generales/uber_tp.png" class="logos" style="transform: scale(.8);width: 12.5vw; right: 7.9vw; top: 4.62vw;">
+                <img src="./img/inicio/simbolos_generales/uber_tp.png" class="logos" style="transform: scale(.8);width: 3.5vw; right: 7.9vw; top: 4.62vw;">
                 <!--Inicio de contenido-->
                     <img src="./img/carretera.png" class="carretera2" style="width: 70vw; position: absolute;left: 17vw; z-index: 0;top: 60vw;">
                     <img class="carteles" src = "./img/cristhian/carteles.png">
@@ -48,8 +48,11 @@
                     </div>
                     <div class="telefonoIn">
                         <div class="countViajes">
+                            <span class="cantVisitas" style="margin-right: -.8vw;">
+                                0
+                            </span>
                             <span>
-                                0-80
+                                -8
                             </span>
                         </div>
                     </div>
@@ -104,7 +107,49 @@
            }
        })
         $(document).ready(function () {
-            console.log(localStorage.getItem('rebel'))
+            if(localStorage.getItem("re")){
+                re = parseInt(localStorage.getItem("re"))
+            }else{
+                re = 0;
+            }
+            if(localStorage.getItem("sp")){
+                sp = parseInt(localStorage.getItem("sp"))
+            }else{
+                sp = 0;
+            }
+            if(localStorage.getItem("we")){
+                we = parseInt(localStorage.getItem("we"))
+            }else{
+                we = 0;
+            }
+            if(localStorage.getItem("cu")){
+                cu = parseInt(localStorage.getItem("cu"))
+            }else{
+                cu = 0;
+            }
+            if(localStorage.getItem("la")){
+                la = parseInt(localStorage.getItem("la"))
+            }else{
+                la = 0;
+            }
+            if(localStorage.getItem("hl")){
+                hl = parseInt(localStorage.getItem("hl"))
+            }else{
+                hl = 0;
+            }
+            if(localStorage.getItem("cur")){
+                cur = parseInt(localStorage.getItem("cur"))
+            }else{
+                cur = 0;
+            }
+            if(localStorage.getItem("ac")){
+                ac = parseInt(localStorage.getItem("ac"))
+            }else{
+                ac = 0;
+            }
+            total = re + sp + we + cu + la + hl + cur + ac;
+            console.log(total);
+            $(".cantVisitas").html(total)
             $(".telefonoIn").animate({
                 right:"14vw"
             }, 800)
@@ -175,7 +220,7 @@
                 $(".divCarro").animate({
                     top: "14.4vw"
                 }, 600, function(){
-                cambiarPantalla()
+                cambiarPantalla("./food/food.html")
             })
             })
         }
@@ -187,7 +232,7 @@
                 $(".divCarro").animate({
                     top: "13.4vw"
                 }, 600, function(){
-                cambiarPantalla()
+                cambiarPantalla("asd")
             })
             })
         }
@@ -199,7 +244,7 @@
                 $(".divCarro").animate({
                     top: "2.6vw"
                 }, 600, function(){
-                cambiarPantalla()
+                cambiarPantalla("./clima/clima.html")
             })
             })
         }
@@ -207,7 +252,7 @@
             $(".divCarro").animate({
                 left: "4vw"
             }, 300, function(){
-                cambiarPantalla()
+                cambiarPantalla("y")
             })
         }
         function viaje6(){
@@ -218,7 +263,7 @@
                 $(".divCarro").animate({
                     top: "9.2vw"
                 }, 600, function(){
-                cambiarPantalla()
+                cambiarPantalla("./Holidays/holidaysUS.html")
             })
             })
         }
@@ -230,7 +275,7 @@
                 $(".divCarro").animate({
                     top: "3.2vw"
                 }, 600, function(){
-                cambiarPantalla()
+                cambiarPantalla("./language/language.html")
             })
             })
         }

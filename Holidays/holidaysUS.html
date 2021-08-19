@@ -10,12 +10,9 @@
     <body style="overflow: hidden;">
         
         <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
-            <div class="blurSocial">
-                <div class="textoBlur">
-                    <div class="close"><span>X</span></div>
-                    <div class="txtB" style="flex-direction: column;">
-                    </div>
-                    <div class="imgB" style="background-image: url('../../img/cristhian/imgBlur1.png');"></div>
+            <div class="blurSocial blurG2">
+                <div class="textoBlur" style="border: 1vw solid white; height: 25vw;">
+                    <img src="../../img/cristhian/wrongQuiz.PNG" style="width: 100%; height: 100%;">
                 </div>
             </div>
             <div class="screen" >
@@ -43,12 +40,11 @@
                 
                 <!--Inicio de contenido-->
                 <div class="letrero2" style="top: -50vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;">
-                    <span class="titulo" style="margin: auto;"></span>
-                    <div class="lineaBanderas"></div>
+                    <span class="titulo" style="margin: auto;">Knowledge Check</span>
                 </div>
                 <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;text-align: center;position: relative;top: -50vw;" class="sp">Select the 5 countries of birth for <br>
                     immigrants in the US. </span>
-                <div class="lineaTiempo" style=" flex-direction: row; height: 25vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;top: 50vw;">
+                <div class="lineaTiempo" style=" flex-direction: row; height: 20vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;top: 50vw;">
                     
                 </div>
                 <div class="btnContinuar" style="width: 11vw; bottom: 0vw; right: 44vw;">
@@ -128,43 +124,27 @@
                 right: "-100%"
             }, 500)
         });
-        
        $(".letrero2").click(function(){
+           console.log(this.id)
            $("#i"+this.id).animate({
                opacity: 1
            }, 500)
        })
-       meses = ["January", "Febrary", "March", "April", "May", "June", "July", "August", "September", "Octuber", "November", "December"]
+       
+       
         $(document).ready(function () {
-            localStorage.setItem("hl", "1")
-            var numPais = localStorage.getItem("numPais");
-            for(i = 0; i<12; i++){
-                localStorage.setItem("pais"+i, datos[numPais-1][i]);
-            }
-            localStorage.setItem("tituloPais", titulos[numPais - 1])
-            localStorage.setItem("colorBandera1", colores[numPais - 1][0])
-            localStorage.setItem("colorBandera2", colores[numPais - 1][1])
-            localStorage.setItem("colorBandera3", colores[numPais - 1][2])
+            
 //  script para que funcione la libreria de animacion
-            for(i = 1; i<13; i++){
-                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divMeses' style='margin: auto; '><div class='textomes' style='opacity: "+localStorage.getItem("pais"+(i-1))+"' id='"+i+"'><span>"+meses[i-1]+"</span><div class='flecha'><img src='../../img/cristhian/flechaSocial.png'></div></div></div>")
+            for(i = 12; i<14; i++){
+                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divBanderas' style='margin: auto;width: 40%'><img class='bandera' src='../../img/cristhian/Holidays/bandera"+i+".png'  id='"+i+"'></div>")
             }
-            $(".titulo").html(localStorage.getItem("tituloPais"))
-            $(".lineaBanderas").html("<div class='colores' style='background-color: "+localStorage.getItem("colorBandera1")+"'></div><div class='colores' style='background-color: "+localStorage.getItem("colorBandera2")+"'></div><div class='colores' style='background-color: "+localStorage.getItem("colorBandera3")+"'></div>")
-            $(".close").click(function(){
-            $(".blurSocial").animate({
-                    right: "-100%"
-                }, 500)
-            });
-            $(".textomes").click(function(){
-                if($(this).css("opacity") == "1"){
-                    $(".blurSocial").animate({
-                        right: "0%"
-                    }, 500)
-                    $(".imgB").css("background-image", "url('../../img/cristhian/Holidays/"+numPais+"_"+this.id+".png')")
-                    $(".txtB").html("<span style='font-size: 5vw; font-weight: bold; margin-top: 1vw;margin-bottom: 0vw;'>"+meses[this.id - 1]+"</span><br><span style='margin-top: -2vw;margin-bottom: 0vw'>"+titulos[numPais-1]+"</span><br>"+textosPaises[numPais-1][this.id-1])
-                }
-                
+            
+            $(".bandera").hover(function(){
+                $(this).css("top", "-1vw");
+            },
+            function(){
+                if($(this).attr("title") != "1")
+                $(this).css("top", "0vw");
             })
         $(".animsition").animsition({
         
@@ -191,7 +171,12 @@
         });
         //  script para que funcione la libreria de animacion
 
-        
+        $(".bandera").click(function(){
+            
+            localStorage.setItem("numPais", this.id);
+            window.location.href = "./meses.html";
+            
+        })
 
 
         }); // fin jQuery
