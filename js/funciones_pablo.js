@@ -263,3 +263,74 @@ function abrir_clima_2(id_btn_pais,id_modal_pais,id_contenido_sube,id_contenedor
 
   });
 }
+
+
+function abrir_continue_clima(id_btn,id_continue,btn_1,btn_2,btn_3,btn_4){
+   
+    
+  $(id_btn).click(function(){
+   
+    $(id_btn).addClass('click');
+
+    if($(btn_1).hasClass('click') && $(btn_2).hasClass('click') && $(btn_3).hasClass('click') && $(btn_4).hasClass('click')  ){
+      $(id_continue).fadeIn();
+
+    }
+  });
+   
+}
+
+function abrir_clima_ln(id_btn_pais,id_modal_pais,id_contenido_sube,id_contenedor_paises,modal_usa,modal_canada,modal_audio){
+  $(id_btn_pais).click(function(){
+    console.log("click");
+
+    $(id_btn_pais).addClass('pais_2')
+    $(id_contenido_sube).animate({
+      "top" : "-31vw"
+    });
+
+    $(modal_usa).fadeOut();
+    $(modal_audio).css({
+      "opacity" : "0"
+    });
+    $(modal_canada).fadeIn();
+    $(id_contenedor_paises).animate({
+      "top" : "-23vw"
+    },function(){
+      $(id_modal_pais).animate({
+        "top" : "12vw"
+      })
+
+      $(id_modal_pais).fadeIn();
+    });
+
+
+  });
+}
+
+function abrir_clima_2_ln(id_btn_pais,id_modal_pais,id_contenido_sube,id_contenedor_paises,modal_usa,modal_canada,modal_audios){
+  $(id_btn_pais).click(function(){
+    console.log("click");
+
+    $(id_btn_pais).addClass('pais_2')
+    $(id_contenido_sube).animate({
+      "top" : "-31vw"
+    });
+
+    $(modal_canada).fadeOut();
+    $(modal_audios).css({
+      "opacity" : "0"
+    });
+    $(modal_usa).fadeIn();
+    $(id_contenedor_paises).animate({
+      "top" : "-23vw"
+    },function(){
+      $(id_modal_pais).animate({
+        "top" : "12vw"
+      });
+      $(id_modal_pais).fadeIn();
+    });
+
+
+  });
+}

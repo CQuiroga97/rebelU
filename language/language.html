@@ -43,50 +43,87 @@
                 <p>Click on each flag to learn more.</p>
             </div>
 
-            <section class="animacion_food_2 animacion_clima_2" id="contenedor_food">
+            <section style="position: relative; z-index: 1;" class="animacion_food_2 animacion_clima_2" id="contenedor_food">
                 <img id="usa" src="../img/pablo/food/usa.png" alt="">
                 <img id="canada" src="../img/pablo/food/canada.png" alt="">
             </section>
 
-            <section id="clima_usa" class="contenedor_clima">
+            <section  id="clima_usa" class="contenedor_clima">
                 <div id="contenedor_texto_clima">
                     <p id="titulo_clima">United States</p>
-                    <p id="texto_clima">The climate of the United States varies due to changes in latitude, and a range of geographic features, including mountains and deserts. Generally, the U.S. becomes warmer the further south one travels, and drier the further west, until one reaches the West Coast. The 4 seasons are very well defined depending the time of the year.
+                    <p id="texto_clima">American English is the national language of the United States. Although there is no official language at the federal level, most states have declared English as the official language.In certain U.S territories there are native languages that have been recognized in addition to English, such as Spanish, Hawaiian, Sioux, Samoan and Chamorro.
                     </p>
                 </div>
 
                 <div id="contenedor_2_clima">
-                    <img class="img_clima_numero" src="../img/pablo/clima/60.png" alt="">
-                    <section id="contenedor_btns_clima">
-                        <article class="btn_mapa_clima" id="btn_mapa_usa" >
-                            <img id="mapa_clima_usa" src="../img/pablo/clima/simbolo_mapa.png" alt="">
-                        </article>
-
-                        <article class="btn_things" id="btn_things_usa" >
-                            <p>Things to do</p>
-                        </article>
-                    </section>
+                    <img style="width: 392px;"  class="img_clima_numero" src="../img/pablo/language/usa.png" alt="">
+                    <div id="contenedor_listen_language">
+                        <img src="../img/pablo/language/simbolo_listen.png" alt="">
+                        <p>Listen Audios</p>
+                    </div>
                 </div>
+            </section>
+
+            <section id="usa_audios" >
+             <article>
+                 <div>
+                     <img id="btn_audio_1" src="../img/pablo/overview/play.png" alt="">
+                     <p>Asian accent
+                    </p>
+                 </div>
+
+                 <div>
+                    <img id="btn_audio_2"  src="../img/pablo/overview/play.png" alt="">
+                    <p>Hindu  accent
+                   </p>
+                </div>
+             </article>
+
+             <div id="contenedor_play_south">
+                <img id="btn_audio_3"  src="../img/pablo/overview/play.png" alt="">
+                <p>South American 
+                    English accent
+                    
+               </p>
+             </div>
+
+             <article>
+                <div>
+                    <img id="btn_audio_4"  src="../img/pablo/overview/play.png" alt="">
+                    <p>Latin accent
+                   </p>
+                </div>
+
+                <div>
+                   <img id="btn_audio_5"  src="../img/pablo/overview/play.png" alt="">
+                   <p>Arabic accent
+                  </p>
+               </div>
+            </article>
+
+            <!-- audios -->
+            <audio  id="audio_1"  src="../img/pablo/language/audios/08062021_REBEL CIP_5Asiatica.mp3"></audio>
+            <audio  id="audio_2"  src="../img/pablo/language/audios/08062021_REBEL CIP_6Hindu.mp3"></audio>
+            <audio  id="audio_3"  src="../img/pablo/language/audios/08062021_REBEL CIP_8Ingles Americano del sur.mp3"></audio>
+            <audio  id="audio_4"  src="../img/pablo/language/audios/08062021_REBEL CIP_9Latino.mp3"></audio>
+            <audio  id="audio_5"  src="../img/pablo/language/audios/08062021_REBEL CIP_7Arabe.mp3"></audio>
+            <!-- audios -->
+              
             </section>
 
             <section id="clima_canada" class="contenedor_clima">
                 <div id="contenedor_texto_clima">
                     <p id="titulo_clima">Canada</p>
-                    <p id="texto_clima">The northern part of Canada is extremely cold, with summer lasting less than two months, but almost all Canadians live near the southern border where the weather is warmer. The climate around Vancouver, on Canada’s west coast, is rainy and temperate. It rarely snows except in the mountains.
+                    <p id="texto_clima">A multitude of languages are used by Canadians, with English and French (the official languages) being the mother tongues of approximately 56 percent and 21 percent of Canadians, respectively.
+                        Other provinces have no official languages as such, but French is used as a language of instruction, in courts, and for other government services, in addition to English.
+                        
                     </p>
                 </div>
 
                 <div id="contenedor_2_clima">
-                    <img class="img_clima_numero" src="../img/pablo/clima/10.png" alt="">
-                    <section id="contenedor_btns_clima">
-                        <article class="btn_mapa_clima" id="btn_mapa_canada" >
-                            <img id="mapa_clima_canada" src="../img/pablo/clima/simbolo_mapa.png" alt="">
-                        </article>
-
-                        <article class="btn_things" id="btn_things_canada" >
-                            <p>Things to do</p>
-                        </article>
-                    </section>
+                    <img style="width: 392px;" class="img_clima_numero" src="../img/pablo/language/canada.png" alt="">
+                   
+                    
                 </div>
             </section>
 
@@ -96,7 +133,7 @@
 
     </section>
 
-    <div href="" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue" style="top: 6vw; right: 6%;">
+    <div href="" class="animsition-link continue_play" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue" style="top: 6vw; right: 6%;">
         <p>Continue</p>
     </div>
 
@@ -222,6 +259,7 @@
 
 <!-- llamado a funciones -->
 <script src="../../js/funciones_pablo.js"></script>
+<script src="../js/audios_language.js"></script>
 
 <script src="../../js/globales.js"></script>
 <!-- llamado a funciones -->
@@ -262,8 +300,8 @@ console.log("jquery");
   
        
 
-        abrir_clima_2('#usa','#clima_usa','.animacion_clima','.animacion_clima_2' ,'#clima_usa' ,'#clima_canada');
-        abrir_clima('#canada','#clima_canada','.animacion_clima','.animacion_clima_2' ,'#clima_usa' ,'#clima_canada');
+        abrir_clima_2_ln('#usa','#clima_usa','.animacion_clima','.animacion_clima_2' ,'#clima_usa' ,'#clima_canada' , '#usa_audios');
+        abrir_clima_ln('#canada','#clima_canada','.animacion_clima','.animacion_clima_2' ,'#clima_usa' ,'#clima_canada' , '#usa_audios');
 
 
 
@@ -280,10 +318,7 @@ console.log("jquery");
         carro_internas('#carro_internas','46%', '46%','46%','46%','270deg', '270deg' ,'#cuadro_blanco_estrellas','0%');
        
 
-        abrir_continue_clima('#btn_mapa_usa','#btn_continue','#btn_things_usa','#btn_things_canada','#btn_mapa_usa','#btn_mapa_canada');
-        abrir_continue_clima('#btn_mapa_canada','#btn_continue','#btn_things_usa','#btn_things_canada','#btn_mapa_usa','#btn_mapa_canada');
-        abrir_continue_clima('#btn_things_usa','#btn_continue','#btn_things_usa','#btn_things_canada','#btn_mapa_usa','#btn_mapa_canada');
-        abrir_continue_clima('#btn_things_canada','#btn_continue','#btn_things_usa','#btn_things_canada','#btn_mapa_usa','#btn_mapa_canada');
+      
 
         $('.animacion_food').animate({
             "top"  : "0vw"
@@ -292,6 +327,13 @@ console.log("jquery");
         $('.animacion_food_2').animate({
             "top"  : "0vw"
         },"ease");
+
+        $('#contenedor_listen_language').click(function(){
+            $('#clima_usa').fadeOut();
+            $('#usa_audios').css({
+                "opacity" : "1"
+            });
+        })
 // fin jQuery
     });
 

@@ -56,4 +56,14 @@ function cambiar_src(id,src_1,src_2){
     });
   }
 
+  // Cambiar ruta mapas clima
+function cambiar_src_clima(id_btn,id_img,src_1,src_2){
+  $(id_btn).mouseenter(function(){
+       $(id_img).attr('src' , src_1)                                                                                     
+
+  }).mouseleave(function(){
+    $(id_img).attr('src' , src_2)  
+  });
+}
+
   
