@@ -112,6 +112,7 @@
             }, 500)
         })
         $(".btnContinuar").click(function(){
+            localStorage.setItem("hl", "1")
             $(".sp").animate({
                 top: "-50vw"
             }, 500)
@@ -180,7 +181,7 @@
        })
        meses = ["January", "Febrary", "March", "April", "May", "June", "July", "August", "September", "Octuber", "November", "December"]
         $(document).ready(function () {
-            localStorage.setItem("hl", "1")
+            
             var numPais = localStorage.getItem("numPais");
             for(i = 0; i<12; i++){
                 localStorage.setItem("pais"+i, datos[numPais-1][i]);
@@ -207,6 +208,22 @@
                     }, 500)
                     $(".imgB").css("background-image", "url('../../img/cristhian/Holidays/"+numPais+"_"+this.id+".png')")
                     $(".txtB").html("<span style='font-size: 5vw; font-weight: bold; margin-top: 1vw;margin-bottom: 0vw;'>"+meses[this.id - 1]+"</span><br><span style='margin-top: -2vw;margin-bottom: 0vw'>"+titulos[numPais-1]+"</span><br>"+textosPaises[numPais-1][this.id-1])
+                }
+                localStorage.setItem(numPais+"_"+this.id, 1);
+                total = 0;
+                for(i = 12; i<14; i++){
+                    for(n = 1; n<13; n++){
+                        if(localStorage.getItem(i+"_"+n))
+                            total++;
+
+                    }
+                }
+                if(total == 18){
+                    $(".btnContinuar").css("display", "flex");
+                        $(".btnContinuar").animate({
+                            opacity: 1,
+                            bottom: "5vw"
+                        }, 500)
                 }
                 
             })
