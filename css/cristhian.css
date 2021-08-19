@@ -400,12 +400,64 @@
 .botonesMenus{
     width: 6vw;height: 8vw;;position: absolute;bottom: 2vw;left: -2vw;display: flex; flex-direction: column;z-index: 5;
 }
-.botonesMenus .sombra, .botonesMenus .sombra .botones{
+.botonesMenus .sombra, .botonesMenus .sombra .botones2{
     width: 6vw;height: 3vw;background-color: black;margin: auto;border-radius: 0vw 6vw 6vw 0vw;position: relative;
 }
-.botonesMenus .sombra .botones{
-    background-color: white;border: .1vw solid black;top: -.2vw;cursor: pointer;transition: left .5s;left: 0vw;
+.botonesMenus .sombra .botones2{
+    background-color: white;border: .2vw solid black;top: -.2vw;cursor: pointer;transition: left .5s;left: 0vw;display: flex;
 }
-.botonesMenus .sombra .botones:hover{
+.botonesMenus .sombra .botones2:hover{
     left: -1vw;
+}
+.botonesMenus .sombra .botones2 img{
+    margin: auto; margin-right: .5vw;width: 2vw;
+}
+.celular{
+    background-image: url("../img/inicio/simbolos_generales/celular.png");background-position: center;background-repeat: no-repeat;background-size: 100% 100%;
+    width: 17.8vw;height: 28.1vw;position: absolute;top: 1.95vw;left: 1vw;
+}
+.celular .divCelular{
+    width: 100%;height: 100%;display: flex;flex-direction: column;
+}
+.celular .divCelular .pantalla{
+    width: 76%;height: 58%;margin: auto;margin-top: .5vw;
+}
+.celular .divCelular .pantalla .mapaPantalla{
+    width: 100%; height: 100%;transform: rotate(18deg);
+}
+.celular .divCelular .pantalla .mapaPantalla img{
+    width: .8vw;transform: rotate(-17deg);position: relative;left: 8.2vw;top: .8vw;
+}
+.celular .divCelular .estrellas{
+    width: 63%;height: 7%;margin: auto;margin-bottom: 4vw;margin-right: 3vw;display: flex;
+}
+.celular .divCelular .estrellas .divEstrellas{
+    width: 100%;height: 100%; background-color: white;margin: auto; margin-right: 0vw;
+}
+.lineaTiempo .divMeses{
+    width: 24%; height: 28%;;display: flex;position: relative;background-color: #F6F6F6; margin: auto;cursor: pointer;overflow: hidden;
+}
+.lineaTiempo .divMeses .textomes{
+    width: 100%; height: 100%; border-bottom: .3vw solid black; display: flex;transition: border .5s;overflow: hidden;
+}
+.lineaTiempo .divMeses .textomes span{
+    margin: auto;font-size: 1.7vw;margin: auto;
+}
+.lineaTiempo .divMeses .textomes:hover{
+    border-bottom: .3vw solid #357EA1;
+}
+.lineaTiempo .divMeses .textomes .flecha{
+    position: absolute;   width: 1.5vw; height: 1.5vw;right: 1vw;top: 8vw;overflow: hidden;transition: top .5s;
+}
+.lineaTiempo .divMeses .textomes:hover .flecha{
+    top: 3.5vw;
+}
+.lineaTiempo .divMeses .textomes .flecha img{
+    height: 100%;width: 100%;
+}
+.letrero2 .lineaBanderas{
+   width: 100%;height: .5vw;display: flex;flex-wrap: wrap;
+}
+.letrero2 .lineaBanderas .colores{
+    width: 33.33%; height: 100%; 
 }

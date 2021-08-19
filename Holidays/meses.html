@@ -40,11 +40,12 @@
                 
                 <!--Inicio de contenido-->
                 <div class="letrero2" style="top: -50vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;">
-                    <span class="titulo" style="margin: auto;">Knowledge Check</span>
+                    <span class="titulo" style="margin: auto;"></span>
+                    <div class="lineaBanderas"></div>
                 </div>
                 <span style="font-size: 1.7vw; margin-left: auto;margin-right: auto;text-align: center;position: relative;top: -50vw;" class="sp">Select the 5 countries of birth for <br>
                     immigrants in the US. </span>
-                <div class="lineaTiempo" style=" flex-direction: row; height: 20vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;top: 50vw;">
+                <div class="lineaTiempo" style=" flex-direction: row; height: 25vw;width: 65vw; margin-top: 2vw; margin-bottom: 0vw;flex-wrap: wrap;top: 50vw;">
                     
                 </div>
                 <div class="btnContinuar" style="width: 11vw; bottom: 0vw; right: 44vw;">
@@ -130,12 +131,15 @@
                opacity: 1
            }, 500)
        })
+       meses = ["January", "Febrary", "March", "April", "May", "June", "July", "August", "September", "Octuber", "November", "December"]
         $(document).ready(function () {
             
 //  script para que funcione la libreria de animacion
-            for(i = 1; i<11; i++){
-                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divBanderas'><div class='check' id='"+i+"'></div><img class='bandera' src='../../img/cristhian/bandera"+i+".png'  id='b"+i+"'></div>")
+            for(i = 1; i<13; i++){
+                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divMeses' style='margin: auto; '><div class='textomes' style='opacity: "+localStorage.getItem("pais"+(i-1))+"'><span>"+meses[i-1]+"</span><div class='flecha'><img src='../../img/cristhian/flechaSocial.png'></div></div></div>")
             }
+            $(".titulo").html(localStorage.getItem("tituloPais"))
+            $(".lineaBanderas").html("<div class='colores' style='background-color: "+localStorage.getItem("colorBandera1")+"'></div><div class='colores' style='background-color: "+localStorage.getItem("colorBandera2")+"'></div><div class='colores' style='background-color: "+localStorage.getItem("colorBandera3")+"'></div>")
             $(".bandera").click(function(){
                 if(this.id == "b3" || this.id == "b7" || this.id == "b8" || this.id == "b9" || this.id == "b4"){
                     $(this).attr("title", "1");

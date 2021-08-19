@@ -41,6 +41,26 @@ With the keywords that you were able to identify, you must ask probing questions
                 </div>
             </div>
             <div class="screen" >
+                <div class="celular">
+                    <div class="divCelular">
+                        <div class="pantalla">
+                            <div class="mapaPantalla">
+                                <img src="../../img/inicio/simbolos_generales/carro_internas.png" alt="" class="ctr">
+                            </div>
+                        </div>
+                        <div class="estrellas">
+<div class="divEstrellas"></div>
+</div>
+                    </div>
+                </div>
+                <div class="botonesMenus">
+                    <div class="sombra">
+                        <div class="botones2"><img src="../../img/cristhian/flecha.png" class="back" alt=""></div>
+                    </div>
+                    <div class="sombra">
+                        <div class="botones2"><img src="../../img/cristhian/casa.png" class="home" alt=""></div>
+                    </div>
+                </div>
                     <img src="../../img/inicio/simbolos_generales/uber_tp.png" class="logos">
                 
                 <!--Inicio de contenido-->
@@ -87,7 +107,10 @@ With the keywords that you were able to identify, you must ask probing questions
     </body>
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/animsition.js"></script>
+    <script src="../../js/script.js"></script>
     <script>
+        moverCarro("10.5vw", "12.2vw", "4vw", "5.5vw", "300deg", "259deg");
+        cambiarEstrellas("40%", "25%")
         $(".sp").animate({
             top: "0vw"
         }, 500)
@@ -112,9 +135,6 @@ With the keywords that you were able to identify, you must ask probing questions
             }, 500)
             $(".btnContinuar").animate({
                 bottom: "-50vw"
-            }, 500)
-            $(".screen").animate({
-                opacity: 0
             }, 500, function(){
                 window.location.href = "./quiz.html";
             })

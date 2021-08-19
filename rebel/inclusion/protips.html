@@ -125,6 +125,26 @@
             </div>
 
             <div class="screen" >
+                <div class="celular">
+                    <div class="divCelular">
+                        <div class="pantalla">
+                            <div class="mapaPantalla">
+                                <img src="../../img/inicio/simbolos_generales/carro_internas.png" alt="" class="ctr">
+                            </div>
+                        </div>
+                        <div class="estrellas">
+<div class="divEstrellas"></div>
+</div>
+                    </div>
+                </div>
+                <div class="botonesMenus">
+                    <div class="sombra">
+                        <div class="botones2"><img src="../../img/cristhian/flecha.png" class="back" alt=""></div>
+                    </div>
+                    <div class="sombra">
+                        <div class="botones2"><img src="../../img/cristhian/casa.png" class="home" alt=""></div>
+                    </div>
+                </div>
                     <img src="../../img/inicio/simbolos_generales/uber_tp.png" class="logos">
                 
                 <!--Inicio de contenido-->
@@ -155,7 +175,14 @@
     </body>
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/animsition.js"></script>
+    <script src="../../js/script.js"></script>
     <script>
+        moverCarro("10.5vw", "12.2vw", "4vw", "5.5vw", "300deg", "259deg");
+        cambiarEstrellas("40%", "0%")
+        setTimeout(function(){
+            moverCarro("12.2vw", "12.2vw", "5.5vw", "9vw", "259deg", "259deg");
+        }, 500)
+        
         clicks = ["", "", "", "", "", "", "", ""]
         places = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"]
         textos = [

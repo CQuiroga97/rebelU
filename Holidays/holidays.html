@@ -130,41 +130,42 @@
                opacity: 1
            }, 500)
        })
+       datos = [
+           ["1", "0", "1", "1", "1", "1", "1", "1", "0", "1", "1", "1"],
+           ["1", "0", "0", "1", "1", "0", "0", "0", "1", "1", "1", "1"],
+           ["0", "0", "0", "0", "1", "1", "1", "1", "1", "1", "1", "1"],
+           ["1", "0", "1", "0", "1", "1", "1", "1", "0", "1", "0", "1"],
+           ["1", "1", "0", "1", "0", "0", "1", "1", "1", "0", "1", "1"],
+           ["1", "1", "0", "0", "0", "0", "0", "0", "1", "0", "1", "1"],
+           ["0", "1", "1", "1", "1", "0", "0", "1", "0", "1", "1", "0"],
+           ["1", "0", "1", "1", "0", "0", "0", "1", "1", "1", "1", "0"],
+           ["0", "1", "1", "1", "1", "0", "1", "1", "0", "1", "1", "1"],
+           ["1", "1", "0", "0", "0", "0", "0", "0", "1", "0", "1", "1"],
+           ["1", "0", "0", "0", "0", "1", "1", "1", "0", "1", "1", "1"]
+    ];
+    colores = [
+        ["#74ACDF", "#FFFFFF", "#74ACDF"],
+        ["#007C29", "#FCC000", "#021E47"],
+        ["#3757A6", "#FFFFFF", "#E13E3E"],
+        ["#FCD73E", "#1D4F95", "#D11F3E"],
+        ["#3757A6", "#FFFFFF", "#E13E3E"],
+        ["#002D62", "#FFFFFF", "#E13E3E"],
+        ["#FCD73E", "#1D4F95", "#D11F3E"],
+        ["#74ACDF", "#FFFFFF", "#74ACDF"],
+        ["#CD2029", "#FCD943", "#0C8E41"],
+        ["#FFFFFF", "#D21034", "#005293"],
+        ["#E73B36", "#FFFFFF", "#E73B36"]
+
+    ]
+    titulos = ["Argentina", "Brasil", "Chile", "Colombia", "Costa Rica", "Dominican Republic", "Ecuador", "Guatemala", "Guyana", "Panama", "Peru"]
+       
         $(document).ready(function () {
             
 //  script para que funcione la libreria de animacion
-            for(i = 1; i<11; i++){
-                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divBanderas'><div class='check' id='"+i+"'></div><img class='bandera' src='../../img/cristhian/bandera"+i+".png'  id='b"+i+"'></div>")
+            for(i = 1; i<12; i++){
+                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divBanderas' style='margin: auto;'><img class='bandera' src='../../img/cristhian/Holidays/bandera"+i+".png'  id='"+i+"'></div>")
             }
-            $(".bandera").click(function(){
-                if(this.id == "b3" || this.id == "b7" || this.id == "b8" || this.id == "b9" || this.id == "b4"){
-                    $(this).attr("title", "1");
-                    $(this).css("top", "-1vw");
-                    $("#"+this.id.split("b")[1]).css("opacity", "1");
-                    setTimeout(function(){
-                        if($("#3").css("opacity") == "1" && $("#7").css("opacity") == "1" && $("#8").css("opacity") == "1" && $("#9").css("opacity") == "1" && $("#4").css("opacity") == "1"){
-                           console.log(1)
-                            $(".textoBlur").html(' <img src="../../img/cristhian/corrQuiz.PNG" style="width: 100%; height: 100%;">')
-                            $(".blurSocial").animate({
-                                right: "0%"
-                            }, 500)
-                            $(".btnContinuar").css("display", "flex");
-                            $(".btnContinuar").animate({
-                                opacity: 1,
-                                bottom: "5vw"
-                            }, 500)
-                        }
-                    }, 600)
-                    
-                }else{
-                    $(".blurSocial").animate({
-                        right: "0%"
-                    }, 500)
-                    $(".check").css("opacity", "0");
-                    $(".bandera").css("top", "0vw");
-                }
-                
-            })
+            
             $(".bandera").hover(function(){
                 $(this).css("top", "-1vw");
             },
@@ -197,7 +198,19 @@
         });
         //  script para que funcione la libreria de animacion
 
-        
+        $(".bandera").click(function(){
+           console.log("asd")
+            for(i = 0; i<12; i++){
+                localStorage.setItem("pais"+i, datos[this.id-1][i]);
+                console.log( datos[this.id-1][i])
+            }
+            localStorage.setItem("tituloPais", titulos[this.id - 1])
+            localStorage.setItem("colorBandera1", colores[this.id - 1][0])
+            localStorage.setItem("colorBandera2", colores[this.id - 1][1])
+            localStorage.setItem("colorBandera3", colores[this.id - 1][2])
+            window.location.href = "./meses.html";
+            
+        })
 
 
         }); // fin jQuery

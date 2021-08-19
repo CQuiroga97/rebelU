@@ -25,6 +25,26 @@
             </div>
            
             <div class="screen" >
+                <div class="celular">
+                    <div class="divCelular">
+                        <div class="pantalla">
+                            <div class="mapaPantalla">
+                                <img src="../../img/inicio/simbolos_generales/carro_internas.png" alt="" class="ctr">
+                            </div>
+                        </div>
+                        <div class="estrellas">
+<div class="divEstrellas"></div>
+</div>
+                    </div>
+                </div>
+                <div class="botonesMenus">
+                    <div class="sombra">
+                        <div class="botones2"><img src="../../img/cristhian/flecha.png" class="back" alt=""></div>
+                    </div>
+                    <div class="sombra">
+                        <div class="botones2"><img src="../../img/cristhian/casa.png" class="home" alt=""></div>
+                    </div>
+                </div>
                     <img src="../../img/inicio/simbolos_generales/uber_tp.png" class="logos">
                 
                 <!--Inicio de contenido-->
@@ -55,7 +75,10 @@
     </body>
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/animsition.js"></script>
+    <script src="../../js/script.js"></script>
     <script>
+        moverCarro("5.5vw", "5.5vw", "8vw", "4vw", "80deg", "-17deg");
+        cambiarEstrellas("80%", "60%")
         textos = ["Dear Customer, I do understand that this has been an inconvenience for you and I am working to resolve [customer’s issue]. I will ask again that you please stop using this type of language.", "Dear Customer, I understand that you are upset and I want to make this right for you, however, when you use this type of language, it’s difficult for me to clearly understand your issue and move forward in getting it resolved.", "Mr. Smith, I would like to continue assisting you at this time but I am going to transfer you to my Lead/Manager, who will assist you in getting this resolved."]
         clicks = ["", "", ""]
         $(".divCup").click(function(){

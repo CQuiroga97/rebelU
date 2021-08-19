@@ -21,3 +21,37 @@ $(document).ready(function () {
         }
     }, 800);
 });
+function moverCarro(topI, topF, leftI, leftF, degI, degF){
+    cl = $(".ctr");
+    cl.css("top", topI);
+    cl.css("left", leftI);
+    cl.css("transform", "rotate("+degI+")");
+    cl.animate({
+        top: topF,
+        left: leftF
+    }, 800, function(){
+        cl.css("transform", "rotate("+degF+")");
+    })
+}
+function cambiarEstrellas(wI, wF){
+    $(".divEstrellas").css("width", wI);
+    $(".divEstrellas").animate({
+        width: wF
+    }, 500)
+}
+$(".home").click(function(){
+    
+    $(".screen").animate({
+        opacity: 0
+    }, 500, function(){
+        window.location.href = "../menu.html"
+    })
+})
+$(".back").click(function(){
+    
+    $(".screen").animate({
+        opacity: 0
+    }, 500, function(){
+        window.history.back();
+    })
+})
