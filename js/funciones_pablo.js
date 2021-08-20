@@ -97,6 +97,10 @@ function abrir_continue_disc_2(id_btn,id_continue,id_disc,btn_1,btn_2,btn_3,btn_
 
 function abrir_encuesta(id_continue,id_encuesta){
   $(id_continue).click(function(){
+    $(id_encuesta).animate({
+      "left": "0%"
+    });
+
     $(id_encuesta).fadeIn();
     $(id_continue).fadeOut();
   });
@@ -104,6 +108,7 @@ function abrir_encuesta(id_continue,id_encuesta){
 
 function encuesta_mal(id_flecha,id_mal,id_encuesta){
   $(id_flecha).click(function(){
+
     $(id_mal).fadeOut();
     $(id_encuesta).fadeIn();
   });
@@ -122,12 +127,28 @@ function comprobar_encuesta(btn_validar,check_1,check_2,check_3,check_4,modal_ma
   $(btn_validar).click(function(){
 
     if( $(check_4).is(':checked') && !$(check_1).is(':checked') && !$(check_2).is(':checked') && !$(check_3).is(':checked')   ) {
-      $(modal_bien).fadeIn();
-      $(modal_encuesta).fadeOut();
+      $(modal_bien).animate({
+        "left" : "0%"
+      });
+      $(modal_encuesta).animate({
+        "left" : "110%"
+      });
+
+      $(modal_encuesta).fadeIn();
     }
     else{
-      $(modal_mal).fadeIn();
-      $(modal_encuesta).fadeOut();
+      console.log("mal");
+      $(modal_mal).animate({
+        "left" : "0%"
+      });
+
+      $(modal_mal).css({
+        "display" : "block"
+      });
+      $(modal_encuesta).animate({
+        "left" : "0%"
+      });
+
     }
   });
  
@@ -188,17 +209,36 @@ function abrir_continue_over_8(id_btn,id_continue,btn_1,btn_2,btn_3,btn_4,btn_5,
 
 function comprobar_encuesta_over_9(btn_validar,check_1,check_2,check_3,modal_mal,modal_bien,modal_encuesta){
 
-  $(btn_validar).click(function(){
 
-    if( $(check_3).is(':checked') && !$(check_1).is(':checked') && !$(check_2).is(':checked')) {
-      $(modal_bien).fadeIn();
-      $(modal_encuesta).fadeOut();
-    }
-    else{
-      $(modal_mal).fadeIn();
-      $(modal_encuesta).fadeOut();
-    }
-  });
+
+    $(btn_validar).click(function(){
+
+      if( $(check_3).is(':checked') && !$(check_1).is(':checked') && !$(check_2).is(':checked')  ) {
+        $(modal_bien).animate({
+          "left" : "0%"
+        });
+        $(modal_encuesta).animate({
+          "left" : "110%"
+        });
+  
+        $(modal_encuesta).fadeIn();
+      }
+      else{
+        console.log("mal");
+        $(modal_mal).animate({
+          "left" : "0%"
+        });
+  
+        $(modal_mal).css({
+          "display" : "block"
+        });
+        $(modal_encuesta).animate({
+          "left" : "0%"
+        });
+  
+      }
+    });
+
  
 }
 
@@ -333,4 +373,54 @@ function abrir_clima_2_ln(id_btn_pais,id_modal_pais,id_contenido_sube,id_contene
 
 
   });
+}
+
+function banderas(id_bandera,id_bandera_derecha,src_bandera_derecha,id_bandera_footer,src_bandera_footer,flip_card,flip_inner,country,text_country,currency,text_currency,abbre,text_abbre,flip_card_2,flip_inner_2){
+  $(id_bandera).click(function(){
+    $(flip_card).addClass('rotar');
+    $(flip_card_2).removeClass('rotar');
+
+    $(flip_inner).addClass('rotar');
+    $(flip_inner_2).removeClass('rotar');
+
+    $(id_bandera_derecha).css({
+      "visibility" : "visible"
+    });
+    $(id_bandera_derecha).attr('src' , src_bandera_derecha);
+    
+    $(id_bandera_footer).attr('src' , src_bandera_footer);
+    $(id_bandera_footer).css({
+      "visibility" : "visible"
+    });
+
+    $(country).html(text_country);
+    $(country).css({
+      "visibility" : "visible"
+    });
+
+    $(currency).html(text_currency);
+    $(currency).css({
+      "visibility" : "visible"
+    });
+
+    $(abbre).html(text_abbre);
+    $(abbre).css({
+      "visibility" : "visible"
+    });
+  });
+}
+
+
+function abrir_continue_currency(id_btn,id_continue,btn_1,btn_2){
+   
+    
+  $(id_btn).click(function(){
+   
+    $(id_btn).addClass('click');
+
+    if($(btn_1).hasClass('click') && $(btn_2).hasClass('click')   ){
+      $(id_continue).fadeIn();
+    }
+  });
+   
 }

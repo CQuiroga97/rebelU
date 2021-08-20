@@ -24,11 +24,16 @@ function cambiar_src(id,src_1,src_2){
 // Abrir modals
   function abrir_modals(id_btn,id_modal,equis){
       $(id_btn).click(function(){
-          $(id_modal).fadeIn();
+          $(id_modal).animate({
+            "left" : "0%"
+          });
+          
       });
 
       $(equis).click(function(){
-        $(id_modal).fadeOut();
+        $(id_modal).animate({
+          "left" : "110%"
+        });
       });
   }
 

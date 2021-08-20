@@ -30,65 +30,37 @@
 
 
 
-    <section id="contenedor_general">
+    <section style="left: 21%; top: 13vw;"  id="contenedor_general">
       
 
         <article id="contenedor_contenido">
-            <div class="animacion_food animacion_clima" id="contenedor_titulos_generales">
-                <p>Choose a Country</p>
-            </div>
+            <section id="contenedor_academy">
+                <article id="academy_1">
+                    <img class="imgs_academy" src="../img/pablo/academy/bad.png" alt="">
+                    <div class="contenedor_textos_academy">
+                        <p>Bad news 
+                            delivery</p>
+                    </div>
+                </article>
 
-            <div class="animacion_food animacion_clima" id="contenedor_subs_generales">
-                <div id="circulo_internas"></div>
-                <p>Click on each flag to learn more.</p>
-            </div>
+                <article id="academy_2">
+                    <img class="imgs_academy" src="../img/pablo/academy/escalation.png" alt="">
 
-            <section class="animacion_food_2 animacion_clima_2" id="contenedor_food">
-                <img id="usa" src="../img/pablo/food/usa.png" alt="">
-                <img id="canada" src="../img/pablo/food/canada.png" alt="">
+                    <div class="contenedor_textos_academy">
+                        <p>De <br> escalation</p>
+                    </div>
+                </article>
+
+                <article id="academy_3">
+                    <img class="imgs_academy" src="../img/pablo/academy/communications.png" alt="">
+
+                    <div class="contenedor_textos_academy">
+                        <p>Effective 
+                            communication</p>
+                    </div>
+                </article>
             </section>
-
-            <section id="clima_usa" class="contenedor_clima">
-                <div id="contenedor_texto_clima">
-                    <p id="titulo_clima">United States</p>
-                    <p id="texto_clima">The climate of the United States varies due to changes in latitude, and a range of geographic features, including mountains and deserts. Generally, the U.S. becomes warmer the further south one travels, and drier the further west, until one reaches the West Coast. The 4 seasons are very well defined depending the time of the year.
-                    </p>
-                </div>
-
-                <div id="contenedor_2_clima">
-                    <img class="img_clima_numero" src="../img/pablo/clima/60.png" alt="">
-                    <section id="contenedor_btns_clima">
-                        <article class="btn_mapa_clima" id="btn_mapa_usa" >
-                            <img id="mapa_clima_usa" src="../img/pablo/clima/simbolo_mapa.png" alt="">
-                        </article>
-
-                        <article class="btn_things" id="btn_things_usa" >
-                            <p>Things to do</p>
-                        </article>
-                    </section>
-                </div>
-            </section>
-
-            <section id="clima_canada" class="contenedor_clima">
-                <div id="contenedor_texto_clima">
-                    <p id="titulo_clima">Canada</p>
-                    <p id="texto_clima">The northern part of Canada is extremely cold, with summer lasting less than two months, but almost all Canadians live near the southern border where the weather is warmer. The climate around Vancouver, on Canada’s west coast, is rainy and temperate. It rarely snows except in the mountains.
-                    </p>
-                </div>
-
-                <div id="contenedor_2_clima">
-                    <img class="img_clima_numero" src="../img/pablo/clima/10.png" alt="">
-                    <section id="contenedor_btns_clima">
-                        <article class="btn_mapa_clima" id="btn_mapa_canada" >
-                            <img id="mapa_clima_canada" src="../img/pablo/clima/simbolo_mapa.png" alt="">
-                        </article>
-
-                        <article class="btn_things" id="btn_things_canada" >
-                            <p>Things to do</p>
-                        </article>
-                    </section>
-                </div>
-            </section>
+         
 
         </article>
 
@@ -96,7 +68,7 @@
 
     </section>
 
-    <div href="../menu.html" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue" style="top: 6vw; right: 6%;">
+    <div href="../menu.html" class="animsition-link btn_arriba" data-animsition-out-class="fade-out-up" data-animsition-out-duration="500" loading="lazy" id="btn_continue" style="top: 5vw; right: 15%;">
         <p>Continue</p>
     </div>
 
@@ -231,9 +203,9 @@
 
 <script>
     
-    $("#btn_continue").click(function(){
-        localStorage.setItem("we", "1");
-    })
+    // $("#btn_continue").click(function(){
+    //     localStorage.setItem("we", "1");
+    // })
     $(document).ready(function () {
 console.log("jquery");
         //  animacion
@@ -261,41 +233,33 @@ console.log("jquery");
             transition: function (url) { window.location.href = url; }
         });
 
-        cambiar_src_clima('#btn_mapa_usa','#mapa_clima_usa','../img/pablo/clima/simbolo_mapa_hover.png','../img/pablo/clima/simbolo_mapa.png');
-        cambiar_src_clima('#btn_mapa_canada','#mapa_clima_canada','../img/pablo/clima/simbolo_mapa_hover.png','../img/pablo/clima/simbolo_mapa.png');
   
+        $('#academy_1').animate({
+            "left" : "0%"
+        },600);
+
+        $('#academy_2').animate({
+            "top" : "0vw"
+        },600);
+
+        $('#academy_3').animate({
+            "right" : "0%"
+        },600);
+
+        $('#btn_continue').fadeIn();
+
        
-
-        abrir_clima_2('#usa','#clima_usa','.animacion_clima','.animacion_clima_2' ,'#clima_usa' ,'#clima_canada');
-        abrir_clima('#canada','#clima_canada','.animacion_clima','.animacion_clima_2' ,'#clima_usa' ,'#clima_canada');
+     
 
 
 
-        // usa
-        abrir_modals('#btn_things_usa','#modal_usa_things','.equis');
-        abrir_modals('#btn_mapa_usa','#modal_usa_mapa','.equis');
        
-
-        // canada
-        abrir_modals('#btn_things_canada','#modal_canada_things','.equis');
-        abrir_modals('#btn_mapa_canada','#modal_canada_mapa','.equis');
      
 
         carro_internas('#carro_internas','46%', '46%','46%','46%','270deg', '270deg' ,'#cuadro_blanco_estrellas','0%');
        
 
-        abrir_continue_clima('#btn_mapa_usa','#btn_continue','#btn_things_usa','#btn_things_canada','#btn_mapa_usa','#btn_mapa_canada');
-        abrir_continue_clima('#btn_mapa_canada','#btn_continue','#btn_things_usa','#btn_things_canada','#btn_mapa_usa','#btn_mapa_canada');
-        abrir_continue_clima('#btn_things_usa','#btn_continue','#btn_things_usa','#btn_things_canada','#btn_mapa_usa','#btn_mapa_canada');
-        abrir_continue_clima('#btn_things_canada','#btn_continue','#btn_things_usa','#btn_things_canada','#btn_mapa_usa','#btn_mapa_canada');
-
-        $('.animacion_food').animate({
-            "top"  : "0vw"
-        },"ease");
-
-        $('.animacion_food_2').animate({
-            "top"  : "0vw"
-        },"ease");
+   
 // fin jQuery
     });
 
