@@ -17,7 +17,7 @@
     width: 80%;
     margin: auto;
     cursor: pointer;
-    transition: width .5s;
+    transition: width .2s;
     position: relative;
 }
 .edificios img:hover{
@@ -398,19 +398,38 @@
     width: 3vw;position: absolute;right: 1vw;top: 1vw;
 }
 .botonesMenus{
-    width: 6vw;height: 8vw;;position: absolute;bottom: 2vw;left: -2vw;display: flex; flex-direction: column;z-index: 5;
+    width: 9vw;
+    height: 12vw;
+    position: absolute;
+    bottom: 6vw;
+    left: -2vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
 }
 .botonesMenus .sombra, .botonesMenus .sombra .botones2{
-    width: 6vw;height: 3vw;background-color: black;margin: auto;border-radius: 0vw 6vw 6vw 0vw;position: relative;
+    width: 8vw;
+    height: 4.8vw;
+    background-color: black;
+    margin: auto;
+    border-radius: 0vw 6vw 6vw 0vw;
+    position: relative;
 }
 .botonesMenus .sombra .botones2{
-    background-color: white;border: .2vw solid black;top: -.2vw;cursor: pointer;transition: left .5s;left: 0vw;display: flex;
+    background-color: white;
+    border: .2vw solid black;
+    top: -0.2vw;
+    cursor: pointer;
+    left: 0vw;
+    display: flex;
 }
 .botonesMenus .sombra .botones2:hover{
     left: -1vw;
 }
 .botonesMenus .sombra .botones2 img{
-    margin: auto; margin-right: .5vw;width: 2vw;
+    margin: auto;
+    margin-right: 1.5vw;
+    width: 3vw;
 }
 .celular{
     background-image: url("../img/inicio/simbolos_generales/celular.png");background-position: center;background-repeat: no-repeat;background-size: 100% 100%;

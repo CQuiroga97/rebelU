@@ -5,6 +5,10 @@
     font-family: Sancoale;
 }
 
+a{
+    text-decoration: none;
+}
+
 @font-face {
     font-family: Sancoale;
     src: url("../font/Sancoale/Sancoale\ Softened.ttf");
