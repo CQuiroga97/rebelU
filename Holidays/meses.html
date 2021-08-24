@@ -1,9 +1,9 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../../css_animation/animsition.css">
-        <link href="../../css/globales.css" rel="stylesheet">
-        <link href="../../css/styles.css" rel="stylesheet">
-        <link href="../../css/cristhian.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css_animation/animsition.css">
+        <link href="../css/globales.css" rel="stylesheet">
+        <link href="../css/styles.css" rel="stylesheet">
+        <link href="../css/cristhian.css" rel="stylesheet">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>CIP</title>
     </head>
@@ -15,7 +15,7 @@
                     <div class="close"><span>X</span></div>
                     <div class="txtB" style="flex-direction: column;">
                     </div>
-                    <div class="imgB" style="background-image: url('../../img/cristhian/imgBlur1.png');"></div>
+                    <div class="imgB" style="background-image: url('../img/cristhian/imgBlur1.png');"></div>
                 </div>
             </div>
             <div class="screen" >
@@ -23,7 +23,7 @@
                     <div class="divCelular">
                         <div class="pantalla">
                             <div class="mapaPantalla">
-                                <img src="../../img/inicio/simbolos_generales/carro_internas.png" alt="" class="ctr">
+                                <img src="../img/inicio/simbolos_generales/carro_internas.png" alt="" class="ctr">
                             </div>
                         </div>
                         <div class="estrellas">
@@ -33,13 +33,13 @@
                 </div>
                 <div class="botonesMenus">
                     <div class="sombra">
-                        <div class="botones2"><img src="../../img/cristhian/flecha.png" class="back" alt=""></div>
+                        <div class="botones2"><img src="../img/cristhian/flecha.png" class="back" alt=""></div>
                     </div>
                     <div class="sombra">
-                        <div class="botones2"><img src="../../img/cristhian/casa.png" class="home" alt=""></div>
+                        <div class="botones2"><img src="../img/cristhian/casa.png" class="home" alt=""></div>
                     </div>
                 </div>
-                    <img src="../../img/inicio/simbolos_generales/uber_tp.png" class="logos">
+                    <img src="../img/inicio/simbolos_generales/uber_tp.png" class="logos">
                 
                 <!--Inicio de contenido-->
                 <div class="letrero2" style="top: -50vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;">
@@ -68,9 +68,9 @@
             </div>
         </div>
     </body>
-    <script src="../../js/jquery-3.4.1.min.js"></script>
-    <script src="../../js/animsition.js"></script>
-    <script src="../../js/script.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/animsition.js"></script>
+    <script src="../js/script.js"></script>
     <script>
         moverCarro("12.2vw", "12.2vw", "5.5vw", "9vw", "259deg", "259deg");
         cambiarEstrellas("25%", "0%")
@@ -155,7 +155,7 @@
             $(".blurG").animate({
                 right: "0%"
             }, 500)
-            $(".imgB").css("background-image", "url('../../img/cristhian/imgBlurG"+this.id+".png')")
+            $(".imgB").css("background-image", "url('../img/cristhian/imgBlurG"+this.id+".png')")
             $(".txtB").html("<span style='text-align: center'>"+textos[this.id - 1]+"</span>")
         })
         $(".blurG").click(function(){
@@ -192,7 +192,7 @@
             localStorage.setItem("colorBandera3", colores[numPais - 1][2])
 //  script para que funcione la libreria de animacion
             for(i = 1; i<13; i++){
-                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divMeses' style='margin: auto; '><div class='textomes' style='opacity: "+localStorage.getItem("pais"+(i-1))+"' id='"+i+"'><span>"+meses[i-1]+"</span><div class='flecha'><img src='../../img/cristhian/flechaSocial.png'></div></div></div>")
+                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divMeses' style='margin: auto; '><div class='textomes' style='opacity: "+localStorage.getItem("pais"+(i-1))+"' id='"+i+"'><span>"+meses[i-1]+"</span><div class='flecha'><img src='../img/cristhian/flechaSocial.png'></div></div></div>")
             }
             $(".titulo").html(localStorage.getItem("tituloPais"))
             $(".lineaBanderas").html("<div class='colores' style='background-color: "+localStorage.getItem("colorBandera1")+"'></div><div class='colores' style='background-color: "+localStorage.getItem("colorBandera2")+"'></div><div class='colores' style='background-color: "+localStorage.getItem("colorBandera3")+"'></div>")
@@ -206,7 +206,7 @@
                     $(".blurSocial").animate({
                         right: "0%"
                     }, 500)
-                    $(".imgB").css("background-image", "url('../../img/cristhian/Holidays/"+numPais+"_"+this.id+".png')")
+                    $(".imgB").css("background-image", "url('../img/cristhian/Holidays/"+numPais+"_"+this.id+".png')")
                     $(".txtB").html("<span style='font-size: 5vw; font-weight: bold; margin-top: 1vw;margin-bottom: 0vw;'>"+meses[this.id - 1]+"</span><br><span style='margin-top: -2vw;margin-bottom: 0vw'>"+titulos[numPais-1]+"</span><br>"+textosPaises[numPais-1][this.id-1])
                 }
                 localStorage.setItem(numPais+"_"+this.id, 1);

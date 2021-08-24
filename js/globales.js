@@ -13,13 +13,20 @@ function cambiar_src(id,src_1,src_2){
   cambiar_src('#flecha_izquierda_slide' ,'../../slider/flecha_izquierda_hover.png' , '../../slider/flecha_izquierda.png');
   cambiar_src('#flecha_derecha_slide' ,'../../slider/flecha_derecha_hover.png' , '../../slider/flecha_derecha.png');
 
-  cambiar_src('#flecha_izquierda_slide_2' ,'../../slider/flecha_izquierda_hover.png' , '../../slider/flecha_izquierda.png');
-  cambiar_src('#flecha_derecha_slide_2' ,'../../slider/flecha_derecha_hover.png' , '../../slider/flecha_derecha.png');
+  cambiar_src('#flecha_izquierda_slide_2' ,'../slider/flecha_izquierda_hover.png' , '../slider/flecha_izquierda.png');
+  cambiar_src('#flecha_derecha_slide_2' ,'../slider/flecha_derecha_hover.png' , '../slider/flecha_derecha.png');
   cambiar_src('.equis' ,'../../slider/equis_hover.png' , '../../slider/equis.png');
 
   //Botones menu abajo
   cambiar_src('#btn_atras' ,'../../img/inicio/simbolos_generales/btn_atras_hover.png' , '../../img/inicio/simbolos_generales/btn_atras.png');
   cambiar_src('#btn_home' ,'../../img/inicio/simbolos_generales/btn_home_hover.png' , '../../img/inicio/simbolos_generales/btn_home.png');
+
+  cambiar_src('#btn_atras_2' ,'../img/inicio/simbolos_generales/btn_atras_hover.png' , '../img/inicio/simbolos_generales/btn_atras.png');
+  cambiar_src('#btn_home_2' ,'../img/inicio/simbolos_generales/btn_home_hover.png' , '../img/inicio/simbolos_generales/btn_home.png');
+  cambiar_src('.equis_2' ,'../slider/equis_hover.png' , '../slider/equis.png');
+
+  cambiar_src('#flecha_izquierda_slide_3' ,'../slider/flecha_izquierda_hover.png' , '../slider/flecha_izquierda.png');
+  cambiar_src('#flecha_derecha_slide_3' ,'../slider/flecha_derecha_hover.png' , '../slider/flecha_derecha.png');
 
 // Abrir modals
   function abrir_modals(id_btn,id_modal,equis){

@@ -265,6 +265,15 @@
     cursor: pointer;
 }
 
+.equis_2{
+    position: absolute;
+    width: 4%;
+    top: 11vw;
+    right: 14%;
+    z-index: 6;
+    cursor: pointer;
+}
+
 #contenedor_subs_generales_borde{
     color: black;
     font-size: var(--letra-subs);

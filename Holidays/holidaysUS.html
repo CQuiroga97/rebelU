@@ -1,9 +1,9 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../../css_animation/animsition.css">
-        <link href="../../css/globales.css" rel="stylesheet">
-        <link href="../../css/styles.css" rel="stylesheet">
-        <link href="../../css/cristhian.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css_animation/animsition.css">
+        <link href="../css/globales.css" rel="stylesheet">
+        <link href="../css/styles.css" rel="stylesheet">
+        <link href="../css/cristhian.css" rel="stylesheet">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>CIP</title>
     </head>
@@ -12,7 +12,7 @@
         <div class="animsition" style=" position:relative;width:100%;height:100%;overflow: hidden; display: flex;">
             <div class="blurSocial blurG2">
                 <div class="textoBlur" style="border: 1vw solid white; height: 25vw;">
-                    <img src="../../img/cristhian/wrongQuiz.PNG" style="width: 100%; height: 100%;">
+                    <img src="../img/cristhian/wrongQuiz.PNG" style="width: 100%; height: 100%;">
                 </div>
             </div>
             <div class="screen" >
@@ -20,7 +20,7 @@
                     <div class="divCelular">
                         <div class="pantalla">
                             <div class="mapaPantalla">
-                                <img src="../../img/inicio/simbolos_generales/carro_internas.png" alt="" class="ctr">
+                                <img src="../img/inicio/simbolos_generales/carro_internas.png" alt="" class="ctr">
                             </div>
                         </div>
                         <div class="estrellas">
@@ -30,13 +30,13 @@
                 </div>
                 <div class="botonesMenus">
                     <div class="sombra">
-                        <div class="botones2"><img src="../../img/cristhian/flecha.png" class="back" alt=""></div>
+                        <div class="botones2"><img src="../img/cristhian/flecha.png" class="back" alt=""></div>
                     </div>
                     <div class="sombra">
-                        <div class="botones2"><img src="../../img/cristhian/casa.png" class="home" alt=""></div>
+                        <div class="botones2"><img src="../img/cristhian/casa.png" class="home" alt=""></div>
                     </div>
                 </div>
-                    <img src="../../img/inicio/simbolos_generales/uber_tp.png" class="logos">
+                    <img src="../img/inicio/simbolos_generales/uber_tp.png" class="logos">
                 
                 <!--Inicio de contenido-->
                 <div class="letrero2" style="top: -50vw;z-index: 1;width: 41vw; height: 7vw; margin-bottom: 2vw;">
@@ -55,9 +55,9 @@
             </div>
         </div>
     </body>
-    <script src="../../js/jquery-3.4.1.min.js"></script>
-    <script src="../../js/animsition.js"></script>
-    <script src="../../js/script.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/animsition.js"></script>
+    <script src="../js/script.js"></script>
     <script>
         moverCarro("12.2vw", "12.2vw", "5.5vw", "9vw", "259deg", "259deg");
         cambiarEstrellas("25%", "0%")
@@ -105,7 +105,7 @@
             $(".blurG").animate({
                 right: "0%"
             }, 500)
-            $(".imgB").css("background-image", "url('../../img/cristhian/imgBlurG"+this.id+".png')")
+            $(".imgB").css("background-image", "url('../img/cristhian/imgBlurG"+this.id+".png')")
             $(".txtB").html("<span style='text-align: center'>"+textos[this.id - 1]+"</span>")
         })
         $(".blurG").click(function(){
@@ -135,7 +135,7 @@
             
 //  script para que funcione la libreria de animacion
             for(i = 12; i<14; i++){
-                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divBanderas' style='margin: auto;width: 40%'><img class='bandera' src='../../img/cristhian/Holidays/bandera"+i+".png'  id='"+i+"'></div>")
+                $(".lineaTiempo").html($(".lineaTiempo").html()+"<div class='divBanderas' style='margin: auto;width: 40%'><img class='bandera' src='../img/cristhian/Holidays/bandera"+i+".png'  id='"+i+"'></div>")
             }
             
             $(".bandera").hover(function(){
