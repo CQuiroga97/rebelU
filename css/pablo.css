@@ -113,14 +113,14 @@
 
 .contenedores_textos_colores{
     background-image: url(../img/pablo/tp_does/fondo_negro_colores.png);
-    background-size: 100% 100%;
+    background-size: 98% 92%;
     background-repeat: no-repeat;
     background-position-y: -5px;
     color: white;
     position: relative;
-    width: 75%;
-    padding: 5%;
-    height: 172px;
+    width: 81%;
+    padding: 7%;
+    height: 235px;
     display: none;
 }
 
@@ -133,9 +133,9 @@
 }
 
 .contenedores_textos_colores #textos_colores{
-    font-family:  _regular;
+    font-family: UberMoveMedium;
     text-align: left;
-    font-size: var(--letra-textos);
+    font-size: 18.5px;
  
 }
 

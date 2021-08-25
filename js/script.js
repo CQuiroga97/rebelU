@@ -46,7 +46,16 @@ $(".home").click(function(){
     }, 500, function(){
         window.location.href = "../menu.html"
     })
-})
+});
+
+$(".home_2").click(function(){
+    
+    $(".screen").animate({
+        opacity: 0
+    }, 500, function(){
+        window.location.href = "../../menu.html"
+    })
+});
 $(".back").click(function(){
     
     $(".screen").animate({
