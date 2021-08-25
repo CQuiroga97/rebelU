@@ -123,6 +123,9 @@
             })
         })
         $(".close").click(function(){
+            document.getElementById("myAudio").pause();
+                $(this).css("background-image", "url('../../img/cristhian/playBtn.png')")
+                flagPlay = 1
             $(".blurG2").animate({
                 right: "-100%"
             }, 500)

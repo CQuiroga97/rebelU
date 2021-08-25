@@ -19,28 +19,44 @@
                     <img class="carteles" src = "./img/cristhian/carteles.png">
                     <div class="cuadricula">
                         <div class="edificios" style="top: 10vw; left: 39vw;">
+                            
                             <img src="./img/cristhian/edificio1.png" class="imgEdificio" id="0">
+                            <div class="check" id="c1"></div>
                         </div>
                         <div class="edificios" style="top: 5vw; left: 31.5vw;">
+                            
                             <img src="./img/cristhian/edificio2.png" class="imgEdificio" id="1">
+                            <div class="check" id="c2"></div>
                         </div>
                         <div class="edificios" style="top: 11vw; left: 26.5vw; width: 5vw; height: 5vw;">
+                            
                             <img src="./img/cristhian/edificio3.png" class="imgEdificio" id="2">
+                            <div class="check" id="c3"></div>
                         </div>
                         <div class="edificios" style="top: 14.4vw; left: 8.5vw; width: 5vw; height: 5vw;">
+                            
                             <img src="./img/cristhian/edificio4.png" class="imgEdificio" id="3">
+                            <div class="check" id="c4"></div>
                         </div>
                         <div class="edificios" style="top: 1vw; left: 23.4vw; width: 3.5vw; height: 3.5vw;">
+                            
                             <img src="./img/cristhian/edificio5.png" class="imgEdificio" id="4">
+                            <div class="check" id="c5"></div>
                         </div>
                         <div class="edificios" style="top: 6vw; left: 3.4vw; width: 6vw; height: 6vw;">
+                            
                             <img src="./img/cristhian/edificio6.png" class="imgEdificio" id="5">
+                            <div class="check" id="c6"></div>
                         </div>
                         <div class="edificios" style="top: 5vw; left: 15.5vw; width: 6vw; height: 6vw;">
+                           
                             <img src="./img/cristhian/edificio7.png" class="imgEdificio" id="6">
+                            <div class="check" id="c7"></div>
                         </div>
                         <div class="edificios" style="top: 0vw; left: 13.5vw; width: 6vw; height: 6vw;">
+                            
                             <img src="./img/cristhian/edificio8.png" class="imgEdificio" id="7">
+                            <div class="check" id="c8"></div>
                         </div>
                         <div class="divCarro" style="width: 2vw; height: 2vw; position: absolute;transform: skew(-420deg,-330deg); z-index: 3; display: flex; top: 11.6vw; left: 0vw;">
                             <img class="carro" src="./img/inicio/carro/carro4.png" style="width: 2vw; margin: auto;">
@@ -109,40 +125,48 @@
         $(document).ready(function () {
             if(localStorage.getItem("re")){
                 re = parseInt(localStorage.getItem("re"))
+                $("#c1").css("opacity", 1)
             }else{
                 re = 0;
             }
             if(localStorage.getItem("sp")){
                 sp = parseInt(localStorage.getItem("sp"))
+                $("#c2").css("opacity", 1)
             }else{
                 sp = 0;
             }
             if(localStorage.getItem("we")){
                 we = parseInt(localStorage.getItem("we"))
+                $("#c5").css("opacity", 1)
             }else{
                 we = 0;
             }
             if(localStorage.getItem("cu")){
                 cu = parseInt(localStorage.getItem("cu"))
+                $("#c3").css("opacity", 1)
             }else{
                 cu = 0;
             }
             if(localStorage.getItem("la")){
                 la = parseInt(localStorage.getItem("la"))
+                $("#c8").css("opacity", 1)
             }else{
                 la = 0;
             }
             if(localStorage.getItem("hl")){
+                $("#c7").css("opacity", 1)
                 hl = parseInt(localStorage.getItem("hl"))
             }else{
                 hl = 0;
             }
             if(localStorage.getItem("cur")){
+                $("#c6").css("opacity", 1)
                 cur = parseInt(localStorage.getItem("cur"))
             }else{
                 cur = 0;
             }
             if(localStorage.getItem("ac")){
+                $("#c4").css("opacity", 1)
                 ac = parseInt(localStorage.getItem("ac"))
             }else{
                 ac = 0;
